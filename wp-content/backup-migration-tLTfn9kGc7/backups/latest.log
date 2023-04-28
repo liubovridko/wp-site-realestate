@@ -1,0 +1,97 @@
+[STEP] [2023-04-28 08:56:24] Looking for PHP CLI executable file.
+[WARN] [2023-04-28 08:56:24] Could not find proper PHP CLI executable, this process may be unstable.
+[WARN] [2023-04-28 08:56:24] PHP CLI file cannot be executed due to unknown reason.
+[STEP] [2023-04-28 08:56:24] Initializing backup...
+[INFO] [2023-04-28 08:56:24] Backup & Migration version: 1.2.8
+[INFO] [2023-04-28 08:56:24] Site which will be backed up: http://real-estate.test
+[INFO] [2023-04-28 08:56:24] PHP Version: 8.2.0
+[INFO] [2023-04-28 08:56:24] WP Version: 6.1.1
+[INFO] [2023-04-28 08:56:24] MySQL Version: 10.4.27
+[INFO] [2023-04-28 08:56:24] MySQL Max Length: 1048576
+[INFO] [2023-04-28 08:56:24] Web server: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0
+[INFO] [2023-04-28 08:56:24] Max execution time (in seconds): 120
+[INFO] [2023-04-28 08:56:24] Memory limit (server): 512M
+[INFO] [2023-04-28 08:56:24] Memory limit (wp-config): 40M
+[INFO] [2023-04-28 08:56:24] Memory limit (wp-config admin): 512M
+[INFO] [2023-04-28 08:56:24] Max rows per query (this site): 2000
+[INFO] [2023-04-28 08:56:24] Checking if backup dir is writable...
+[INFO] [2023-04-28 08:56:24] Initializing custom error handler
+[SUCCESS] [2023-04-28 08:56:24] Yup it is writable...
+[STEP] [2023-04-28 08:56:24] Scanning files...
+[STEP] [2023-04-28 08:56:25] Checking free space, reserving...
+[INFO] [2023-04-28 08:56:25] Requires at least 76700789 bytes. [73.15 MB]
+[INFO] [2023-04-28 08:56:25] Disk free space function is not disabled - using it...
+[INFO] [2023-04-28 08:56:25] Checking this path/partition: C:\xampp\htdocs\real-estate\wp-content\backup-migration-tLTfn9kGc7\backups
+[SUCCESS] [2023-04-28 08:56:25] There is 22,577.98 MB free. [22.05 GB]
+[SUCCESS] [2023-04-28 08:56:25] Great! We have enough space.
+[SUCCESS] [2023-04-28 08:56:25] Confirmed, there is more than enough space, checked: 76700789 bytes
+[INFO] [2023-04-28 08:56:25] Scanning done - found 1642 files...
+[SUCCESS] [2023-04-28 08:56:25] Backup initialized...
+[STEP] [2023-04-28 08:56:25] Initializing archiving system...
+[SUCCESS] [2023-04-28 08:56:25] Archive system initialized...
+[STEP] [2023-04-28 08:56:25] Preparing map of files...
+[SUCCESS] [2023-04-28 08:56:25] Files prepared.
+[INFO] [2023-04-28 08:56:25] Starting compression process...
+[STEP] [2023-04-28 08:56:25] Smart memory calculation...
+[INFO] [2023-04-28 08:56:25] There is 512 MBs of memory to use
+[INFO] [2023-04-28 08:56:25] WordPress memory limit: 512 MBs
+[SUCCESS] [2023-04-28 08:56:25] Setting the safe limit to 115 MB
+[INFO] [2023-04-28 08:56:25] Using PclZip module to create the backup
+[INFO] [2023-04-28 08:56:25] Legacy setting: Using default modules depending on user server
+[STEP] [2023-04-28 08:56:25] Making database backup (using v3 engine, requires at least v1.2.2 to restore)
+[INFO] [2023-04-28 08:56:25] Iterating database...
+[INFO] [2023-04-28 08:56:25] Memory usage after initialization: 39.08 MB
+[INFO] [2023-04-28 08:56:25] Scan found 12 tables (524 rows), estimated total size: 2.68 MB.
+[INFO] [2023-04-28 08:56:25] Memory usage after getting table names: 39.09 MB 
+[INFO] [2023-04-28 08:56:25] Getting table recipes...
+[INFO] [2023-04-28 08:56:25] Table recipes have been exported.
+[INFO] [2023-04-28 08:56:25] Memory usage after loading recipes: 39.09 MB 
+[INFO] [2023-04-28 08:56:25] Saving recipes...
+[INFO] [2023-04-28 08:56:25] Recipes saved.
+[INFO] [2023-04-28 08:56:25] Memory usage after recipe off-load: 39.09 MB
+[INFO] [2023-04-28 08:56:25] Exporting table data...
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_commentmeta (1/12, 0.05 MB)
+[INFO] [2023-04-28 08:56:25] Table re_commentmeta is empty, saving only recipe.
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_comments (2/12, 0.09 MB)
+[INFO] [2023-04-28 08:56:25] Table re_comments is empty, saving only recipe.
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_links (3/12, 0.03 MB)
+[INFO] [2023-04-28 08:56:25] Table re_links is empty, saving only recipe.
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_options (4/12, 2.06 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_options finished (0.08276s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_postmeta (5/12, 0.05 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_postmeta finished (0.01613s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_posts (6/12, 0.11 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_posts finished (0.02206s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_term_relationships (7/12, 0.03 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_term_relationships finished (0.01457s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_term_taxonomy (8/12, 0.05 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_term_taxonomy finished (0.01497s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_termmeta (9/12, 0.05 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_termmeta finished (0.01334s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_terms (10/12, 0.05 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_terms finished (0.01174s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_usermeta (11/12, 0.05 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_usermeta finished (0.00802s)
+[STEP] [2023-04-28 08:56:25] Getting data of table: re_users (12/12, 0.06 MB)
+[SUCCESS] [2023-04-28 08:56:25] Table export for: re_users finished (0.01713s)
+[INFO] [2023-04-28 08:56:25] Table data exported.
+[INFO] [2023-04-28 08:56:25] Memory usage after data export: 39.07 MB
+[INFO] [2023-04-28 08:56:25] Entire process took: 0.2987 s
+[SUCCESS] [2023-04-28 08:56:25] Database backup finished
+[STEP] [2023-04-28 08:56:25] Making archive
+[INFO] [2023-04-28 08:56:25] Compressing...
+[WARN] [2023-04-28 08:56:25] Backup will run as single-request, may be unstable...
+[STEP] [2023-04-28 08:56:25] Adding database SQL file(s) to the backup file.
+[SUCCESS] [2023-04-28 08:56:25] Database added to the backup successfully.
+[STEP] [2023-04-28 08:56:25] Performing site files backup...
+[INFO] [2023-04-28 08:56:25] Chunks contain 250 files.
+[INFO] [2023-04-28 08:56:28] Milestone: 500/1642
+[INFO] [2023-04-28 08:56:29] Milestone: 1000/1642
+[INFO] [2023-04-28 08:56:35] Milestone: 1500/1642
+[INFO] [2023-04-28 08:56:37] Milestone: 1642/1642
+[SUCCESS] [2023-04-28 08:56:37] Compressed 1642 files
+[INFO] [2023-04-28 08:56:37] Archiving of 1642 files took: 12.67s
+[STEP] [2023-04-28 08:56:37] Finalizing backup
+[INFO] [2023-04-28 08:56:37] Adding manifest...
+[STEP] [2023-04-28 08:56:37] Closing files and archives
+[END-CODE] [2023-04-28 08:56:37] #001

@@ -1,0 +1,48 @@
+/*!
+Theme Name: RealEstate
+Author: Liubov
+Description: real estate booking theme
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: realestate
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+*/
+
+/*0. Все страницы
+   -навигация
+   -контакты+соц сети/шапка
+   -футер
+1. Главная страница
+   -баннер
+   -поиск/фильтр
+   -список недвижимости
+   -отзывы
+   -нам доверяют
+2.  Страница со всеми обьектами
+   -поиск фильтр
+    -сортировка
+    -переключение вида
+    -рекомендации
+3. Страница обьекта
+     -слайдер
+     -информация про агента
+     -похожие обьекты
+     -особенности обьекта
+     -описание
+     -доп детали
+     -теги/feauters
+     -video
+     -social
+     -поиск фильтр
+4. Блог
+5.Статья блога
+    -комментарии
+6. FAQ
+7.Пользователь
+8.Контакты
+
+   */
