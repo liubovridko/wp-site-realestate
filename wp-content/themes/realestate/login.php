@@ -68,7 +68,7 @@ wp_login_form( $args );*/
 								    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
 								</div>
 								 
-								  <input type="submit" id="<?= esc_attr(__('wp-submit')); ?>" name="wp-submit" value="<?php esc_attr_e( 'Log In' ); ?>" class="btn btn-pill text-white btn-block btn-primary">
+								  <input type="submit" id="<?= esc_attr__('wp-submit'); ?>" name="wp-submit" value="<?php esc_attr_e( 'Log In' ); ?>" class="btn btn-pill text-white btn-block btn-primary">
                                    <input type="hidden" name="redirect_to" value="<?php echo esc_url( home_url() ); ?>">
 								 <span class="d-block text-center my-4 text-muted"> or sign in with</span>
 								<div class="social text-center">

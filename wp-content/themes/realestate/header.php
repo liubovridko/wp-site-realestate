@@ -67,8 +67,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('login')" data-wow-delay="0.45s"><?php echo is_user_logged_in()?  'Log out' : 'Login' ?></button>
-                        <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s">Submit</button>
+                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('login')" data-wow-delay="0.45s"><?php echo is_user_logged_in()?  __('Log out') : __('Login') ?></button>
+                        <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s"><?php _e('Submit', 'realestate'); ?></button>
                     </div>
 
                     <?php 

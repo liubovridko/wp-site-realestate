@@ -297,7 +297,7 @@
                     <div class="col-md-12 clear"> 
                         <div id="list-type" class="proerty-th">
                         	
-                                <!-- вывод всех постов -->
+                                <!-- out all posts -->
 								<?php
 								/* Start the Loop */
 								while ( have_posts() ) : //if post>=lenght {} если есть посты

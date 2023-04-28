@@ -20,7 +20,7 @@
 
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
-                                <h4>About us </h4>
+                                <h4><?php _e('About us', 'realestate'); ?> </h4>
                                 <div class="footer-title-line"></div>
 
                                 <img src="assets/img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
-                                <h4>Quick links </h4>
+                                <h4><?php _e('Quick links', 'realestate'); ?> </h4>
                                 <div class="footer-title-line"></div>
                                 <?php 
 
@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
-                                <h4>Last News</h4>
+                                <h4><?php _e('Last News', 'realestate'); ?></h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-blog">
                                     <li>
@@ -112,9 +112,9 @@
                         </div>
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer news-letter">
-                                <h4>Stay in touch</h4>
+                                <h4><?php _e('Stay in touch', 'realestate'); ?></h4>
                                 <div class="footer-title-line"></div>
-                                <p>Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis.</p>
+                                <p><?php _e('Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis.', 'realestate'); ?></p>
 
                                 <form>
                                     <div class="input-group">
@@ -146,7 +146,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> (C) <a href="http://www.KimaroTec.com">KimaroTheme</a> , All rights reserved 2016  </span> 
+                            <span> (C) <a href="http://www.KimaroTec.com">KimaroTheme</a> , <?php _e('All rights reserved 2016', 'realestate'); ?>  </span> 
                         </div> 
                         <div class="bottom-menu pull-right"> 
                         	<!-- выводим зарегистрированное меню WP -->

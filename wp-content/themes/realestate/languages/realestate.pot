@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-23 22:30+0200\n"
+"POT-Creation-Date: 2023-04-28 21:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Poedit 2.0.6\n"
 "X-Domain: _s\n"
@@ -28,6 +28,30 @@ msgstr ""
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
+#: footer.php:23
+msgid "About us"
+msgstr ""
+
+#: footer.php:37
+msgid "Quick links"
+msgstr ""
+
+#: footer.php:64
+msgid "Last News"
+msgstr ""
+
+#: footer.php:115
+msgid "Stay in touch"
+msgstr ""
+
+#: footer.php:117
+msgid "Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis."
+msgstr ""
+
+#: footer.php:149
+msgid "All rights reserved 2016"
+msgstr ""
+
 #: functions.php:71
 msgid "Header Menu"
 msgstr ""
@@ -36,15 +60,121 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:84
+msgid "Cities"
+msgstr ""
+
+#: functions.php:85 functions.php:94
+msgid "City"
+msgstr ""
+
+#: functions.php:86
+msgid "Search Cities"
+msgstr ""
+
+#: functions.php:87
+msgid "All Cities"
+msgstr ""
+
+#: functions.php:88
+msgid "Parent City"
+msgstr ""
+
+#: functions.php:89
+msgid "Parent City:"
+msgstr ""
+
+#: functions.php:90
+msgid "Edit City"
+msgstr ""
+
+#: functions.php:91
+msgid "Update City"
+msgstr ""
+
+#: functions.php:92
+msgid "Add New City"
+msgstr ""
+
+#: functions.php:93
+msgid "New City Name"
+msgstr ""
+
+#: functions.php:111
+msgid "Features"
+msgstr ""
+
+#: functions.php:112 functions.php:121
+msgid "Feature"
+msgstr ""
+
+#: functions.php:113
+msgid "Search Features"
+msgstr ""
+
+#: functions.php:114
+msgid "All Features"
+msgstr ""
+
+#: functions.php:115
+msgid "Parent Feature"
+msgstr ""
+
+#: functions.php:116
+msgid "Parent Feature:"
+msgstr ""
+
+#: functions.php:117
+msgid "Edit Feature"
+msgstr ""
+
+#: functions.php:118
+msgid "Update Feature"
+msgstr ""
+
+#: functions.php:119
+msgid "Add New Feature"
+msgstr ""
+
+#: functions.php:120
+msgid "New Feature Name"
+msgstr ""
+
+#: functions.php:137
+msgid "Properties"
+msgstr ""
+
+#: functions.php:326
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:328
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/template-tags.php:63
+#: header.php:70
+msgid "Log out"
+msgstr ""
+
+#: header.php:70
+msgid "Login"
+msgstr ""
+
+#: header.php:71
+msgid "Submit"
+msgstr ""
+
+#: inc/template-tags.php:30
+#, php-format
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:46
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:63 inc/template-tags.php:70
 msgid ", "
 msgstr ""
 
@@ -68,6 +198,42 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
+#: login.php:36
+msgid "Sign In to <strong>RealEstate</strong>"
+msgstr ""
+
+#: login.php:44
+msgid "<strong>ERROR:</strong> Invalid username and/or password."
+msgstr ""
+
+#: login.php:46
+msgid "<strong>ERROR:</strong> Username and/or Password is empty."
+msgstr ""
+
+#: login.php:48
+msgid "<strong>INFO:</strong> You are logged out."
+msgstr ""
+
+#: login.php:56
+msgid "user_login"
+msgstr ""
+
+#: login.php:56
+msgid "Username or Email Address"
+msgstr ""
+
+#: login.php:61
+msgid "user_pass"
+msgstr ""
+
+#: login.php:61
+msgid "Password"
+msgstr ""
+
+#: login.php:71
+msgid "wp-submit"
+msgstr ""
+
 #: search.php:21
 #, php-format
 msgid "Search Results for: %s"
@@ -81,12 +247,164 @@ msgstr ""
 msgid "Next:"
 msgstr ""
 
-#: template-homepage.php:30
+#: template-homepage.php:34
 msgid "Select your city"
 msgstr ""
 
-#: template-homepage.php:42
+#: template-homepage.php:36
+msgid "New york, CA"
+msgstr ""
+
+#: template-homepage.php:37
+msgid "Paris"
+msgstr ""
+
+#: template-homepage.php:38
+msgid "Casablanca"
+msgstr ""
+
+#: template-homepage.php:39
+msgid "Tokyo"
+msgstr ""
+
+#: template-homepage.php:40
+msgid "Marraekch"
+msgstr ""
+
+#: template-homepage.php:41
+msgid "kyoto , shibua"
+msgstr ""
+
+#: template-homepage.php:46
 msgid "-Status-"
+msgstr ""
+
+#: template-homepage.php:47
+msgid "Rent"
+msgstr ""
+
+#: template-homepage.php:48
+msgid "Boy"
+msgstr ""
+
+#: template-homepage.php:49
+msgid "used"
+msgstr ""
+
+#: template-homepage.php:60
+msgid "Price range"
+msgstr ""
+
+#: template-homepage.php:70
+msgid "Property geo (m2) "
+msgstr ""
+
+#: template-homepage.php:83
+msgid "Min baths "
+msgstr ""
+
+#: template-homepage.php:93
+msgid "Min bed "
+msgstr ""
+
+#: template-homepage.php:109
+msgid "Fire Place"
+msgstr ""
+
+#: template-homepage.php:118
+msgid "Dual Sinks"
+msgstr ""
+
+#: template-homepage.php:127
+msgid "Hurricane Shutters"
+msgstr ""
+
+#: template-homepage.php:139
+msgid "Swimming Pool"
+msgstr ""
+
+#: template-homepage.php:148
+msgid "Stories"
+msgstr ""
+
+#: template-homepage.php:157
+msgid "Emergency Exit"
+msgstr ""
+
+#: template-homepage.php:169
+msgid "Laundry Room"
+msgstr ""
+
+#: template-homepage.php:178
+msgid "Jog Path"
+msgstr ""
+
+#: template-homepage.php:187
+msgid "Ceilings"
+msgstr ""
+
+#: template-homepage.php:226
+msgid "Area"
+msgstr ""
+
+#: template-homepage.php:325
+msgid "CAN`T DECIDE"
+msgstr ""
+
+#: template-homepage.php:326
+msgid "Show all properties"
+msgstr ""
+
+#: template-homepage.php:327
+msgid "All properties"
+msgstr ""
+
+#: template-homepage.php:347
+msgid "GARO ESTATE"
+msgstr ""
+
+#: template-homepage.php:360
+msgid "Any property"
+msgstr ""
+
+#: template-homepage.php:368
+msgid "More Clients"
+msgstr ""
+
+#: template-homepage.php:382
+msgid "Easy to use"
+msgstr ""
+
+#: template-homepage.php:390
+msgid "Any help"
+msgstr ""
+
+#: template-homepage.php:408
+msgid "Our Customers Said"
+msgstr ""
+
+#: template-homepage.php:466
+msgid "You can trust Us"
+msgstr ""
+
+#: template-homepage.php:479
+msgid "HAPPY CUSTOMER"
+msgstr ""
+
+#: template-homepage.php:490
+msgid "Properties in stock"
+msgstr ""
+
+#: template-homepage.php:501
+msgid "City registered"
+msgstr ""
+
+#: template-homepage.php:512
+msgid "DEALER BRANCHES"
+msgstr ""
+
+#: template-homepage.php:557
+msgid "QUESTIONS? CALL US"
 msgstr ""
 
 #: template-parts/content-none.php:24

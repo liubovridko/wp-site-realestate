@@ -4,20 +4,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RealEstate 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2023-02-23 15:15+0200\n"
-"PO-Revision-Date: 2023-02-23 15:20+0200\n"
-"Last-Translator: \n"
 "Language-Team: Liubov <LL@li.org>\n"
-"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-04-28 21:32+0300\n"
+"PO-Revision-Date: 2023-04-28 22:15+0300\n"
 "X-Generator: Poedit 2.0.6\n"
 "X-Domain: _s\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_x;esc_attr__;esc_attr_e\n"
 "X-Poedit-Basepath: ..\n"
+"Last-Translator: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk_UA\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:48
@@ -30,23 +30,155 @@ msgstr ""
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
+#: footer.php:23
+msgid "About us"
+msgstr "Про нас"
+
+#: footer.php:37
+msgid "Quick links"
+msgstr "Швидкі посилання"
+
+#: footer.php:64
+msgid "Last News"
+msgstr "Останні новини"
+
+#: footer.php:115
+msgid "Stay in touch"
+msgstr "Залишайтеся з нами"
+
+#: footer.php:117
+msgid ""
+"Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. "
+"Vel unde, blanditiis."
+msgstr ""
+
+#: footer.php:149
+msgid "All rights reserved 2016"
+msgstr "Усі права захищені 2016"
+
 #: functions.php:71
 msgid "Header Menu"
-msgstr ""
+msgstr "Верхнє меню"
 
 #: functions.php:72
 msgid "Footer Menu"
-msgstr ""
+msgstr "Нижнє меню"
 
-#: functions.php:210
+#: functions.php:84
+msgid "Cities"
+msgstr "Міста"
+
+#: functions.php:85 functions.php:94
+msgid "City"
+msgstr "Місто"
+
+#: functions.php:86
+msgid "Search Cities"
+msgstr "Пошук Міста"
+
+#: functions.php:87
+msgid "All Cities"
+msgstr "Усі Міста"
+
+#: functions.php:88
+msgid "Parent City"
+msgstr "Батько Місто"
+
+#: functions.php:89
+msgid "Parent City:"
+msgstr "Батько Місто"
+
+#: functions.php:90
+msgid "Edit City"
+msgstr "Редагувати Місто"
+
+#: functions.php:91
+msgid "Update City"
+msgstr "Оновити Місто"
+
+#: functions.php:92
+msgid "Add New City"
+msgstr "Додати Нове Місто"
+
+#: functions.php:93
+msgid "New City Name"
+msgstr "Нове Місто ім'я"
+
+#: functions.php:111
+msgid "Features"
+msgstr "Особливісті"
+
+#: functions.php:112 functions.php:121
+msgid "Feature"
+msgstr "Особливість"
+
+#: functions.php:113
+msgid "Search Features"
+msgstr "Пошук особливостей"
+
+#: functions.php:114
+msgid "All Features"
+msgstr "Усі особливості"
+
+#: functions.php:115
+msgid "Parent Feature"
+msgstr "Батько особливості"
+
+#: functions.php:116
+msgid "Parent Feature:"
+msgstr "Батько особливості:"
+
+#: functions.php:117
+msgid "Edit Feature"
+msgstr "Редагувати особливісті"
+
+#: functions.php:118
+msgid "Update Feature"
+msgstr "Оновити особливісті"
+
+#: functions.php:119
+msgid "Add New Feature"
+msgstr "Додати нову особливісті"
+
+#: functions.php:120
+msgid "New Feature Name"
+msgstr "Нова особливісті ім'я"
+
+#: functions.php:137
+msgid "Properties"
+msgstr "Об'єкти"
+
+#: functions.php:326
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:328
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/template-tags.php:63
+#: header.php:70
+msgid "Log out"
+msgstr "Вийти"
+
+#: header.php:70
+msgid "Login"
+msgstr "Увійти"
+
+#: header.php:71
+msgid "Submit"
+msgstr "Надіслати"
+
+#: inc/template-tags.php:30
+#, php-format
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:46
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:63 inc/template-tags.php:70
 msgid ", "
 msgstr ""
 
@@ -70,26 +202,214 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
+#: login.php:36
+msgid "Sign In to <strong>RealEstate</strong>"
+msgstr ""
+
+#: login.php:44
+msgid "<strong>ERROR:</strong> Invalid username and/or password."
+msgstr ""
+
+#: login.php:46
+msgid "<strong>ERROR:</strong> Username and/or Password is empty."
+msgstr ""
+
+#: login.php:48
+msgid "<strong>INFO:</strong> You are logged out."
+msgstr ""
+
+#: login.php:56
+msgid "user_login"
+msgstr ""
+
+#: login.php:56
+msgid "Username or Email Address"
+msgstr "Ім'я або Емейл"
+
+#: login.php:61
+msgid "user_pass"
+msgstr ""
+
+#: login.php:61
+msgid "Password"
+msgstr "Пароль"
+
+#: login.php:71
+msgid "wp-submit"
+msgstr ""
+
 #: search.php:21
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Результати пошуку для: %s"
 
 #: single.php:23
 msgid "Previous:"
-msgstr ""
+msgstr "Попередній:"
 
 #: single.php:24
 msgid "Next:"
-msgstr ""
+msgstr "Наступний:"
 
-#: template-homepage.php:30
+#: template-homepage.php:34
 msgid "Select your city"
 msgstr "Виберіть місто"
 
-#: template-homepage.php:42
+#: template-homepage.php:36
+msgid "New york, CA"
+msgstr ""
+
+#: template-homepage.php:37
+msgid "Paris"
+msgstr ""
+
+#: template-homepage.php:38
+msgid "Casablanca"
+msgstr ""
+
+#: template-homepage.php:39
+msgid "Tokyo"
+msgstr ""
+
+#: template-homepage.php:40
+msgid "Marraekch"
+msgstr ""
+
+#: template-homepage.php:41
+msgid "kyoto , shibua"
+msgstr ""
+
+#: template-homepage.php:46
 msgid "-Status-"
 msgstr "-Статус-"
+
+#: template-homepage.php:47
+msgid "Rent"
+msgstr "Оренда"
+
+#: template-homepage.php:48
+msgid "Boy"
+msgstr "Хлопчик"
+
+#: template-homepage.php:49
+msgid "used"
+msgstr "використаний"
+
+#: template-homepage.php:60
+msgid "Price range"
+msgstr "Діапазон цін"
+
+#: template-homepage.php:70
+msgid "Property geo (m2) "
+msgstr "Географія нерухомості (м2)"
+
+#: template-homepage.php:83
+msgid "Min baths "
+msgstr "Мін ванни"
+
+#: template-homepage.php:93
+msgid "Min bed "
+msgstr "Мін. ліжко"
+
+#: template-homepage.php:109
+msgid "Fire Place"
+msgstr "Камін"
+
+#: template-homepage.php:118
+msgid "Dual Sinks"
+msgstr "Подвійні раковини"
+
+#: template-homepage.php:127
+msgid "Hurricane Shutters"
+msgstr "Ураганні жалюзі"
+
+#: template-homepage.php:139
+msgid "Swimming Pool"
+msgstr "Басейн"
+
+#: template-homepage.php:148
+msgid "Stories"
+msgstr "Історії"
+
+#: template-homepage.php:157
+msgid "Emergency Exit"
+msgstr "ЗАПАСНИЙ ВИХІД"
+
+#: template-homepage.php:169
+msgid "Laundry Room"
+msgstr "Пральня"
+
+#: template-homepage.php:178
+msgid "Jog Path"
+msgstr "Доріжка для пробіжки"
+
+#: template-homepage.php:187
+msgid "Ceilings"
+msgstr "Стелі"
+
+#: template-homepage.php:226
+msgid "Area"
+msgstr "Площа"
+
+#: template-homepage.php:325
+msgid "CAN`T DECIDE"
+msgstr "НЕ МОЖУ ВИРІШИТИ"
+
+#: template-homepage.php:326
+msgid "Show all properties"
+msgstr "Показати всі об'єкти"
+
+#: template-homepage.php:327
+msgid "All properties"
+msgstr "Всі об'єкти"
+
+#: template-homepage.php:347
+msgid "GARO ESTATE"
+msgstr "МАЄТОК GARO"
+
+#: template-homepage.php:360
+msgid "Any property"
+msgstr "Будь-яке майно"
+
+#: template-homepage.php:368
+msgid "More Clients"
+msgstr "Більше клієнтів"
+
+#: template-homepage.php:382
+msgid "Easy to use"
+msgstr "Простий у використанні"
+
+#: template-homepage.php:390
+msgid "Any help"
+msgstr "Будь-яка допомога"
+
+#: template-homepage.php:408
+msgid "Our Customers Said"
+msgstr "Наші клієнти сказали"
+
+#: template-homepage.php:466
+msgid "You can trust Us"
+msgstr "Ви можете нам довіряти"
+
+#: template-homepage.php:479
+msgid "HAPPY CUSTOMER"
+msgstr "ЩАСЛИВИЙ КЛІЄНТ"
+
+#: template-homepage.php:490
+msgid "Properties in stock"
+msgstr "Нерухомість в наявності"
+
+#: template-homepage.php:501
+msgid "City registered"
+msgstr "Місто зареєстровано"
+
+#: template-homepage.php:512
+msgid "DEALER BRANCHES"
+msgstr "ДИЛЕРСЬКІ ФІЛІЇ"
+
+#: template-homepage.php:557
+msgid "QUESTIONS? CALL US"
+msgstr "Є  ПИТАННЯ? ПОДЗВОНІТЬ НАМ"
 
 #: template-parts/content-none.php:24
 #, php-format
@@ -99,7 +419,7 @@ msgstr ""
 
 #: template-parts/content-page.php:25 template-parts/content.php:53
 msgid "Pages:"
-msgstr ""
+msgstr "Сторінки:"
 
 #: template-parts/content.php:40
 #, php-format

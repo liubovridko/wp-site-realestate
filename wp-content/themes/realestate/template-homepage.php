@@ -33,20 +33,20 @@ get_header();
                                 <div class="form-group">                                   
                                     <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="<?php _e('Select your city', 'realestate'); ?>">
 
-                                        <option>New york, CA</option>
-                                        <option>Paris</option>
-                                        <option>Casablanca</option>
-                                        <option>Tokyo</option>
-                                        <option>Marraekch</option>
-                                        <option>kyoto , shibua</option>
+                                        <option><?php _e('New york, CA', 'realestate'); ?></option>
+                                        <option><?php _e('Paris', 'realestate'); ?></option>
+                                        <option><?php _e('Casablanca', 'realestate'); ?></option>
+                                        <option><?php _e('Tokyo', 'realestate'); ?></option>
+                                        <option><?php _e('Marraekch', 'realestate'); ?></option>
+                                        <option><?php _e('kyoto , shibua', 'realestate'); ?></option>
                                     </select>
                                 </div>
                                 <div class="form-group">                                     
                                     <select id="basic" class="selectpicker show-tick form-control">
                                         <option> <?php _e('-Status-', 'realestate'); ?> </option>
-                                        <option>Rent </option>
-                                        <option>Boy</option>
-                                        <option>used</option>  
+                                        <option> <?php _e('Rent', 'realestate'); ?></option>
+                                        <option><?php _e('Boy', 'realestate'); ?></option>
+                                        <option><?php _e('used', 'realestate'); ?></option>  
 
                                     </select>
                                 </div>
@@ -57,7 +57,7 @@ get_header();
                                     <div class="search-row">   
 
                                         <div class="form-group mar-r-20">
-                                            <label for="price-range">Price range ($):</label>
+                                            <label for="price-range"><?php _e('Price range', 'realestate'); ?> ($):</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[0,450]" id="price-range" ><br />
@@ -67,7 +67,7 @@ get_header();
                                         <!-- End of  -->  
 
                                         <div class="form-group mar-l-20">
-                                            <label for="property-geo">Property geo (m2) :</label>
+                                            <label for="property-geo"><?php _e('Property geo (m2) ', 'realestate'); ?> :</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[50,450]" id="property-geo" ><br />
@@ -80,7 +80,7 @@ get_header();
                                     <div class="search-row">
 
                                         <div class="form-group mar-r-20">
-                                            <label for="price-range">Min baths :</label>
+                                            <label for="price-range"><?php _e('Min baths ', 'realestate'); ?>:</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[250,450]" id="min-baths" ><br />
@@ -90,7 +90,7 @@ get_header();
                                         <!-- End of  --> 
 
                                         <div class="form-group mar-l-20">
-                                            <label for="property-geo">Min bed :</label>
+                                            <label for="property-geo"><?php _e('Min bed ', 'realestate'); ?>:</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[250,450]" id="min-bed" ><br />
@@ -106,7 +106,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Fire Place(3100)
+                                                    <input type="checkbox"> <?php _e('Fire Place', 'realestate'); ?>(3100)
                                                 </label>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Dual Sinks(500)
+                                                    <input type="checkbox"> <?php _e('Dual Sinks', 'realestate'); ?>(500)
                                                 </label>
                                             </div>
                                         </div>
@@ -124,7 +124,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Hurricane Shutters(99)
+                                                    <input type="checkbox"> <?php _e('Hurricane Shutters', 'realestate'); ?>(99)
                                                 </label>
                                             </div>
                                         </div>
@@ -136,7 +136,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Swimming Pool(1190)
+                                                    <input type="checkbox"> <?php _e('Swimming Pool', 'realestate'); ?>(1190)
                                                 </label>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> 2 Stories(4600)
+                                                    <input type="checkbox"> 2 <?php _e('Stories', 'realestate'); ?>(4600)
                                                 </label>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Emergency Exit(200)
+                                                    <input type="checkbox"> <?php _e('Emergency Exit', 'realestate'); ?>(200)
                                                 </label>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Laundry Room(10073)
+                                                    <input type="checkbox"> <?php _e('Laundry Room', 'realestate'); ?>(10073)
                                                 </label>
                                             </div>
                                         </div>
@@ -175,7 +175,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Jog Path(1503)
+                                                    <input type="checkbox"> <?php _e('Jog Path', 'realestate'); ?>(1503)
                                                 </label>
                                             </div>
                                         </div>
@@ -184,7 +184,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> 26' Ceilings(1200)
+                                                    <input type="checkbox"> 26' <?php _e('Ceilings', 'realestate'); ?>(1200)
                                                 </label>
                                             </div>
                                         </div>
@@ -223,7 +223,7 @@ get_header();
                                 <div class="item-entry overflow">
                                     <h5><a href="property-1.html" >Super nice villa </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
+                                    <span class="pull-left"><b><?php _e('Area', 'realestate'); ?> :</b> 120m </span>
                                     <span class="proerty-price pull-right">$ 300,000</span>
                                 </div>
                             </div>
@@ -322,9 +322,9 @@ get_header();
                                     <i class="fa fa-th"></i>
                                 </div>
                                 <div class="more-entry overflow">
-                                    <h5><a href="property-1.html" >CAN'T DECIDE ? </a></h5>
-                                    <h5 class="tree-sub-ttl">Show all properties</h5>
-                                    <button class="btn border-btn more-black" value="All properties">All properties</button>
+                                    <h5><a href="property-1.html" ><?php _e('CAN`T DECIDE', 'realestate'); ?> ? </a></h5>
+                                    <h5 class="tree-sub-ttl"><?php _e('Show all properties', 'realestate'); ?></h5>
+                                    <button class="btn border-btn more-black" value="All properties"><?php _e('All properties', 'realestate'); ?></button>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +344,7 @@ get_header();
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                                         <!-- /.feature title -->
-                                        <h2>GARO ESTATE </h2>
+                                        <h2><?php _e('GARO ESTATE', 'realestate'); ?> </h2>
                                     </div>
                                 </div>
                             </div>
@@ -357,7 +357,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-home pe-4x"></i>
                                             </div>
-                                            <h3>Any property</h3>
+                                            <h3><?php _e('Any property', 'realestate'); ?></h3>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 m-padding">
@@ -365,7 +365,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-users pe-4x"></i>
                                             </div>
-                                            <h3>More Clients</h3>
+                                            <h3><?php _e('More Clients', 'realestate'); ?></h3>
                                         </div>
                                     </div>
 
@@ -379,7 +379,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-notebook pe-4x"></i>
                                             </div>
-                                            <h3>Easy to use</h3>
+                                            <h3><?php _e('Easy to use', 'realestate'); ?></h3>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 m-padding">
@@ -387,7 +387,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-help2 pe-4x"></i>
                                             </div>
-                                            <h3>Any help </h3>
+                                            <h3><?php _e('Any help', 'realestate'); ?> </h3>
                                         </div>
                                     </div>
 
@@ -405,7 +405,7 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2>Our Customers Said  </h2> 
+                        <h2><?php _e('Our Customers Said', 'realestate'); ?>  </h2> 
                     </div>
                 </div>
 
@@ -463,7 +463,7 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2>You can trust Us </h2> 
+                        <h2><?php _e('You can trust Us', 'realestate'); ?> </h2> 
                     </div>
                 </div>
                 <div class="row">
@@ -476,7 +476,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="5000">
                                         <h2 class="percent" id="counter">0</h2>
-                                        <h5>HAPPY CUSTOMER </h5>
+                                        <h5><?php _e('HAPPY CUSTOMER', 'realestate'); ?> </h5>
                                     </div>
                                 </div>
                             </div>
@@ -487,7 +487,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="12000">
                                         <h2 class="percent" id="counter1">0</h2>
-                                        <h5>Properties in stock</h5>
+                                        <h5><?php _e('Properties in stock', 'realestate'); ?></h5>
                                     </div>
                                 </div> 
                             </div> 
@@ -498,7 +498,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="120">
                                         <h2 class="percent" id="counter2">0</h2>
-                                        <h5>City registered </h5>
+                                        <h5><?php _e('City registered', 'realestate'); ?> </h5>
                                     </div>
                                 </div> 
                             </div> 
@@ -509,7 +509,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="5000">
                                         <h2 class="percent"  id="counter3">5000</h2>
-                                        <h5>DEALER BRANCHES</h5>
+                                        <h5><?php _e('DEALER BRANCHES', 'realestate'); ?></h5>
                                     </div>
                                 </div> 
 
@@ -554,7 +554,7 @@ get_header();
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <p  class="asks-call">QUESTIONS? CALL US  : <span class="strong"> + 3-123- 424-5700</span></p>
+                        <p  class="asks-call"><?php _e('QUESTIONS? CALL US', 'realestate'); ?>  : <span class="strong"> + 3-123- 424-5700</span></p>
                     </div>
                 </div>
             </div>
