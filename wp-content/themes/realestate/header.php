@@ -67,7 +67,19 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('login')" data-wow-delay="0.45s"><?php echo is_user_logged_in()?  __('Log out') : __('Login') ?></button>
+                        <?php 
+                        if ( is_user_logged_in() ){
+                            ?>
+                        
+                        <form action="<?php echo wp_logout_url( home_url() ); ?>" method="post" style="display: contents;">
+                            <input type="hidden" name="redirect_to" value="<?php echo home_url(); ?>">
+                            <button type="submit" class="navbar-btn nav-button wow bounceInRight login"  data-wow-delay="0.45s"><?php  _e('Log out'); ?></button>
+                       </form>
+                        <?php } else {
+                            ?>
+                            <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('login')" data-wow-delay="0.45s"><?php  _e('Login'); ?></button>
+                       <?php } ?>
+                        
                         <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s"><?php _e('Submit', 'realestate'); ?></button>
                     </div>
 

@@ -195,7 +195,7 @@
                                         <ul>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-2.webp"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -208,7 +208,7 @@
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-1.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-1.webp"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -221,7 +221,7 @@
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-3.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-3.webp"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -235,7 +235,7 @@
 
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-2.webp"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -364,6 +364,7 @@
             </div>
         </div>
 		
-
+  </div>
+        
 <?php
    get_footer();

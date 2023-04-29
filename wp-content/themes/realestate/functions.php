@@ -182,15 +182,19 @@ function verify_username_password( $user, $username, $password ) {
 add_filter( 'authenticate', 'verify_username_password', 1, 3);
 	
 function logout_page() {
+	ob_start();
   $login_page  = home_url( '/login/' );
   wp_redirect( $login_page . "?login=false" );
   exit;
 }
 add_action('wp_logout','logout_page');
 
-
-
-
+function hide_admin_bar() {
+    if (is_user_logged_in() && !current_user_can('administrator')) {
+        add_filter('show_admin_bar', '__return_false');
+    }
+}
+add_action('wp', 'hide_admin_bar');
 
 
 

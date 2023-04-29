@@ -3,15 +3,50 @@
 * Template Name:  Login 
 
 */
+ // Код для обработки данных формы
+if ( isset( $_POST['submit'] ) ) {
+        $username = sanitize_user( $_POST['username'] );
+        $email = sanitize_email( $_POST['email'] );
+        $password = esc_attr( $_POST['password'] );
 
+        $new_user = array(
+            'user_login' => $username,
+            'user_email' => $email,
+            'user_pass' => $password,
+            'role' => 'subscriber',
+            'show_admin_bar_front' => false // display the Admin Bar for the user 'true' or 'false'
+        );
+        
+        $user_id = wp_insert_user( $new_user );
+        //$user_id = wp_create_user( $username, $password, $email );
+        
+        if ( is_wp_error( $user_id ) ) {
+            $error_message = $user_id->get_error_message();
+            wp_die( $error_message );
+        } else {
+        	$user = get_user_by( 'login', $username );
+            wp_set_password( $password, $user->ID );
+            $creds = array(
+                'user_login'    => $username,
+                'user_password' => $password,
+                'remember'      => true
+            );
+            $user = wp_signon( $creds, false );
+            wp_redirect( home_url() );
+            exit;
+        }
+    }
 
 $login  = (isset($_GET['login']) ) ? $_GET['login'] : 0;
 
 get_header();
 
-if ( ! is_user_logged_in() ) {
+if ( is_user_logged_in() ) {
 
 
+   wp_logout();
+    // Display a message for logged-in users
+   
 
    /* $args = array
         'redirect' => admin_url(), // redirect to admin dashboard.
@@ -23,23 +58,44 @@ if ( ! is_user_logged_in() ) {
          'remember' => true
     );
 wp_login_form( $args );*/
+} else {
+
 
 ?>
-<div class="container">
-	<div class="row justify-content-center">
+ <div class="page-head"> 
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title"><?= __('Home New account / Sign in ', 'realestate'); ?></h1>               
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+ 
 
-		<div class="col-md-6 contents">
-			<div class="row justify-content-center">
-				<div class="col-md-12">
-					<div class="form-block">
-						<div class="mb-4">
-						<h3><?= __('Sign In to <strong>RealEstate</strong>'); ?></h3>
+        <!-- register-area -->
+        <div class="register-area" style="background-color: rgb(249, 249, 249);">
+            <div class="container">
 
-						</div>
+                <div class="col-md-6">
+                    <div class="box-for overflow">
+                        <div class="col-md-12 col-xs-12 register-blocks">
+                            <h2><?php _e('New account', 'realestate'); ?> : </h2> 
 
-                          <form action="<?php echo esc_url( home_url( '/wp-login.php' ) ); ?>" method="post">
+			           
 
-                      <?php
+                      <?php echo do_shortcode( '[realestate_registration_form]' ); ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box-for overflow">                         
+                        <div class="col-md-12 col-xs-12 login-blocks">
+                            <h2>Login : </h2> 
+                            <form action="<?php echo esc_url( home_url( '/wp-login.php' ) ); ?>" method="post">
+                            	<?php
 							if ( $login === "failed" ) {
 							  echo '<div class="alert alert-danger" role="alert">' . __("<strong>ERROR:</strong> Invalid username and/or password.") . '</div>';
 							} elseif ( $login === "empty" ) {
@@ -48,52 +104,42 @@ wp_login_form( $args );*/
 							  echo '<div class="alert alert-success" role="alert">' . __("<strong>INFO:</strong> You are logged out.") . '</div>';
 							}
 							?>
-        
-        
-                               <div class="form-group first">
-									
-									<label for="user_login"><?php esc_html_e( 'Username', 'realestate' ); ?></label>
-                                     <input class="form-control" type="text" name="log" id="<?= __('user_login') ; ?>" placeholder="<?= __('Username or Email Address') ?>">
-								</div>
-								<div class="form-group last mb-4">
-									
-									<label for="user_pass"><?php esc_html_e( 'Password', 'realestate' ); ?></label>
-                                    <input class="form-control" type="password" name="pwd" id="<?= __('user_pass'); ?>" placeholder="<?= __('Password'); ?>">
-								</div>
-								<div class="d-flex mb-5 align-items-center">
-									<label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-									<input type="checkbox" checked="checked">
-									<div class="control__indicator"></div>
-									</label>
-								    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
-								</div>
-								 
-								  <input type="submit" id="<?= esc_attr__('wp-submit'); ?>" name="wp-submit" value="<?php esc_attr_e( 'Log In' ); ?>" class="btn btn-pill text-white btn-block btn-primary">
+                                <div class="form-group">
+                                    <label for="user_login"><?php esc_html_e( 'Email', 'realestate' ); ?></label>
+                                    <input type="text" class="form-control" name="log" id="<?= __('user_login') ; ?>" placeholder="<?= __('Username or Email Address') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_pass"><?php esc_html_e( 'Password', 'realestate' ); ?></label>
+                                    <input type="password" class="form-control" name="pwd" id="<?= __('user_pass'); ?>" placeholder="<?= __('Password'); ?>">
+                                </div>
+                                <div class="text-center">
+                                	 <input type="submit" id="<?= esc_attr__('wp-submit'); ?>" name="wp-submit" value="<?php esc_attr_e( 'Log In' ); ?>" class="btn btn-default">
                                    <input type="hidden" name="redirect_to" value="<?php echo esc_url( home_url() ); ?>">
-								 <span class="d-block text-center my-4 text-muted"> or sign in with</span>
-								<div class="social text-center">
-									<ul>
-                                        
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
-                                        
-                                    </ul> 
-								</div>
-							</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+                                    
+                                </div>
+                            </form>
+                            <br>
+                            
+                            <h2>Social login :  </h2> 
+                            
+                            <p>
+                            <a class="login-social" href="#"><i class="fa fa-facebook"></i>&nbsp;Facebook</a> 
+                            <a class="login-social" href="#"><i class="fa fa-google-plus"></i>&nbsp;Gmail</a> 
+                            <a class="login-social" href="#"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>  
+                            </p> 
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>      
+
+
 
 <?php
-} else {
 
-	wp_logout();
-    // Display a message for logged-in users
-   
+	
 
    }
 
