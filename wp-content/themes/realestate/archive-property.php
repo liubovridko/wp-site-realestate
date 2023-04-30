@@ -312,7 +312,7 @@
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="p<?php echo esc_url(get_post_permalink()) ?>"> <?php the_title(); ?> </a></h5>
+                                            <h5><a href="<?php echo esc_url(get_post_permalink()) ?>"> <?php the_title(); ?> </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
