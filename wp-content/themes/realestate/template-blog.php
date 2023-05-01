@@ -1,17 +1,10 @@
 <?php
 /**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package RealEstate
+ Template Name: Template Blog 
  */
 
 get_header();
-?>
-   
-
-		
+?>	
 
 			<div class="page-head"> 
             <div class="container">
@@ -31,8 +24,17 @@ get_header();
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			global $post;
+                 $args = array( 'post_type' => 'post','post_status' => 'publish','numberposts' => 5 /*, 'offset' => 6*/);
+                 $myposts = get_posts( $args );
+                 foreach( $myposts as $post ){ setup_postdata($post);
+
+                $price=get_post_meta(get_the_ID(),'price', true);
+                $weight=get_post_meta(get_the_ID(),'weight', true);
+                $dimensions=get_post_meta(get_the_ID(),'dimensions', true);
+                $voltage=get_post_meta(get_the_ID(),'voltage', true);
+                $category_id = get_the_category()[0]->cat_ID;
+                $format = 'F j , Y ';
 
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -42,7 +44,7 @@ get_header();
 				//get_template_part( 'template-parts/content', get_post_type() );
             ?>
 
-                      <section class="post">
+              <section class="post">
                             <div class="text-center padding-b-50">
                                 <h2 class="wow fadeInLeft animated"><?php the_title(); ?></h2>
                                 <div class="title-line wow fadeInRight animated"></div>
@@ -52,18 +54,18 @@ get_header();
                                 <div class="col-sm-6">
                                     <p class="author-category">
                                         By <a href="#">John Snow</a>
-                                        in <a href="<?php echo esc_url( home_url('/blog') ); ?>"><?php echo get_the_category( get_the_ID(); )[0]->name ; ?></a>
+                                        in <a href="<?php echo esc_url( get_category_link( $category_id ) ); ?>"><?php echo get_the_category( )[0]->name ; ?></a>
                                     </p>
                                 </div>
                                 <div class="col-sm-6 right" >
                                     <p class="date-comments">
-                                        <a href="<?php echo esc_url(get_post_permalink()) ?>"><i class="fa fa-calendar-o"></i> June 20, 2013</a>
+                                        <a href="<?php echo esc_url(get_post_permalink()) ?>"><i class="fa fa-calendar-o" title="<?php the_title_attribute(); ?>"></i> <?php echo get_the_date( $format ); ?></a>
                                         <a href="<?php echo esc_url(get_post_permalink()) ?>"><i class="fa fa-comment-o"></i> 8 Comments</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="image wow fadeInLeft animated">
-                                <a href="<?php echo esc_url(get_post_permalink()) ?>">
+                                <a href="<?php echo esc_url(get_post_permalink()) ?>" title="<?php the_title_attribute(); ?>">
                                     <img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>" class="img-responsive" alt="Example blog post alt">
                                 </a>
                             </div>
@@ -71,24 +73,21 @@ get_header();
                             <p class="read-more">
                                 <a href="<?php echo esc_url(get_post_permalink()) ?>" class="btn btn-default btn-border">Continue reading</a>
                             </p>
-                        </section>   
-
-            <?php
-			endwhile;
+                        </section>           
+                <?php
+              }
+                wp_reset_postdata();
+              ?>
+                    <?php
+			
 
 			//the_posts_navigation();
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
-			?>
-
-		
-
-		 
-                        
-
-                       
+			?>        
+               
 
                     </div> 
 
@@ -101,7 +100,7 @@ get_header();
             </div>
         </div>
 
-
+</div>
 	
 <?php
 
