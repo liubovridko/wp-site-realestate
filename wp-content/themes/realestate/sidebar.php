@@ -13,9 +13,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <div class="blog-asside-right col-md-3">
-    <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
+    
 <?php dynamic_sidebar( 'sidebar-1' ); ?>
-    </div>
+
 </div> <!-- #secondary
 
 <!-<div class="blog-asside-right col-md-3">
