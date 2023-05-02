@@ -44,6 +44,40 @@
 }
 
 function realestate_user_registration($user_id) {
+
+    // Код для обработки данных формы
+if ( isset( $_POST['submit'] ) ) {
+        $username = sanitize_user( $_POST['username'] );
+        $email = sanitize_email( $_POST['email'] );
+        $password = esc_attr( $_POST['password'] );
+
+        $new_user = array(
+            'user_login' => $username,
+            'user_email' => $email,
+            'user_pass' => $password,
+            'role' => 'subscriber',
+            'show_admin_bar_front' => false // display the Admin Bar for the user 'true' or 'false'
+        );
+        
+        $user_id = wp_insert_user( $new_user );
+        //$user_id = wp_create_user( $username, $password, $email );
+        
+        if ( is_wp_error( $user_id ) ) {
+            $error_message = $user_id->get_error_message();
+            wp_die( $error_message );
+        } else {
+            $user = get_user_by( 'login', $username );
+            wp_set_password( $password, $user->ID );
+            $creds = array(
+                'user_login'    => $username,
+                'user_password' => $password,
+                'remember'      => true
+            );
+            $user = wp_signon( $creds, false );
+            wp_redirect( home_url() );
+            exit;
+        }
+    }
     
 }
 
