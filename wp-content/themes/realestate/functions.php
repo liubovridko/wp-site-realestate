@@ -204,10 +204,12 @@ function custom_widgets_init() {
     require get_template_directory() . '/widgets/text-widget.php';
     require get_template_directory() . '/widgets/search-widget.php';
     require get_template_directory() . '/widgets/recommended-post-widget.php';
+     require get_template_directory() . '/widgets/tags.php';
     //unregister_widget( 'WP_Widget_Text' );
     register_widget( 'RealEstate_Text_Widget' );
     register_widget( 'RealEstate_Search_Widget' );
     register_widget( 'Realestate_Recommended_Posts' );
+     register_widget( 'Realestate_Tags_Cloud' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
 
@@ -229,7 +231,6 @@ function realestate_search_form( $form ) {
       return $form;
     }
     add_filter( 'get_search_form', 'realestate_search_form', 40 );
-
 
 
 
