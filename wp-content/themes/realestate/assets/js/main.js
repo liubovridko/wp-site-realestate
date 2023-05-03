@@ -31,6 +31,8 @@ $(document).ready(function () {
 
     });
 
+
+
 });
 $(document).ready(function () {
     $("#bg-slider").owlCarousel({

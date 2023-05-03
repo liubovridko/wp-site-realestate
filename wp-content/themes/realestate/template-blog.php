@@ -53,7 +53,7 @@ get_header();
                             <div class="row">
                                 <div class="col-sm-6">
                                     <p class="author-category">
-                                        By <a href="#">John Snow</a>
+                                        <?php realestate_posted_by(); ?>
                                         in <a href="<?php echo esc_url( get_category_link( $category_id ) ); ?>"><?php echo get_the_category( )[0]->name ; ?></a>
                                     </p>
                                 </div>
@@ -98,6 +98,7 @@ get_header();
 					?>
 
             </div>
+
             <?php get_sidebar(); ?>
         </div>
 

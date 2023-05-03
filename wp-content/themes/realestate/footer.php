@@ -18,31 +18,18 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
-                            <div class="single-footer">
-                                <h4><?php _e('About us', 'realestate'); ?> </h4>
-                                <div class="footer-title-line"></div>
-
-                                <img src="<?php echo  get_template_directory_uri()?>/assets/img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
-                                <p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>
-                                <ul class="footer-adress">
-                                    <li><i class="pe-7s-map-marker strong"> </i> 9089 your adress her</li>
-                                    <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
-                                    <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <!-- 
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
                                 <h4><?php _e('Quick links', 'realestate'); ?> </h4>
-                                <div class="footer-title-line"></div>
+                                <div class="footer-title-line"></div> -->
                                 <?php 
 
-                                wp_nav_menu([
+                               /* wp_nav_menu([
                                 'theme_location' => 'footer_nav',
                                 'container'=> false,
                                 'menu_class'		=> 'footer-menu',
-                                                        ]);
+                                                        ]);*/
 
                                 ?>
 
@@ -57,7 +44,7 @@
                                     <li><a href="faq.html">Terms </a>  </li> 
                                 </ul>
                                 */?>
-                            </div>
+                         <!--    </div>
                         </div>
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
@@ -122,9 +109,9 @@
                                         <span class="input-group-btn">
                                             <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
                                         </span>
-                                    </div>
+                                    </div> -->
                                     <!-- /input-group -->
-                                </form> 
+                               <!--  </form> 
 
                                 <div class="social pull-right"> 
                                     <ul>
@@ -137,10 +124,12 @@
                                 </div>
                             </div>
                         </div>
-
+ -->
+ <?php dynamic_sidebar( 'sidebar-footer' ); ?>
                     </div>
                 </div>
             </div>
+
 
             <div class="footer-copy text-center">
                 <div class="container">
