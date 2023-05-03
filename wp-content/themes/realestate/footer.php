@@ -19,33 +19,7 @@
                     <div class="row">
 
                         <!-- 
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
-                            <div class="single-footer">
-                                <h4><?php _e('Quick links', 'realestate'); ?> </h4>
-                                <div class="footer-title-line"></div> -->
-                                <?php 
-
-                               /* wp_nav_menu([
-                                'theme_location' => 'footer_nav',
-                                'container'=> false,
-                                'menu_class'		=> 'footer-menu',
-                                                        ]);*/
-
-                                ?>
-
-
-                                <?php /*
-                                <ul class="footer-menu">
-                                    <li><a href="properties.html">Properties</a>  </li> 
-                                    <li><a href="#">Services</a>  </li> 
-                                    <li><a href="submit-property.html">Submit property </a></li> 
-                                    <li><a href="contact.html">Contact us</a></li> 
-                                    <li><a href="faq.html">fqa</a>  </li> 
-                                    <li><a href="faq.html">Terms </a>  </li> 
-                                </ul>
-                                */?>
-                         <!--    </div>
-                        </div>
+                      
                         <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
                                 <h4><?php _e('Last News', 'realestate'); ?></h4>
@@ -128,6 +102,7 @@
  <?php dynamic_sidebar( 'sidebar-footer' ); ?>
                     </div>
                 </div>
+            </div>
             </div>
 
 

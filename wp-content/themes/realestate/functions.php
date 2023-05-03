@@ -206,12 +206,16 @@ function custom_widgets_init() {
     require get_template_directory() . '/widgets/recommended-post-widget.php';
     require get_template_directory() . '/widgets/tags.php';
     require get_template_directory() . '/widgets/about-us-widget.php';
+    require get_template_directory() . '/widgets/quick-links-widget.php';
+    require get_template_directory() . '/widgets/last-news-widget.php';
     //unregister_widget( 'WP_Widget_Text' );
     register_widget( 'RealEstate_Text_Widget' );
     register_widget( 'RealEstate_Search_Widget' );
     register_widget( 'Realestate_Recommended_Posts' );
     register_widget( 'Realestate_Tags_Cloud' );
     register_widget( 'About_Us_Text_Widget' );
+    register_widget( 'WP_Quick_Links_Widget' );
+    register_widget( 'Widget_Last_Posts' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
 
@@ -234,10 +238,20 @@ function realestate_search_form( $form ) {
     }
     add_filter( 'get_search_form', 'realestate_search_form', 40 );
 
+//trim lenght exerpt
+    function true_excerpt_length( $length ){
+	return 4;
+}
+ 
+add_filter( 'excerpt_length', 'true_excerpt_length', 10, 1);
 
 
+function true_excerpt_more(  ){
 
-
+	return  '....';
+}
+ 
+add_filter( 'excerpt_more', 'true_excerpt_more', 10);
 
 
 
