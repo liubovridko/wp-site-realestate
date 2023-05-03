@@ -127,7 +127,7 @@ class Widget_Last_Posts extends WP_Widget {
 				</li>
 			<?php endforeach; ?>
 		</ul>
-
+       </div>
 		<?php
 		if ( 'html5' === $format ) {
 			echo '</nav>';
