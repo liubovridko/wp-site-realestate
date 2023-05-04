@@ -3403,3 +3403,555 @@ og)
 [2023-05-04 08:13:19] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
 [2023-05-04 08:13:19] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$zip_progress is deprecated
 [2023-05-04 08:13:19] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|637
+[2023-05-04 12:40:49] [ERROR] Shuted down
+[2023-05-04 12:40:49] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:40:49] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:49] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:40:49] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:40:49] [ERROR] Shuted down
+[2023-05-04 12:40:49] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:49] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:49] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:49] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:49] [ERROR] Shuted down
+[2023-05-04 12:40:49] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:49] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:49] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:49] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:49] [ERROR] Shuted down
+[2023-05-04 12:40:49] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:49] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:49] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:49] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:51] [ERROR] Shuted down
+[2023-05-04 12:40:51] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:51] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:51] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:51] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:51] [ERROR] Shuted down
+[2023-05-04 12:40:51] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:51] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:51] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:51] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:53] [ERROR] Shuted down
+[2023-05-04 12:40:53] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:53] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:53] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:53] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:55] [ERROR] Shuted down
+[2023-05-04 12:40:55] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:55] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:55] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:55] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:40:57] [ERROR] Shuted down
+[2023-05-04 12:40:57] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:40:57] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:40:57] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:40:57] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:41:01] [ERROR] Shuted down
+[2023-05-04 12:41:01] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:41:01] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:01] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:41:01] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:41:01] [ERROR] Shuted down
+[2023-05-04 12:41:01] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:01] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:01] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:01] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:41:02] [ERROR] Shuted down
+[2023-05-04 12:41:02] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 12:41:02] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:02] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 12:41:02] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 12:41:13] [ERROR] Shuted down
+[2023-05-04 12:41:13] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:13] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:13] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:13] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:41:25] [ERROR] Shuted down
+[2023-05-04 12:41:25] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:25] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:25] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:25] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:41:36] [ERROR] Shuted down
+[2023-05-04 12:41:36] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:36] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:36] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:36] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:41:48] [ERROR] Shuted down
+[2023-05-04 12:41:48] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:48] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:48] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:48] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:41:59] [ERROR] Shuted down
+[2023-05-04 12:41:59] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:41:59] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:41:59] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:41:59] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:42:11] [ERROR] Shuted down
+[2023-05-04 12:42:11] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:42:11] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:42:11] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:42:11] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:42:23] [ERROR] Shuted down
+[2023-05-04 12:42:23] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:42:23] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:42:23] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:42:23] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:42:35] [ERROR] Shuted down
+[2023-05-04 12:42:35] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:42:35] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:42:35] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:42:35] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:42:47] [ERROR] Shuted down
+[2023-05-04 12:42:47] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Return type of Requests_Utility_CaseInsensitiveDictionary::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice
+    [file] => C:\xampp\htdocs\real-estate\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php
+    [line] => 91
+)
+
+[2023-05-04 12:42:47] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:42:47] [ERROR] Error message: Return type of Requests_Utility_CaseInsensitiveDictionary::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice
+[2023-05-04 12:42:47] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php|91
+[2023-05-04 12:42:59] [ERROR] Shuted down
+[2023-05-04 12:42:59] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:42:59] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:42:59] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:42:59] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:43:10] [ERROR] Shuted down
+[2023-05-04 12:43:10] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:43:10] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:43:10] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:43:10] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:43:22] [ERROR] Shuted down
+[2023-05-04 12:43:22] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:43:22] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:43:22] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:43:22] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:43:34] [ERROR] Shuted down
+[2023-05-04 12:43:34] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:43:34] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:43:34] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:43:34] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:43:45] [ERROR] Shuted down
+[2023-05-04 12:43:45] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:43:45] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:43:45] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:43:45] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:43:57] [ERROR] Shuted down
+[2023-05-04 12:43:57] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:43:57] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:43:57] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:43:57] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:44:08] [ERROR] Shuted down
+[2023-05-04 12:44:08] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:44:08] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:44:08] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:44:08] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:44:21] [ERROR] Shuted down
+[2023-05-04 12:44:21] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:44:21] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:44:21] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:44:21] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 12:44:32] [ERROR] Shuted down
+[2023-05-04 12:44:32] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 12:44:32] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 12:44:32] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 12:44:32] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:22:26] [ERROR] Shuted down
+[2023-05-04 15:22:26] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:22:26] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:26] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:22:26] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:22:26] [ERROR] Shuted down
+[2023-05-04 15:22:26] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:26] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:26] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:26] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:27] [ERROR] Shuted down
+[2023-05-04 15:22:27] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:27] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:27] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:27] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:27] [ERROR] Shuted down
+[2023-05-04 15:22:27] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:27] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:27] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:27] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:28] [ERROR] Shuted down
+[2023-05-04 15:22:28] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:28] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:28] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:28] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:29] [ERROR] Shuted down
+[2023-05-04 15:22:29] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:29] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:29] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:29] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:30] [ERROR] Shuted down
+[2023-05-04 15:22:30] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:30] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:30] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:30] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:32] [ERROR] Shuted down
+[2023-05-04 15:22:32] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:32] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:32] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:32] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:33] [ERROR] Shuted down
+[2023-05-04 15:22:33] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:33] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:33] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:33] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:35] [ERROR] Shuted down
+[2023-05-04 15:22:35] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:35] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:35] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:35] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:36] [ERROR] Shuted down
+[2023-05-04 15:22:36] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 37
+)
+
+[2023-05-04 15:22:36] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:36] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$post is deprecated
+[2023-05-04 15:22:36] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|37
+[2023-05-04 15:22:37] [ERROR] Shuted down
+[2023-05-04 15:22:37] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:22:37] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:37] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:22:37] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:22:48] [ERROR] Shuted down
+[2023-05-04 15:22:48] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:22:48] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:48] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:22:48] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:22:59] [ERROR] Shuted down
+[2023-05-04 15:22:59] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:22:59] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:22:59] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:22:59] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:23:10] [ERROR] Shuted down
+[2023-05-04 15:23:10] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:23:10] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:23:10] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:23:10] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229
+[2023-05-04 15:23:22] [ERROR] Shuted down
+[2023-05-04 15:23:22] [ERROR] Array
+(
+    [type] => 8192
+    [message] => Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+    [file] => C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php
+    [line] => 1229
+)
+
+[2023-05-04 15:23:22] [ERROR] There was an error before request shutdown (but it was not logged to backup/restore log)
+[2023-05-04 15:23:22] [ERROR] Error message: Creation of dynamic property BMI\Plugin\BMI_Ajax::$lock_cli is deprecated
+[2023-05-04 15:23:22] [ERROR] Error file/line: C:\xampp\htdocs\real-estate\wp-content\plugins\backup-backup\includes\ajax.php|1229

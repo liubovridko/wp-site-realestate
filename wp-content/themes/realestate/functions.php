@@ -221,6 +221,22 @@ function custom_widgets_init() {
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
 
+
+//change class for $args[before_widget]
+function change_widget_class( $params ) {
+    global $wp_registered_widgets;
+    $widget_id = $params[0]['widget_id'];
+    $widget_obj = $wp_registered_widgets[$widget_id];
+    $widget_opt = get_option($widget_obj['callback'][0]->option_name);
+    
+    // Здесь изменяем класс для виджета с заданным ID
+    if ($widget_id == 'my_widget_id') {
+        $params[0]['before_widget'] = str_replace('class="', 'class="my-new-class ', $params[0]['before_widget']);
+    }
+    return $params;
+}
+add_filter('dynamic_sidebar_params', 'change_widget_class');
+
 /*Custom form search*/
 
 function realestate_search_form( $form ) {
