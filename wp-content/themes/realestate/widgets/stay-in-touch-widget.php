@@ -35,7 +35,7 @@ class Realestate_Stay_In_Touch extends WP_Widget {
         echo $args['before_widget'];
        
         ?>
-        <div class="single-footer">
+        <div class="single-footer news-letter">
             <?php  if ( ! empty(  $title ) ) {
             echo $args['before_title'] . apply_filters( 'widget_title',  $title ) . $args['after_title'];
         } ?> 
@@ -43,16 +43,9 @@ class Realestate_Stay_In_Touch extends WP_Widget {
             
             
             <p><?php echo  $paragraph; ?></p>
-                              <form>
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" placeholder="E-mail ... ">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
-                                        </span>
-                                    </div> 
-                                    
-                               </form> 
-
+                             
+               <?php echo do_shortcode( $shortcode1 ); ?>
+                   <?php echo do_shortcode( $shortcode2 ); ?>
                           <div class="social pull-right"> 
                                     <ul>
                                         <li><a class="wow fadeInUp animated" href="https://twitter.com/kimarotec"><i class="fa fa-twitter"></i></a></li>
