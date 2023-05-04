@@ -206,14 +206,36 @@ function custom_widgets_init() {
     require get_template_directory() . '/widgets/recommended-post-widget.php';
     require get_template_directory() . '/widgets/tags.php';
     require get_template_directory() . '/widgets/about-us-widget.php';
+    require get_template_directory() . '/widgets/quick-links-widget.php';
+    require get_template_directory() . '/widgets/last-news-widget.php';
+    require get_template_directory() . '/widgets/stay-in-touch-widget.php';
     //unregister_widget( 'WP_Widget_Text' );
     register_widget( 'RealEstate_Text_Widget' );
     register_widget( 'RealEstate_Search_Widget' );
     register_widget( 'Realestate_Recommended_Posts' );
     register_widget( 'Realestate_Tags_Cloud' );
     register_widget( 'About_Us_Text_Widget' );
+    register_widget( 'WP_Quick_Links_Widget' );
+    register_widget( 'Widget_Last_Posts' );
+    register_widget( 'Realestate_Stay_In_Touch' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
+
+
+//change class for $args[before_widget]
+function change_widget_class( $params ) {
+    global $wp_registered_widgets;
+    $widget_id = $params[0]['widget_id'];
+    $widget_obj = $wp_registered_widgets[$widget_id];
+    $widget_opt = get_option($widget_obj['callback'][0]->option_name);
+    
+    // Здесь изменяем класс для виджета с заданным ID
+    if ($widget_id == 'my_widget_id') {
+        $params[0]['before_widget'] = str_replace('class="', 'class="my-new-class ', $params[0]['before_widget']);
+    }
+    return $params;
+}
+add_filter('dynamic_sidebar_params', 'change_widget_class');
 
 /*Custom form search*/
 
@@ -234,10 +256,20 @@ function realestate_search_form( $form ) {
     }
     add_filter( 'get_search_form', 'realestate_search_form', 40 );
 
+//trim lenght exerpt
+    function true_excerpt_length( $length ){
+	return 4;
+}
+ 
+add_filter( 'excerpt_length', 'true_excerpt_length', 10, 1);
 
 
+function true_excerpt_more(  ){
 
-
+	return  '....';
+}
+ 
+add_filter( 'excerpt_more', 'true_excerpt_more', 10);
 
 
 
