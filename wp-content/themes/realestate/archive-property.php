@@ -20,7 +20,7 @@
                      
                 <div class="col-md-3 p0 padding-top-40">
                     <div class="blog-asside-right pr0">
-                        <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
+                        <!-- <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
                             <div class="panel-heading">
                                 <h3 class="panel-title">Smart search</h3>
                             </div>
@@ -249,9 +249,12 @@
 
                                     </ul>
                             </div>
-                        </div>
+                        </div> -->
+                        <?php dynamic_sidebar( 'sidebar-left' ); ?>
                     </div>
+                    
                 </div>
+                 
                  <!-- вывод всех постов -->
                 <?php if ( have_posts() ) : ?>
 
@@ -302,6 +305,11 @@
 								/* Start the Loop */
 								while ( have_posts() ) : //if post>=lenght {} если есть посты
 									the_post();
+                                    $price= get_post_meta(get_the_ID(), 'price', true);
+                                    $area= get_post_meta(get_the_ID(), 'area', true);
+                                    $rooms= get_post_meta(get_the_ID(), 'rooms', true);
+                                    $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
+                                    $cars= get_post_meta(get_the_ID(), 'cars', true);
 								?>
 
                             <div class="col-sm-6 col-md-4 p0">
@@ -314,13 +322,13 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="<?php echo esc_url(get_post_permalink()) ?>"> <?php the_title(); ?> </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
-                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <span class="pull-left"><b> Area :</b> <?php echo $area; ?>m </span>
+                                            <span class="proerty-price pull-right"> $ <?php echo $price; ?></span>
                                             <p style="display: none;"><?php the_content(); ?></p>
                                             <div class="property-icon">
-                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/bed.png">(5)|
-                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/shawer.png">(2)|
-                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/cars.png">(1)  
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/bed.png">(<?php echo $rooms; ?>)
+                                                 <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/shawer.png">(<?php echo $bathrooms; ?>)
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/cars.png">(<?php echo $cars; ?>)  
                                             </div>
                                         </div>
 

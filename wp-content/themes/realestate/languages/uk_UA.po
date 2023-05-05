@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-04-28 21:32+0300\n"
-"PO-Revision-Date: 2023-04-28 22:15+0300\n"
+"PO-Revision-Date: 2023-05-05 21:32+0300\n"
 "X-Generator: Poedit 2.0.6\n"
 "X-Domain: _s\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_x;esc_attr__;esc_attr_e\n"
@@ -171,7 +171,7 @@ msgstr "Надіслати"
 #: inc/template-tags.php:30
 #, php-format
 msgid "Posted on %s"
-msgstr ""
+msgstr "Опубліковано: %s"
 
 #: inc/template-tags.php:46
 #, php-format
@@ -185,7 +185,7 @@ msgstr ""
 #: inc/template-tags.php:66
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Опубліковано в %1$s"
 
 #: inc/template-tags.php:73
 #, php-format
@@ -333,7 +333,7 @@ msgstr "Історії"
 
 #: template-homepage.php:157
 msgid "Emergency Exit"
-msgstr "ЗАПАСНИЙ ВИХІД"
+msgstr "Аварійний вихід"
 
 #: template-homepage.php:169
 msgid "Laundry Room"

@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-04-28 21:32+0300\n"
+"POT-Creation-Date: 2023-05-05 21:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Poedit 2.0.6\n"
 "X-Domain: _s\n"
@@ -28,139 +28,131 @@ msgstr ""
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#: footer.php:23
-msgid "About us"
-msgstr ""
-
-#: footer.php:37
-msgid "Quick links"
-msgstr ""
-
-#: footer.php:64
-msgid "Last News"
-msgstr ""
-
-#: footer.php:115
-msgid "Stay in touch"
-msgstr ""
-
-#: footer.php:117
-msgid "Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis."
-msgstr ""
-
-#: footer.php:149
+#: footer.php:32
 msgid "All rights reserved 2016"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:74
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:75
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:87
 msgid "Cities"
 msgstr ""
 
-#: functions.php:85 functions.php:94
+#: functions.php:88 functions.php:97
 msgid "City"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:89
 msgid "Search Cities"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:90
 msgid "All Cities"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:91
 msgid "Parent City"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:92
 msgid "Parent City:"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:93
 msgid "Edit City"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:94
 msgid "Update City"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:95
 msgid "Add New City"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:96
 msgid "New City Name"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:114
 msgid "Features"
 msgstr ""
 
-#: functions.php:112 functions.php:121
+#: functions.php:115 functions.php:124
 msgid "Feature"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:116
 msgid "Search Features"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:117
 msgid "All Features"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:118
 msgid "Parent Feature"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:119
 msgid "Parent Feature:"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:120
 msgid "Edit Feature"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:121
 msgid "Update Feature"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:122
 msgid "Add New Feature"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:123
 msgid "New Feature Name"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:140
 msgid "Properties"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:247
+msgid "Search"
+msgstr ""
+
+#: functions.php:396
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:398 functions.php:409 functions.php:421
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:70
+#: functions.php:407
+msgid "Sidebar left"
+msgstr ""
+
+#: functions.php:419
+msgid "Sidebar-footer"
+msgstr ""
+
+#: header.php:76
 msgid "Log out"
 msgstr ""
 
-#: header.php:70
+#: header.php:80
 msgid "Login"
 msgstr ""
 
-#: header.php:71
+#: header.php:83
 msgid "Submit"
 msgstr ""
 
@@ -198,53 +190,45 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: login.php:36
-msgid "Sign In to <strong>RealEstate</strong>"
+#: login.php:69
+msgid "Home New account / Sign in "
 msgstr ""
 
-#: login.php:44
+#: login.php:84
+msgid "New account"
+msgstr ""
+
+#: login.php:100
 msgid "<strong>ERROR:</strong> Invalid username and/or password."
 msgstr ""
 
-#: login.php:46
+#: login.php:102
 msgid "<strong>ERROR:</strong> Username and/or Password is empty."
 msgstr ""
 
-#: login.php:48
+#: login.php:104
 msgid "<strong>INFO:</strong> You are logged out."
 msgstr ""
 
-#: login.php:56
+#: login.php:109
 msgid "user_login"
 msgstr ""
 
-#: login.php:56
+#: login.php:109
 msgid "Username or Email Address"
 msgstr ""
 
-#: login.php:61
+#: login.php:113
 msgid "user_pass"
 msgstr ""
 
-#: login.php:61
+#: login.php:113
 msgid "Password"
-msgstr ""
-
-#: login.php:71
-msgid "wp-submit"
 msgstr ""
 
 #: search.php:21
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
-
-#: single.php:23
-msgid "Previous:"
-msgstr ""
-
-#: single.php:24
-msgid "Next:"
 msgstr ""
 
 #: template-homepage.php:34
@@ -412,11 +396,144 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-page.php:25 template-parts/content.php:53
+#: template-parts/content-page.php:25
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:40
+#: widgets/about-us-widget.php:60
+msgid "About Us"
+msgstr ""
+
+#: widgets/about-us-widget.php:70 widgets/last-news-widget.php:170
+#: widgets/post-widget.php:91 widgets/quick-links-widget.php:181
+#: widgets/recommended-post-widget.php:172 widgets/search-widget.php:49
+#: widgets/stay-in-touch-widget.php:91 widgets/tags.php:161
+#: widgets/text-widget.php:60
+msgid "Title:"
+msgstr ""
+
+#: widgets/about-us-widget.php:74 widgets/stay-in-touch-widget.php:95
+msgid "Paragraph:"
+msgstr ""
+
+#: widgets/about-us-widget.php:80
+msgid "Address:"
+msgstr ""
+
+#: widgets/about-us-widget.php:85
+msgid "Email:"
+msgstr ""
+
+#: widgets/about-us-widget.php:91
+msgid "Phone:"
+msgstr ""
+
+#: widgets/last-news-widget.php:15
+msgid "Your site&#8217;s last Posts."
+msgstr ""
+
+#: widgets/last-news-widget.php:19
+msgid "Last Posts"
+msgstr ""
+
+#: widgets/last-news-widget.php:37
+msgid "Last News"
+msgstr ""
+
+#: widgets/last-news-widget.php:106 widgets/recommended-post-widget.php:102
+msgid "(no title)"
+msgstr ""
+
+#: widgets/last-news-widget.php:175 widgets/post-widget.php:109
+#: widgets/recommended-post-widget.php:192
+msgid "Number of posts to show:"
+msgstr ""
+
+#: widgets/last-news-widget.php:181 widgets/recommended-post-widget.php:198
+msgid "Display post date?"
+msgstr ""
+
+#: widgets/post-widget.php:96 widgets/recommended-post-widget.php:178
+msgid "Select post type:"
+msgstr ""
+
+#: widgets/quick-links-widget.php:18
+msgid "Add a navigation linls to your sidebar."
+msgstr ""
+
+#: widgets/quick-links-widget.php:22
+msgid "Quick Links"
+msgstr ""
+
+#: widgets/quick-links-widget.php:42
+msgid "Quick links"
+msgstr ""
+
+#: widgets/quick-links-widget.php:173
 #, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr ""
+
+#: widgets/quick-links-widget.php:185
+msgid "Select Menu:"
+msgstr ""
+
+#: widgets/quick-links-widget.php:187
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: widgets/quick-links-widget.php:197
+msgid "Edit Menu"
+msgstr ""
+
+#: widgets/recommended-post-widget.php:17
+msgid "Your site&#8217;s Recommended Posts."
+msgstr ""
+
+#: widgets/recommended-post-widget.php:21
+msgid "Recommended Posts ReaLEstate"
+msgstr ""
+
+#: widgets/recommended-post-widget.php:42
+msgid "Recommended Posts"
+msgstr ""
+
+#: widgets/stay-in-touch-widget.php:13
+msgid "Stay in Footer Widget"
+msgstr ""
+
+#: widgets/stay-in-touch-widget.php:15
+msgid "Displays custom footer block."
+msgstr ""
+
+#: widgets/stay-in-touch-widget.php:79
+msgid "Stay in Touch"
+msgstr ""
+
+#: widgets/tags.php:16
+msgid "A cloud of your most used tags."
+msgstr ""
+
+#: widgets/tags.php:20
+msgid "RealEstate Tag Cloud"
+msgstr ""
+
+#: widgets/tags.php:39
+msgid "Tags"
+msgstr ""
+
+#: widgets/tags.php:175
+msgid "The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget."
+msgstr ""
+
+#: widgets/tags.php:193
+msgid "Taxonomy:"
+msgstr ""
+
+#: widgets/tags.php:209
+msgid "Show tag counts"
+msgstr ""
+
+#: widgets/text-widget.php:64
+msgid "Text:"
 msgstr ""
