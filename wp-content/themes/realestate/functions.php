@@ -146,7 +146,8 @@ function realestate_register_post_type_property() {
          	'title',
 			'editor',
 			'thumbnail',
-			'excerpt'
+			'excerpt',
+			'custom-fields'
          ],
          'rewrite'     => array( 'slug' => 'properties' ),
 	];
@@ -242,14 +243,14 @@ add_filter('dynamic_sidebar_params', 'change_widget_class');
 function realestate_search_form( $form ) {
       $form = '<form role="search" method="get" id="searchform" class="form-a" action="' . home_url( '/' ) . '" >
         
-                                   <div class="input-group">
-                                        <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
-                                        <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-smal" id="searchsubmit" >
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </span>
-                                    </div>
+                     <div class="input-group">
+                          <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
+                             <span class="input-group-btn">
+                                <button type="submit" class="btn btn-smal" id="searchsubmit" >
+                                  <i class="fa fa-search"></i>
+                                 </button>
+                              </span>
+                      </div>
       </form>';
 
       return $form;

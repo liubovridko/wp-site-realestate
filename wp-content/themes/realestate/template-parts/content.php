@@ -7,60 +7,176 @@
  * @package RealEstate
  */
 
+$category_id=get_the_category()[0]->cat_ID;
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
+ <div class="content-area blog-page padding-top-40" style="background-color: #FCFCFC; padding-bottom: 55px;">
+            <div class="container">
+                <div class="row">
+                    <div class="blog-lst col-md-12 pl0">
+                        <section id="id-100" class="post single">
+
+                            <div class="post-header single">
+                                <div class="">
+                                    <h2 class="wow fadeInLeft animated"><?php wp_kses_post( get_the_title() ); ?></h2>
+                                    <div class="title-line wow fadeInRight animated"></div>
+                                </div>
+                                <div class="row wow fadeInRight animated">
+                                    <div class="col-sm-6">
+                                        <p class="author-category">
+                                            <?php realestate_posted_by(); ?>
+                                            in <a href="<?php echo esc_url( get_category_link( $category_id) ); ?>"><?php echo get_the_category( )[0]->name ; ?></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6 right" >
+                                        <p class="date-comments">
+                                            <a href="single.html"><i class="fa fa-calendar-o"></i> June 20, 2013</a>
+                                            <a href="single.html"><i class="fa fa-comment-o"></i> 8 Comments</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="image wow fadeInRight animated"> 
+                                    <img src="<?php echo get_template_directory_uri()?>/assets/img/blog2.webp" class="img-responsive" alt="Example blog post alt">
+                                </div>
+                            </div> 
+
+                            <div id="post-content" class="post-body single wow fadeInLeft animated">
+                                <p>
+                                    <?php the_content(); ?>
+                                <p>
+                                    <img src="<?php echo get_template_directory_uri()?>/assets/img/blog1.webp" class="img-responsive" alt="Example blog post alt">
+                                </p>
+
+                                <h2>Header Level 2</h2>
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Aliquam tincidunt mauris eu risus.</li>
+                                </ol>
+
+                                <blockquote>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
+                                        tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+                                    </p>
+                                </blockquote>
+
+                                <h3>Header Level 3</h3>
+
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                    ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Aliquam tincidunt mauris eu risus.</li>
+                                </ul>
+                                <p>
+                                    <img src="<?php echo get_template_directory_uri()?>/assets/img/blog.webp" class="img-responsive" alt="Example blog post alt">
+                                </p>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                    condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+                                    eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+                                </p>
+
+                            </div>
+                            <div class="post-footer single wow fadeInBottum animated">
+                                <ul class="pager">
+                                    <li class="previous"><a href="#"><i class=""></i>← Older </a></li>
+                                    <li class="next disabled"><a href="#">Newer →<i class=""></i> </a></li>
+                                </ul> 
+                            </div>    
+
+                        </section> 
+
+                        <section class="about-autor">
+
+                        </section>
+
+                        <section id="comments" class="comments wow fadeInRight animated"> 
+                            <h4 class="text-uppercase wow fadeInLeft animated">3 comments</h4>
 
 
-			
-			<div class="entry-meta">
-				<?php
-				realestate_posted_on();
-				realestate_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+                            <div class="row comment">
+                                <div class="col-sm-3 col-md-2 text-center-xs">
+                                    <p>
+                                        <img src="assets/img/client-face1.png" class="img-responsive img-circle" alt="">
+                                    </p>
+                                </div>
+                                <div class="col-sm-9 col-md-10">
+                                    <h5 class="text-uppercase">Julie Alma</h5>
+                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2011 at 12:00 am</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p class="reply"><a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- /.comment -->
 
-	<?php realestate_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'realestate' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+                            <div class="row comment last">
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'realestate' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+                                <div class="col-sm-3 col-md-2 text-center-xs">
+                                    <p>
+                                        <img src="assets/img/client-face2.png" class="img-responsive img-circle" alt="">
+                                    </p>
+                                </div>
 
-	<footer class="entry-footer">
-		<?php realestate_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+                                <div class="col-sm-9 col-md-10">
+                                    <h5 class="text-uppercase">Louise Armero</h5>
+                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2012 at 12:00 am</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p class="reply"><a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!-- /.comment -->
+                        </section>
+
+                        <section id="comment-form" class="add-comments">
+                            <h4 class="text-uppercase wow fadeInLeft animated">Leave comment</h4>
+                            <form>
+                                <div class="row wow fadeInLeft animated">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">Name <span class="required">*</span>
+                                            </label>
+                                            <input class="form-control" id="name" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row wow fadeInLeft animated">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email <span class="required">*</span>
+                                            </label>
+                                            <input class="form-control" id="email" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row wow fadeInLeft animated">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="comment">Comment <span class="required">*</span>
+                                            </label>
+                                            <textarea class="form-control" id="comment" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row wow fadeInLeft animated">
+                                    <div class="col-sm-12 text-right">
+                                        <button class="btn btn-primary"><i class="fa fa-comment-o"></i> Post comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>                                 
+                </div>
+
+            </div>
+        </div>
