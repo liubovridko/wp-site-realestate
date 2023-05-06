@@ -72,7 +72,8 @@ function realestate_register_theme_init(){
 	//функция регастрации меню
 	register_nav_menus( array(
 	    	'header_nav' => __( 'Header Menu', 'RealEstate' ),
-	    	'footer_nav'  => __( 'Footer Menu', 'tRealEstate' ),
+	    	'footer_nav'  => __( 'Footer Menu', 'RealEstate' ),
+	    	'links_nav'  => __( 'Quick Links Menu', 'RealEstate' ),
 		) );
 	//load languages directory
 	load_theme_textdomain( 'realestate', get_template_directory() . '/languages' );
@@ -192,6 +193,16 @@ function logout_page() {
   exit;
 }
 add_action('wp_logout','logout_page');
+
+
+function save_name_fields_on_registration( $user_id ) {
+    if ( isset( $_POST['first_name'] ) )
+        update_user_meta( $user_id, 'first_name', sanitize_text_field( $_POST['first_name'] ) );
+    if ( isset( $_POST['last_name'] ) )
+        update_user_meta( $user_id, 'last_name', sanitize_text_field( $_POST['last_name'] ) );
+}
+
+add_action( 'user_register', 'save_name_fields_on_registration', 10, 1 );
 
 function hide_admin_bar() {
     if (is_user_logged_in() && !current_user_can('administrator')) {
