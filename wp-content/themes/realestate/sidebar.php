@@ -7,7 +7,7 @@
  * @package RealEstate
  */
 
-if ( ! is_active_sidebar( 'sidebar-right' ) ) {
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'sidebar-right' ) ) {
 <div class="blog-asside-right col-md-3">
 
     
-<?php dynamic_sidebar( 'sidebar-right' ); ?>
+<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 
 </div> 
