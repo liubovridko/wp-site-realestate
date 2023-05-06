@@ -34,19 +34,19 @@ add_action( 'wp_enqueue_scripts', 'realestate_enqueue_style' );
 function realestate_enqueue_script() {
     wp_enqueue_script( 'modernizr-2.6.2', get_template_directory_uri(). '/assets/js/modernizr-2.6.2.min.js',  array(), '1.0.0', 'all'  );
     wp_enqueue_script( 'jquery-1.10.2', get_template_directory_uri(). '/assets/js/jquery-1.10.2.min.js',  array('modernizr-2.6.2'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri(). '/assets/bootstrap/js/bootstrap.min.js',  array('modernizr-2.6.2', 'jquery-1.10.2' ), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap-select', get_template_directory_uri(). '/assets/js/bootstrap-select.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap-hover-dropdown', get_template_directory_uri(). '/assets/js/bootstrap-hover-dropdown.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'easypiechart', get_template_directory_uri(). '/assets/js/easypiechart.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'jquery-easypiechart', get_template_directory_uri(). '/assets/js/jquery.easypiechart.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'owl-carousel', get_template_directory_uri(). '/assets/js/owl.carousel.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'wow', get_template_directory_uri(). '/assets/js/wow.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'icheck', get_template_directory_uri(). '/assets/js/icheck.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'price-range', get_template_directory_uri(). '/assets/js/price-range.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'maps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api', 'gmaps'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range', 'maps-api', 'gmaps', 'gmaps-init'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri(). '/assets/bootstrap/js/bootstrap.min.js',  array('jquery-1.10.2' , 'modernizr-2.6.2'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap-select', get_template_directory_uri(). '/assets/js/bootstrap-select.min.js',  array('jquery-1.10.2' , 'bootstrap'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap-hover-dropdown', get_template_directory_uri(). '/assets/js/bootstrap-hover-dropdown.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'easypiechart', get_template_directory_uri(). '/assets/js/easypiechart.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'jquery-easypiechart', get_template_directory_uri(). '/assets/js/jquery.easypiechart.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'owl-carousel', get_template_directory_uri(). '/assets/js/owl.carousel.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'wow', get_template_directory_uri(). '/assets/js/wow.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'icheck', get_template_directory_uri(). '/assets/js/icheck.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'price-range', get_template_directory_uri(). '/assets/js/price-range.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'maps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api', 'gmaps'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
 }
 
 
@@ -146,8 +146,7 @@ function realestate_register_post_type_property() {
          	'title',
 			'editor',
 			'thumbnail',
-			'excerpt',
-			'custom-fields'
+			'excerpt'
          ],
          'rewrite'     => array( 'slug' => 'properties' ),
 	];
@@ -243,14 +242,14 @@ add_filter('dynamic_sidebar_params', 'change_widget_class');
 function realestate_search_form( $form ) {
       $form = '<form role="search" method="get" id="searchform" class="form-a" action="' . home_url( '/' ) . '" >
         
-                     <div class="input-group">
-                          <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
-                             <span class="input-group-btn">
-                                <button type="submit" class="btn btn-smal" id="searchsubmit" >
-                                  <i class="fa fa-search"></i>
-                                 </button>
-                              </span>
-                      </div>
+                                   <div class="input-group">
+                                        <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-smal" id="searchsubmit" >
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
       </form>';
 
       return $form;
@@ -394,18 +393,7 @@ function realestate_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'realestate' ),
-			'id'            => 'sidebar-right',
-			'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
-			'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="panel-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar left', 'realestate' ),
-			'id'            => 'sidebar-left',
+			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
 			'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
 			'after_widget'  => '</div>',
