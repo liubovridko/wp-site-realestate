@@ -94,6 +94,7 @@ get_header();
                     
                 </div>
 
+
 			<?php endif;
 					?>
 
@@ -101,7 +102,7 @@ get_header();
 
             <?php get_sidebar(); ?>
         </div>
-
+</div>
 </div>
 	
 <?php
