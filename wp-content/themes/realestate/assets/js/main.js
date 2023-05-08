@@ -35,23 +35,9 @@ $(document).ready(function () {
 
 });
 
-$("#bg-slider").owlCarousel({
-        navigation: false, // Show next and prev buttons
-        slideSpeed: 100,
-        autoPlay: 5000,
-        paginationSpeed: 100,
-        singleItem: true,
-        mouseDrag: false,
-        transitionStyle: "fade"
-                // "singleItem:true" is a shortcut for:
-                // items : 1, 
-                // itemsDesktop : false,
-                // itemsDesktopSmall : false,
-                // itemsTablet: false,
-                // itemsMobile : false 
-    });
 
-$(document).ready(function () {
+
+//$(document).ready(function () {
    
     $("#bg-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
@@ -140,7 +126,7 @@ $(document).ready(function () {
         return r;
     }
 
-})
+//})
 
 // Initializing WOW.JS
 
