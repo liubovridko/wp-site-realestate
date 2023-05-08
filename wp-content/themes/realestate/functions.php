@@ -220,6 +220,7 @@ function custom_widgets_init() {
     require get_template_directory() . '/widgets/quick-links-widget.php';
     require get_template_directory() . '/widgets/last-news-widget.php';
     require get_template_directory() . '/widgets/stay-in-touch-widget.php';
+    require get_template_directory() . '/widgets/advanced-search-widget.php';
     //unregister_widget( 'WP_Widget_Text' );
     register_widget( 'RealEstate_Text_Widget' );
     register_widget( 'RealEstate_Search_Widget' );
@@ -229,6 +230,7 @@ function custom_widgets_init() {
     register_widget( 'WP_Quick_Links_Widget' );
     register_widget( 'Widget_Last_Posts' );
     register_widget( 'Realestate_Stay_In_Touch' );
+    register_widget( 'Custom_Real_Estate_Search_Widget' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
 
