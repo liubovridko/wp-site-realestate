@@ -9,11 +9,11 @@ get_header();
 
   <div class="slider-area">
             <div class="slider">
-                <div id="bg-slider" class="owl-carousel owl-theme" >
+                <div id="bg-slider" class="owl-carousel owl-theme">
 
-                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-1.webp" alt="GTA V"></div>
-                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-2.webp" alt="The Last of us"></div>
-                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-4.webp" alt="GTA V"></div>
+                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-1.jpg" alt="GTA V"></div>
+                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-2.jpg" alt="The Last of us"></div>
+                    <div class="item"><img src="<?php echo  get_template_directory_uri()?>/assets/img/slide1/slider-image-1.jpg" alt="GTA V"></div>
 
                 </div>
             </div>
@@ -558,6 +558,5 @@ get_header();
                     </div>
                 </div>
             </div>
-        </div>
 <?php
 get_footer();
