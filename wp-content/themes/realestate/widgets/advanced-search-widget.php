@@ -21,17 +21,17 @@ class Custom_Real_Estate_Search_Widget extends WP_Widget {
         // Get the current saved values for the widget
         $title = !empty($instance['title']) ? $instance['title'] : __('Search Properties', 'text_domain');
         $field_price = !empty($instance['field_price']) ? $instance['field_price'] : 'Price range ($)';
-        $price_min = !empty($instance['price_min']) ? $instance['price_min'] : '20000';
+        $price_min = !empty($instance['price_min']) ? $instance['price_min'] : '0';
         $price_max = !empty($instance['price_max']) ? $instance['price_max'] : '1000000';
-        $field_beds = !empty($instance['field_beds']) ? $instance['field_beds'] : 'Min bed';
-        $beds_min = !empty($instance['beds_min']) ? $instance['beds_min'] : '1';
-        $beds_max = !empty($instance['beds_max']) ? $instance['beds_max'] : '120';
+        $field_beds = !empty($instance['field_beds']) ? $instance['field_beds'] : 'Min rooms';
+        $beds_min = !empty($instance['beds_min']) ? $instance['beds_min'] : '0';
+        $beds_max = !empty($instance['beds_max']) ? $instance['beds_max'] : '600';
         $field_baths = !empty($instance['field_baths']) ? $instance['field_baths'] : 'Min baths';
-        $baths_min = !empty($instance['baths_min']) ? $instance['baths_min'] : '1';
-        $baths_max = !empty($instance['baths_max']) ? $instance['baths_max'] : '120';
+        $baths_min = !empty($instance['baths_min']) ? $instance['baths_min'] : '0';
+        $baths_max = !empty($instance['baths_max']) ? $instance['baths_max'] : '600';
         $field_area = !empty($instance['field_area']) ? $instance['field_area'] : 'Property geo (m2) ';
-        $area_min = !empty($instance['area_min']) ? $instance['area_min'] : '40';
-        $area_max = !empty($instance['area_max']) ? $instance['area_max'] : '12000';
+        $area_min = !empty($instance['area_min']) ? $instance['area_min'] : '0';
+        $area_max = !empty($instance['area_max']) ? $instance['area_max'] : '600';
 
         // Output the widget form
         ?>
@@ -113,17 +113,17 @@ public function widget( $args, $instance ) {
 
 		$title = !empty($instance['title']) ? $instance['title'] : __('Search Properties', 'text_domain');
         $field_price = !empty($instance['field_price']) ? $instance['field_price'] : 'Price range ($)';
-        $price_min = !empty($instance['price_min']) ? $instance['price_min'] : '20000';
+        $price_min = !empty($instance['price_min']) ? $instance['price_min'] : '0';
         $price_max = !empty($instance['price_max']) ? $instance['price_max'] : '1000000';
-        $field_beds = !empty($instance['field_beds']) ? $instance['field_beds'] : 'Min bed';
-        $beds_min = !empty($instance['beds_min']) ? $instance['beds_min'] : '1';
-        $beds_max = !empty($instance['beds_max']) ? $instance['beds_max'] : '120';
+        $field_beds = !empty($instance['field_beds']) ? $instance['field_beds'] : 'Min rooms';
+        $beds_min = !empty($instance['beds_min']) ? $instance['beds_min'] : '0';
+        $beds_max = !empty($instance['beds_max']) ? $instance['beds_max'] : '600';
         $field_baths = !empty($instance['field_baths']) ? $instance['field_baths'] : 'Min baths';
-        $baths_min = !empty($instance['baths_min']) ? $instance['baths_min'] : '1';
-        $baths_max = !empty($instance['baths_max']) ? $instance['baths_max'] : '120';
+        $baths_min = !empty($instance['baths_min']) ? $instance['baths_min'] : '0';
+        $baths_max = !empty($instance['baths_max']) ? $instance['baths_max'] : '600';
         $field_area = !empty($instance['field_area']) ? $instance['field_area'] : 'Property geo (m2) ';
-        $area_min = !empty($instance['area_min']) ? $instance['area_min'] : '40';
-        $area_max = !empty($instance['area_max']) ? $instance['area_max'] : '12000';
+        $area_min = !empty($instance['area_min']) ? $instance['area_min'] : '0';
+        $area_max = !empty($instance['area_max']) ? $instance['area_max'] : '600';
 
 		echo $args['before_widget'];
 	?>
@@ -141,7 +141,8 @@ public function widget( $args, $instance ) {
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <input type="text" class="form-control" placeholder="<?php echo esc_attr('Key word', 'realestate') ?>" value="<?php  get_search_query(); ?>">
+                                                <input type="text" name="s" id="s" class="form-control" placeholder="<?php echo esc_attr('Key word', 'realestate') ?>" >
+                                                <input type="hidden" name="post_type" value="property">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -150,14 +151,20 @@ public function widget( $args, $instance ) {
                                         <div class="row">
                                             <div class="col-xs-6">
 
-                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your City">
+                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your City" name="category_name">
 
-                                                    <option>New york, CA</option>
-                                                    <option>Paris</option>
-                                                    <option>Casablanca</option>
-                                                    <option>Tokyo</option>
-                                                    <option>Marraekch</option>
-                                                    <option>kyoto , shibua</option>
+									        <?php
+									           $taxonomy = 'cities'; 
+													$terms = get_terms( array(
+													    'taxonomy' => $taxonomy,
+													    'hide_empty' => false,
+													) );
+													if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+									            foreach( $terms as $term ) {
+									                echo '<option value="' . esc_html( $term->name ) . '">' . esc_html( $term->name ) . '</option>';
+									             }
+									           }
+									        ?>
                                                 </select>
                                             </div>
                                             <div class="col-xs-6">
@@ -177,17 +184,17 @@ public function widget( $args, $instance ) {
                                         <div class="row">
                                             <div class="col-xs-6">
                                                 <label for="price-range"><?php echo  $field_price; ?> :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[0,450]" id="price-range" ><br />
+                                                <input type="text" class="span2"  data-slider-min="<?php echo $price_min; ?>" 
+                                                       data-slider-max="<?php echo $price_max; ?>" data-slider-step="5" 
+                                                       data-slider-value="[50,1850]" value="<?php echo $price_min . ',' .$price_max; ?>" id="price-range" name="price_range" ><br />
                                                 <b class="pull-left color"><?php echo $price_min; ?>$</b> 
                                                 <b class="pull-right color"><?php echo $price_max; ?>$</b>                                                
                                             </div>
                                             <div class="col-xs-6">
                                                 <label for="property-geo"><?php echo $field_area; ?> :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[50,450]" id="property-geo" ><br />
+                                                <input type="text" class="span2" value="<?php echo $area_min . ',' .$area_max; ?>" data-slider-min="<?php echo $area_min; ?>" 
+                                                       data-slider-max="<?php echo $area_max; ?>" data-slider-step="5" 
+                                                       data-slider-value="[50,450]"  id="property-geo" name="area_range" ><br />
                                                 <b class="pull-left color"><?php echo $area_min; ?>m</b> 
                                                 <b class="pull-right color"><?php echo $area_max; ?>m</b>                                                
                                             </div>                                            
@@ -197,19 +204,19 @@ public function widget( $args, $instance ) {
                                     <fieldset class="padding-5">
                                         <div class="row">
                                             <div class="col-xs-6">
-                                                <label for="price-range"><?php echo  $field_baths; ?> :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[250,450]" id="min-baths" ><br />
+                                                <label for="min-baths"><?php echo  $field_baths; ?> :</label>
+                                                <input type="text" class="span2" value="<?php echo $baths_min . ',' .$baths_max; ?>" data-slider-min="<?php echo $baths_min; ?>" 
+                                                       data-slider-max="<?php echo $baths_max; ?>" data-slider-step="5" 
+                                                       data-slider-value="[250,450]" id="min-baths" name="baths_range" ><br />
                                                 <b class="pull-left color"><?php echo $baths_min; ?></b> 
                                                 <b class="pull-right color"><?php echo $baths_max; ?></b>                                                
                                             </div>
 
                                             <div class="col-xs-6">
                                                 <label for="property-geo"><?php echo $field_beds; ?> :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[250,450]" id="min-bed" ><br />
+                                                <input type="text" class="span2" value="<?php echo $beds_min . ',' .$beds_max; ?>" data-slider-min="<?php echo $beds_min; ?>" 
+                                                       data-slider-max="<?php echo $beds_max; ?>" data-slider-step="5" 
+                                                       data-slider-value="[250,450]" id="min-bed" name="rooms_range"><br />
                                                 <b class="pull-left color"><?php echo $beds_min; ?></b> 
                                                 <b class="pull-right color"><?php echo $beds_max; ?></b>
 
