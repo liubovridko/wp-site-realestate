@@ -133,3 +133,27 @@ $(window).load(function () { // makes sure the whole site is loaded
 new WOW().init();
 
 
+$(document).ready(function () {
+  // обработчик клика на элемент списка сортировки
+  $('.sort-by-list a').click(function() {
+    var orderby = $(this).data('orderby'); // получаем поле, по которому нужно сортировать
+    var order = $(this).data('order'); // получаем направление сортировки
+    var data = {
+      action: 'sort_properties', // указываем действие для WordPress AJAX
+      orderby: orderby,
+      order: order
+    };
+    // отправляем AJAX запрос на сервер для получения отсортированных данных
+    $.ajax({
+      url: my_script_vars.ajaxurl, // используем глобальную переменную ajaxurl, которая содержит путь к WordPress AJAX обработчику
+      method: 'POST',
+      data: data,
+      success: function(response) {
+        console.log(response);
+        // обновляем отображение данных на странице
+        $('#list-type').html(response);
+      }
+     
+    });
+  });
+})

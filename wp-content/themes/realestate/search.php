@@ -9,16 +9,28 @@
 
 get_header();
 
+$orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'property_date' ;
+  $order = isset($_POST['order']) ? $_POST['order'] : 'ASC' ;
 
-			            $args = array(
+			 $args = array(
 			    'post_type' => 'property',
 			    'post_status' => 'publish',
 			    's' => get_search_query(),
+			     'orderby' => $orderby,
+                 'order' => $order,
+                
 			);
 
 			// Add category parameter to query
 			if( ! empty( $_GET['category_name'] ) ) {
-			    $args['category_name'] = sanitize_text_field( $_GET['category_name'] );
+			    $args['tax_query'] =array(
+					array(
+					'taxonomy' => 'cities' ,
+					'field' => 'slug',
+					'terms' => sanitize_text_field( $_GET['category_name'] ) ,
+					
+					),
+					) ;
 			}
 
 
@@ -94,7 +106,7 @@ get_header();
 
 			$query = new WP_Query( $args );
 
-			if ( $query->have_posts() ) :
+			if ( $query->have_posts() ) {
 				?>
 				<div class="page-head"> 
             <div class="container">
@@ -170,8 +182,9 @@ get_header();
                         <div id="list-type" class="proerty-th">
 				<?php
 			/* Start the Loop */
-			while ( $query->have_posts() ) :
+			while ( $query->have_posts() ) {
 				$query->the_post();
+			
         // Display post content
 
 
@@ -214,12 +227,20 @@ get_header();
                                 </div> 
                 <?php 
 
-			endwhile;
+			}
+
+
+		    } else {
+              //<!-- если нет постов -->
+			get_template_part( 'template-parts/content', 'none' );
+
+			}
+
             wp_reset_postdata();
 			//the_posts_navigation();
 
 			?>
-                               
+                              
                     
                     <div class="col-md-12"> 
                         <div class="pull-right">
@@ -235,20 +256,8 @@ get_header();
                             </div>
                         </div>                
                     </div>
-                </div>
-
-                <!-- если нет постов -->
-                <?php
-
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-			
-
-		endif;
-		?>
+                  </div>  
+      
 
 
                 </div>              
