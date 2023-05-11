@@ -34,19 +34,22 @@ add_action( 'wp_enqueue_scripts', 'realestate_enqueue_style' );
 function realestate_enqueue_script() {
     wp_enqueue_script( 'modernizr-2.6.2', get_template_directory_uri(). '/assets/js/modernizr-2.6.2.min.js',  array(), '1.0.0', 'all'  );
     wp_enqueue_script( 'jquery-1.10.2', get_template_directory_uri(). '/assets/js/jquery-1.10.2.min.js',  array('modernizr-2.6.2'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri(). '/assets/bootstrap/js/bootstrap.min.js',  array('jquery-1.10.2' , 'modernizr-2.6.2'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap-select', get_template_directory_uri(). '/assets/js/bootstrap-select.min.js',  array('jquery-1.10.2' , 'bootstrap'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'bootstrap-hover-dropdown', get_template_directory_uri(). '/assets/js/bootstrap-hover-dropdown.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'easypiechart', get_template_directory_uri(). '/assets/js/easypiechart.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'jquery-easypiechart', get_template_directory_uri(). '/assets/js/jquery.easypiechart.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
-    wp_enqueue_script( 'owl-carousel', get_template_directory_uri(). '/assets/js/owl.carousel.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'wow', get_template_directory_uri(). '/assets/js/wow.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'icheck', get_template_directory_uri(). '/assets/js/icheck.min.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'price-range', get_template_directory_uri(). '/assets/js/price-range.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'maps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api', 'gmaps'), '1.0.0', 'all'  );
-     wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri(). '/assets/bootstrap/js/bootstrap.min.js',  array('modernizr-2.6.2', 'jquery-1.10.2' ), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap-select', get_template_directory_uri(). '/assets/js/bootstrap-select.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'bootstrap-hover-dropdown', get_template_directory_uri(). '/assets/js/bootstrap-hover-dropdown.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'easypiechart', get_template_directory_uri(). '/assets/js/easypiechart.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'jquery-easypiechart', get_template_directory_uri(). '/assets/js/jquery.easypiechart.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart'), '1.0.0', 'all'  );
+    wp_enqueue_script( 'owl-carousel', get_template_directory_uri(). '/assets/js/owl.carousel.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'wow', get_template_directory_uri(). '/assets/js/wow.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'icheck', get_template_directory_uri(). '/assets/js/icheck.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'price-range', get_template_directory_uri(). '/assets/js/price-range.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'maps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api', 'gmaps'), '1.0.0', 'all'  );
+     wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range', 'maps-api', 'gmaps', 'gmaps-init'), '1.0.0', 'all'  );
+     wp_localize_script('main', 'my_script_vars', array('ajaxurl' => admin_url('admin-ajax.php')));
+
+    
 }
 
 
@@ -285,9 +288,82 @@ function true_excerpt_more(  ){
 add_filter( 'excerpt_more', 'true_excerpt_more', 10);
 
 
+//Sort properties
 
 
+function sort_properties_callback() {
+  $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date';
+  $order = isset($_POST['order']) ? $_POST['order'] : 'DESC' ;
+  $per_page= isset($_POST['posts_per_page']) ? (int)$_POST['posts_per_page'] : -1 ;
+  $args = array(
+    'post_type' => 'property',
+     'post_status' => 'publish',
+     's' => get_search_query(),
+     'meta_key' => 'price',
+    'orderby' => $orderby,
+    'order' => $order,
+     'posts_per_page' => $per_page,
+  );
 
+  // Add category parameter to query
+			
+			if( ! empty( $_GET['category_name'] ) ) {
+			    $args['tax_query'] =array(
+					array(
+					'taxonomy' => 'cities' ,
+					'field' => 'slug',
+					'terms' => sanitize_text_field( $_GET['category_name'] ) ,
+					
+					),
+					) ;
+			}
+
+  $query = new WP_Query($args);
+  if ($query->have_posts()) {
+   
+    while ($query->have_posts()) {
+      $query->the_post();
+                                    $price= get_post_meta(get_the_ID(), 'price', true);
+                                    $area= get_post_meta(get_the_ID(), 'area', true);
+                                    $rooms= get_post_meta(get_the_ID(), 'rooms', true);
+                                    $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
+                                    $cars= get_post_meta(get_the_ID(), 'cars', true);
+                                    ?>
+                         <div class="col-sm-6 col-md-4 p0">
+
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="<?php echo esc_url(get_post_permalink()) ?>" ><img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>"></a>
+                                        </div>
+
+                                        <div class="item-entry overflow">
+                                            <h5><a href="<?php echo esc_url(get_post_permalink()) ?>"> <?php the_title(); ?> </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> <?php echo $area; ?>m </span>
+                                            <span class="proerty-price pull-right"> $ <?php echo $price; ?></span>
+                                            <p style="display: none;"><?php the_content(); ?></p>
+                                            <div class="property-icon">
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/bed.png">(<?php echo $rooms; ?>)
+                                                 <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/shawer.png">(<?php echo $bathrooms; ?>)
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/cars.png">(<?php echo $cars; ?>)  
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div> 
+                                <?php
+    }
+     wp_reset_postdata();
+  } else {
+    echo'No properties found';
+  }
+ 
+  wp_die();
+}
+
+add_action('wp_ajax_sort_properties', 'sort_properties_callback');
+add_action('wp_ajax_nopriv_sort_properties', 'sort_properties_callback');
 
 
 

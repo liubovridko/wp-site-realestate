@@ -20,240 +20,24 @@
                      
                 <div class="col-md-3 p0 padding-top-40">
                     <div class="blog-asside-right pr0">
-                        <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Smart search</h3>
-                            </div>
-                            <div class="panel-body search-widget">
-                                <form action="" class=" form-inline"> 
-                                    <fieldset>
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <input type="text" class="form-control" placeholder="Key word">
-                                            </div>
-                                        </div>
-                                    </fieldset>
 
-                                    <fieldset>
-                                        <div class="row">
-                                            <div class="col-xs-6">
+                     
+                        <?php dynamic_sidebar( 'sidebar-left' ); ?>
 
-                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your City">
-
-                                                    <option>New york, CA</option>
-                                                    <option>Paris</option>
-                                                    <option>Casablanca</option>
-                                                    <option>Tokyo</option>
-                                                    <option>Marraekch</option>
-                                                    <option>kyoto , shibua</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-6">
-
-                                                <select id="basic" class="selectpicker show-tick form-control">
-                                                    <option> -Status- </option>
-                                                    <option>Rent </option>
-                                                    <option>Boy</option>
-                                                    <option>used</option>  
-
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <label for="price-range">Price range ($):</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[0,450]" id="price-range" ><br />
-                                                <b class="pull-left color">2000$</b> 
-                                                <b class="pull-right color">100000$</b>                                                
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <label for="property-geo">Property geo (m2) :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[50,450]" id="property-geo" ><br />
-                                                <b class="pull-left color">40m</b> 
-                                                <b class="pull-right color">12000m</b>                                                
-                                            </div>                                            
-                                        </div>
-                                    </fieldset>                                
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <label for="price-range">Min baths :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[250,450]" id="min-baths" ><br />
-                                                <b class="pull-left color">1</b> 
-                                                <b class="pull-right color">120</b>                                                
-                                            </div>
-
-                                            <div class="col-xs-6">
-                                                <label for="property-geo">Min bed :</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="600" data-slider-step="5" 
-                                                       data-slider-value="[250,450]" id="min-bed" ><br />
-                                                <b class="pull-left color">1</b> 
-                                                <b class="pull-right color">120</b>
-
-                                            </div>
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Fire Place</label>
-                                                </div> 
-                                            </div>
-
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox"> Dual Sinks</label>
-                                                </div>
-                                            </div>                                            
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Swimming Pool</label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> 2 Stories </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox"> Laundry Room </label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox"> Emergency Exit</label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox" checked> Jog Path </label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox"> 26' Ceilings </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-12"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox"> Hurricane Shutters </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset >
-                                        <div class="row">
-                                            <div class="col-xs-12">  
-                                                <input class="button btn largesearch-btn" value="Search" type="submit">
-                                            </div>  
-                                        </div>
-                                    </fieldset>                                     
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default sidebar-menu wow fadeInRight animated">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Recommended</h3>
-                            </div>
-                            <div class="panel-body recent-property-widget">
-                                        <ul>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-2.webp"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
-                                                <span class="property-price">3000000$</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-1.webp"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
-                                                <span class="property-price">3000000$</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-3.webp"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
-                                                <span class="property-price">3000000$</span>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="<?php echo get_template_directory_uri()?>/assets/img/demo/small-property-2.webp"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
-                                                <span class="property-price">3000000$</span>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                            </div>
-                        </div>
+                      
                     </div>
                 </div>
                  <!-- вывод всех постов -->
-                <?php if ( have_posts() ) : ?>
+                <?php 
+                 $args = array(
+                     'post_type' => 'property',
+                     'post_status' => 'publish',
+                     'posts_per_page' => -1
+                  );
+                 $query = new WP_Query($args);
+
+                if ( $query->have_posts() ) : 
+                    ?>
 
                 <div class="col-md-9  pr0 padding-top-40 properties-page">
                     <div class="col-md-12 clear"> 
@@ -265,7 +49,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="property_price" data-order="DESC">
+                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="meta_value_num" data-order="DESC">
                                         Property Price <i class="fa fa-sort-numeric-desc"></i>						
                                     </a>
                                 </li>
@@ -300,8 +84,16 @@
                                 <!-- out all posts -->
 								<?php
 								/* Start the Loop */
-								while ( have_posts() ) : //if post>=lenght {} если есть посты
-									the_post();
+
+								while ( $query->have_posts() ) : //if post>=lenght {} если есть посты
+									$query->the_post();
+                                    $price= get_post_meta(get_the_ID(), 'price', true);
+                                    $area= get_post_meta(get_the_ID(), 'area', true);
+                                    $rooms= get_post_meta(get_the_ID(), 'rooms', true);
+                                    $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
+                                    $cars= get_post_meta(get_the_ID(), 'cars', true);
+
+								
 								?>
 
                             <div class="col-sm-6 col-md-4 p0">
@@ -331,9 +123,9 @@
 		                endwhile;
 
 				?>
-                               
+                    <!-- pagination  -->         
                     
-                    <div class="col-md-12"> 
+                   <!--  <div class="col-md-12"> 
                         <div class="pull-right">
                             <div class="pagination">
                                 <ul>
@@ -346,7 +138,7 @@
                                 </ul>
                             </div>
                         </div>                
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- если нет постов -->

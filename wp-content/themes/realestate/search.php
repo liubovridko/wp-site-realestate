@@ -9,16 +9,29 @@
 
 get_header();
 
+$orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date' ;
+  $order = isset($_POST['order']) ? $_POST['order'] : 'DESC' ;
 
-			            $args = array(
+			 $args = array(
 			    'post_type' => 'property',
 			    'post_status' => 'publish',
 			    's' => get_search_query(),
+			     'orderby' => $orderby,
+                 'order' => $order,
+                 'posts_per_page' => -1 ,
+                
 			);
 
 			// Add category parameter to query
 			if( ! empty( $_GET['category_name'] ) ) {
-			    $args['category_name'] = sanitize_text_field( $_GET['category_name'] );
+			    $args['tax_query'] =array(
+					array(
+					'taxonomy' => 'cities' ,
+					'field' => 'slug',
+					'terms' => sanitize_text_field( $_GET['category_name'] ) ,
+					
+					),
+					) ;
 			}
 
 
@@ -94,7 +107,7 @@ get_header();
 
 			$query = new WP_Query( $args );
 
-			if ( $query->have_posts() ) :
+			if ( $query->have_posts() ) {
 				?>
 				<div class="page-head"> 
             <div class="container">
@@ -132,12 +145,12 @@ get_header();
                         <div class="col-xs-10 page-subheader sorting pl0">
                             <ul class="sort-by-list">
                                 <li class="active">
-                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
+                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="date" data-order="ASC">
                                         Property Date <i class="fa fa-sort-amount-asc"></i>					
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="property_price" data-order="DESC">
+                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="meta_value_num" data-order="DESC">
                                         Property Price <i class="fa fa-sort-numeric-desc"></i>						
                                     </a>
                                 </li>
@@ -170,8 +183,9 @@ get_header();
                         <div id="list-type" class="proerty-th">
 				<?php
 			/* Start the Loop */
-			while ( $query->have_posts() ) :
+			while ( $query->have_posts() ) {
 				$query->the_post();
+			
         // Display post content
 
 
@@ -214,12 +228,20 @@ get_header();
                                 </div> 
                 <?php 
 
-			endwhile;
+			}
+
+
+		    } else {
+              //<!-- если нет постов -->
+			get_template_part( 'template-parts/content', 'none' );
+
+			}
+
             wp_reset_postdata();
 			//the_posts_navigation();
 
 			?>
-                               
+                              
                     
                     <div class="col-md-12"> 
                         <div class="pull-right">
@@ -235,20 +257,8 @@ get_header();
                             </div>
                         </div>                
                     </div>
-                </div>
-
-                <!-- если нет постов -->
-                <?php
-
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-			
-
-		endif;
-		?>
+                  </div>  
+      
 
 
                 </div>              
