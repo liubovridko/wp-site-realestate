@@ -48,6 +48,8 @@ function realestate_enqueue_script() {
      wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api', 'gmaps'), '1.0.0', 'all'  );
      wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range', 'maps-api', 'gmaps', 'gmaps-init'), '1.0.0', 'all'  );
      wp_localize_script('main', 'my_script_vars', array('ajaxurl' => admin_url('admin-ajax.php')));
+
+    
 }
 
 
@@ -148,8 +150,7 @@ function realestate_register_post_type_property() {
          	'title',
 			'editor',
 			'thumbnail',
-			'excerpt',
-			'custom-fields'
+			'excerpt'
          ],
          'rewrite'     => array( 'slug' => 'properties' ),
 	];
@@ -257,14 +258,14 @@ add_filter('dynamic_sidebar_params', 'change_widget_class');
 function realestate_search_form( $form ) {
       $form = '<form role="search" method="get" id="searchform" class="form-a" action="' . home_url( '/' ) . '" >
         
-                     <div class="input-group">
-                          <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
-                             <span class="input-group-btn">
-                                <button type="submit" class="btn btn-smal" id="searchsubmit" >
-                                  <i class="fa fa-search"></i>
-                                 </button>
-                              </span>
-                      </div>
+                                   <div class="input-group">
+                                        <input  class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'. __( 'Search' ) .'" type="text">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-smal" id="searchsubmit" >
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
       </form>';
 
       return $form;
@@ -481,18 +482,7 @@ function realestate_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'realestate' ),
-			'id'            => 'sidebar-right',
-			'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
-			'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="panel-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar left', 'realestate' ),
-			'id'            => 'sidebar-left',
+			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
 			'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
 			'after_widget'  => '</div>',
