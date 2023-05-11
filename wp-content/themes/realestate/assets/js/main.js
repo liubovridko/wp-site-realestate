@@ -133,7 +133,7 @@ $(window).load(function () { // makes sure the whole site is loaded
 new WOW().init();
 
 
-$(document).ready(function () {
+//$(document).ready(function () {
   // обработчик клика на элемент списка сортировки
   $('.sort-by-list a').click(function() {
     var orderby = $(this).data('orderby'); // получаем поле, по которому нужно сортировать
@@ -149,11 +149,34 @@ $(document).ready(function () {
       method: 'POST',
       data: data,
       success: function(response) {
-        console.log(response);
+      
         // обновляем отображение данных на странице
         $('#list-type').html(response);
       }
      
     });
   });
-})
+
+
+  $('#items_per_page').on('change', function() {
+    var per_page = $(this).val();
+     
+    var data = {
+      action: 'sort_properties', // указываем действие для WordPress AJAX
+      posts_per_page: per_page,
+     
+    };
+    // отправляем AJAX запрос на сервер для получения отсортированных данных
+    $.ajax({
+      url: my_script_vars.ajaxurl, // используем глобальную переменную ajaxurl, которая содержит путь к WordPress AJAX обработчику
+      method: 'POST',
+      data: data,
+      success: function(response) {
+      
+        // обновляем отображение данных на странице
+        $('#list-type').html(response);
+      }
+     
+    });
+  });
+//})

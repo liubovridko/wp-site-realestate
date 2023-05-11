@@ -9,8 +9,8 @@
 
 get_header();
 
-$orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'property_date' ;
-  $order = isset($_POST['order']) ? $_POST['order'] : 'ASC' ;
+$orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date' ;
+  $order = isset($_POST['order']) ? $_POST['order'] : 'DESC' ;
 
 			 $args = array(
 			    'post_type' => 'property',
@@ -18,6 +18,7 @@ $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'property_date' ;
 			    's' => get_search_query(),
 			     'orderby' => $orderby,
                  'order' => $order,
+                 'posts_per_page' => -1 ,
                 
 			);
 
@@ -144,12 +145,12 @@ $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'property_date' ;
                         <div class="col-xs-10 page-subheader sorting pl0">
                             <ul class="sort-by-list">
                                 <li class="active">
-                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
+                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="date" data-order="ASC">
                                         Property Date <i class="fa fa-sort-amount-asc"></i>					
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="property_price" data-order="DESC">
+                                    <a href="javascript:void(0);" class="order_by_price" data-orderby="meta_value_num" data-order="DESC">
                                         Property Price <i class="fa fa-sort-numeric-desc"></i>						
                                     </a>
                                 </li>

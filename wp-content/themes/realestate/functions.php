@@ -291,14 +291,17 @@ add_filter( 'excerpt_more', 'true_excerpt_more', 10);
 
 
 function sort_properties_callback() {
-  $orderby = $_POST['orderby'];
-  $order = $_POST['order'];
+  $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date';
+  $order = isset($_POST['order']) ? $_POST['order'] : 'DESC' ;
+  $per_page= isset($_POST['posts_per_page']) ? (int)$_POST['posts_per_page'] : -1 ;
   $args = array(
     'post_type' => 'property',
      'post_status' => 'publish',
      's' => get_search_query(),
+     'meta_key' => 'price',
     'orderby' => $orderby,
     'order' => $order,
+     'posts_per_page' => $per_page,
   );
 
   // Add category parameter to query
@@ -324,35 +327,42 @@ function sort_properties_callback() {
                                     $rooms= get_post_meta(get_the_ID(), 'rooms', true);
                                     $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
                                     $cars= get_post_meta(get_the_ID(), 'cars', true);
+                                    ?>
+                         <div class="col-sm-6 col-md-4 p0">
 
-                         $output = '<div class="col-sm-6 col-md-4 p0"><div class="box-two proerty-item">';
-                                       $output .=  '<div class="item-thumb"> <a href="'. esc_url(get_post_permalink()) .'" ><img src="'. esc_url(get_the_post_thumbnail_url()) .'"></a>';
-                                         $output .= '</div><div class="item-entry overflow">';
-                                             $output .= '<h5><a href="'. esc_url(get_post_permalink()). '"> '. the_title() . ' </a></h5>';
-                                            $output .='<div class="dot-hr"></div>';
-                                             $output .= '<span class="pull-left"><b> Area :</b>'. $area. 'm </span>';
-                                             $output .= '<span class="proerty-price pull-right"> $'. $price. '</span>';
-                                             $output .= '<p style="display: none;">' . the_content() . '</p>';
-                                             $output .= '<div class="property-icon">' ;
-                                                 $output .= '<img src="' . get_template_directory_uri(). '/assets/img/icon/bed.png">('. $rooms .'>)';
-                                                  $output .= '<img src="' .get_template_directory_uri() . '/assets/img/icon/shawer.png">('. $bathrooms . ')';
-                                                 $output .= '<img src="'. get_template_directory_uri() . '/assets/img/icon/cars.png">(' . $cars . ')';  
-                                             $output .= '</div>';
-                                         $output .= '</div>';
-                                     $output .= '</div>';
-                                 $output .= '</div> ' ;
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="<?php echo esc_url(get_post_permalink()) ?>" ><img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>"></a>
+                                        </div>
+
+                                        <div class="item-entry overflow">
+                                            <h5><a href="<?php echo esc_url(get_post_permalink()) ?>"> <?php the_title(); ?> </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> <?php echo $area; ?>m </span>
+                                            <span class="proerty-price pull-right"> $ <?php echo $price; ?></span>
+                                            <p style="display: none;"><?php the_content(); ?></p>
+                                            <div class="property-icon">
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/bed.png">(<?php echo $rooms; ?>)
+                                                 <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/shawer.png">(<?php echo $bathrooms; ?>)
+                                                <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/cars.png">(<?php echo $cars; ?>)  
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div> 
+                                <?php
     }
-    
+     wp_reset_postdata();
   } else {
-    $output = 'No properties found';
+    echo'No properties found';
   }
-  wp_reset_postdata();
-  echo $output;
+ 
   wp_die();
 }
 
-//add_action('wp_ajax_sort_properties', 'sort_properties_callback');
-//add_action('wp_ajax_nopriv_sort_properties', 'sort_properties_callback');
+add_action('wp_ajax_sort_properties', 'sort_properties_callback');
+add_action('wp_ajax_nopriv_sort_properties', 'sort_properties_callback');
 
 
 
