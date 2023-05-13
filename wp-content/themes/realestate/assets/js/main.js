@@ -37,8 +37,10 @@ $(window).load(function () { // makes sure the whole site is loaded
 
 
 
+
 //$(document).ready(function () {
    
+
     $("#bg-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         slideSpeed: 100,
