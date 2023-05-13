@@ -292,13 +292,19 @@ add_filter( 'excerpt_more', 'true_excerpt_more', 10);
 
 function sort_properties_callback() {
   $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date';
-  $order = isset($_POST['order']) ? $_POST['order'] : 'DESC' ;
-  $per_page= isset($_POST['posts_per_page']) ? (int)$_POST['posts_per_page'] : -1 ;
+  $order = isset($_POST['order']) ? $_POST['order'] : 'ASC' ;
+  $per_page= isset($_POST['posts_per_page']) ? (int)$_POST['posts_per_page'] : 6 ;
+  $page = $_POST['page'];
+  // Вычисляем OFFSET и LIMIT для выбранной страницы
+	$offset = ($page - 1) * $per_page;
+	
+
   $args = array(
     'post_type' => 'property',
      'post_status' => 'publish',
      's' => get_search_query(),
      'meta_key' => 'price',
+     'offset' => $offset,
     'orderby' => $orderby,
     'order' => $order,
      'posts_per_page' => $per_page,
@@ -357,17 +363,56 @@ function sort_properties_callback() {
   } else {
     echo'No properties found';
   }
- 
-  wp_die();
+		 // Собираем HTML код пагинации
+		$total_records = $query->found_posts;
+		$total_pages = ceil($total_records / $per_page);
+
+		$pagination_html = '';
+		$pagination_html= '<div class="col-md-12"> 
+                        <div class="pull-right">
+                            <div class="pagination">';
+		if ( $total_pages > 1 ) {
+		    $pagination_html .= '<ul>';
+		    if ( $page > 1 ) {
+		        $prev_page = $page - 1;
+		        $pagination_html .= '<li><a href="javascript:void(0);" class="prev_page" data-page="' . $prev_page . '">Prev</a></li>';
+		    }
+		    for ( $i = 1; $i <= $total_pages; $i++ ) {
+		        $active_class = ( $page == $i ) ? 'active' : '';
+		        $pagination_html .= '<li class="' . $active_class . '"><a href="javascript:void(0);" class="page_link " data-page="' . $i . '">' . $i . '</a></li>';
+		    }
+		    if ( $page < $total_pages ) {
+		        $next_page = $page + 1;
+		        $pagination_html .= '<li><a href="javascript:void(0);" class="next_page" data-page="' . $next_page . '">Next</a></li>';
+		    }
+		    $pagination_html .= '</ul>';
+		    $pagination_html.='</div>
+                        </div>                
+                    </div>';
+		}
+
+		echo  $pagination_html;
+          wp_die();
 }
 
 add_action('wp_ajax_sort_properties', 'sort_properties_callback');
 add_action('wp_ajax_nopriv_sort_properties', 'sort_properties_callback');
 
+function ajax_load_more__properties_callback() {
+	 $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date';
+    $order = isset($_POST['order']) ? $_POST['order'] : 'ASC' ;
+
+ $shortcode = '[ajax_load_more id="8529698665" loading_style="infinite classic" post_type="property" posts_per_page="5" no_results_text="<div class=\'no-results\'>Sorry, nothing found in this query</div>" meta_key="price"';
+    // Добавляем параметры сортировки к шорткоду
+    $shortcode .= ' order_by="'. $orderby . '" order="' . $order . '"';
+    $shortcode .= ']';
+    echo do_shortcode($shortcode);
 
 
+}
 
-
+//add_action('wp_ajax_sort_properties', 'ajax_load_more__properties_callback');
+//add_action('wp_ajax_nopriv_sort_properties', 'ajax_load_more__properties_callback');
 
 
 if ( ! defined( '_S_VERSION' ) ) {

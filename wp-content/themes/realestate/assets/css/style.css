@@ -3044,3 +3044,8 @@ padding: 10px;
 #map {
     height: 300px;
 }
+
+
+.alm-load-more-btn.done{
+   display: none;
+}

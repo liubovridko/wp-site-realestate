@@ -18,7 +18,7 @@ $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date' ;
 			    's' => get_search_query(),
 			     'orderby' => $orderby,
                  'order' => $order,
-                 'posts_per_page' => -1 ,
+                 'posts_per_page' => 12 ,
                 
 			);
 
