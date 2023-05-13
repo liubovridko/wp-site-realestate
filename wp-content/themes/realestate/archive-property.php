@@ -29,14 +29,14 @@
                 </div>
                  <!-- вывод всех постов -->
                 <?php 
-                 $args = array(
+                /* $args = array(
                      'post_type' => 'property',
                      'post_status' => 'publish',
-                     'posts_per_page' => -1
+                     'posts_per_page' => 6
                   );
-                 $query = new WP_Query($args);
+                 $query = new WP_Query($args);*/
 
-                if ( $query->have_posts() ) : 
+                if ( have_posts() ) : 
                     ?>
 
                 <div class="col-md-9  pr0 padding-top-40 properties-page">
@@ -44,7 +44,7 @@
                         <div class="col-xs-10 page-subheader sorting pl0">
                             <ul class="sort-by-list">
                                 <li class="active">
-                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
+                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="date" data-order="ASC">
                                         Property Date <i class="fa fa-sort-amount-asc"></i>					
                                     </a>
                                 </li>
@@ -60,9 +60,9 @@
                                 <div class="sel">
                                     <select id="items_per_page" name="per_page">
                                         <option value="3">3</option>
-                                        <option value="6">6</option>
+                                        <option selected="selected" value="6">6</option>
                                         <option value="9">9</option>
-                                        <option selected="selected" value="12">12</option>
+                                        <option  value="12">12</option>
                                         <option value="15">15</option>
                                         <option value="30">30</option>
                                         <option value="45">45</option>
@@ -85,18 +85,22 @@
 								<?php
 								/* Start the Loop */
 
-								while ( $query->have_posts() ) : //if post>=lenght {} если есть посты
+								/*while ( $query->have_posts() ) : //if post>=lenght {} если есть посты
+=======
 									$query->the_post();
                                     $price= get_post_meta(get_the_ID(), 'price', true);
                                     $area= get_post_meta(get_the_ID(), 'area', true);
                                     $rooms= get_post_meta(get_the_ID(), 'rooms', true);
                                     $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
-                                    $cars= get_post_meta(get_the_ID(), 'cars', true);
+                                    $cars= get_post_meta(get_the_ID(), 'cars', true);*/
+=======
+                                    
 
 								
+
 								?>
 
-                            <div class="col-sm-6 col-md-4 p0">
+                           <!--  <div class="col-sm-6 col-md-4 p0">
 
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
@@ -118,28 +122,33 @@
 
 
                                     </div>
-                                </div> 
+                                </div>  -->
+                             
                 <?php 
-		                endwhile;
-
+		                //endwhile;
+                   /* echo do_shortcode('[ajax_load_more id="8529698665" loading_style="infinite classic" post_type="property" posts_per_page="5" no_results_text="<div class="no-results">Sorry, nothing found in this query</div>" meta_key="price" orderby="date" order="ASC"]');*/
 				?>
+
+                <div id="loader">
+                  <div style="padding-top:63.636%;position:relative;"><img src="<?php echo get_template_directory_uri()?>/assets/img/A6Yw.gif" width="20%" height="20%" style='position:absolute;top:0;left:50%;' /></div>
+                </div><!--/ #loader-->
                     <!-- pagination  -->         
-                    
+                    </div>
                    <!--  <div class="col-md-12"> 
                         <div class="pull-right">
                             <div class="pagination">
                                 <ul>
-                                    <li><a href="#">Prev</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">Next</a></li>
+                                    <li><a href="javascript:void(0);" class="prev_page">Prev</a></li>
+                                    <li><a href="javascript:void(0);" class="page_link" data-page="1">1</a></li>
+                                    <li><a href="javascript:void(0);" class="page_link" data-page="2">2</a></li>
+                                    <li><a href="javascript:void(0);" class="page_link" data-page="3">3</a></li>
+                                    <li><a href="javascript:void(0);" class="page_link" data-page="4">4</a></li>
+                                    <li><a href="javascript:void(0);" class="next_page">Next</a></li>
                                 </ul>
                             </div>
                         </div>                
                     </div> -->
-                </div>
+                
 
                 <!-- если нет постов -->
                 <?php
