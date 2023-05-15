@@ -134,21 +134,7 @@
                 </div><!--/ #loader-->
                     <!-- pagination  -->         
                     </div>
-                   <!--  <div class="col-md-12"> 
-                        <div class="pull-right">
-                            <div class="pagination">
-                                <ul>
-                                    <li><a href="javascript:void(0);" class="prev_page">Prev</a></li>
-                                    <li><a href="javascript:void(0);" class="page_link" data-page="1">1</a></li>
-                                    <li><a href="javascript:void(0);" class="page_link" data-page="2">2</a></li>
-                                    <li><a href="javascript:void(0);" class="page_link" data-page="3">3</a></li>
-                                    <li><a href="javascript:void(0);" class="page_link" data-page="4">4</a></li>
-                                    <li><a href="javascript:void(0);" class="next_page">Next</a></li>
-                                </ul>
-                            </div>
-                        </div>                
-                    </div> -->
-                
+                  
 
                 <!-- если нет постов -->
                 <?php
