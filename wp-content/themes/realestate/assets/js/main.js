@@ -3,7 +3,9 @@ $(window).load(function () { // makes sure the whole site is loaded
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
     $('body').delay(350).css({'overflow': 'visible'});
 })
-//$(document).ready(function () {
+
+
+$(document).ready(function () {
 
     
     $('input').iCheck({
@@ -33,13 +35,12 @@ $(window).load(function () { // makes sure the whole site is loaded
 
 
 
-//});
+});
 
 
 
 
-//$(document).ready(function () {
-   
+$(document).ready(function () {
 
     $("#bg-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
@@ -128,7 +129,7 @@ $(window).load(function () { // makes sure the whole site is loaded
         return r;
     }
 
-//})
+})
 
 // Initializing WOW.JS
 
@@ -136,7 +137,7 @@ new WOW().init();
 
 
 
-//$(document).ready(function () {
+$(document).ready(function () {
 
   var page = 1;
   var per_page = $('#items_per_page').val();
@@ -239,7 +240,7 @@ new WOW().init();
 
   loadProducts();
 
-//})
+})
 
 
 //function for plugin Load More Ajax
