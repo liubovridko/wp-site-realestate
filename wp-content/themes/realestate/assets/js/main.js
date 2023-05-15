@@ -134,7 +134,7 @@ new WOW().init();
 
 
 
-
+//$(document).ready(function () {
 
   var page = 1;
   var per_page = $('#items_per_page').val();
@@ -212,13 +212,13 @@ new WOW().init();
         loadProducts(order, orderby); // вызвать функцию загрузки контента с новыми параметрами сортировки
     });
     // обработчик клика на ссылку страницы
-    $('.page_link a').click(function() {
+    $(document).on('click','a.page_link', function() {
        current_page = $(this).data('page');
        //$(this).parent().addClass('active').siblings().removeClass('active'); // выделить кнопку 
        loadProducts(); // вызвать функцию загрузки контента с новыми параметрами сортировки
     });
       // обработчик клика на ссылку "Prev"
-      $('.prev_page').click(function() {
+       $(document).on('click','a.prev_page', function() {
         //if (current_page > 1) {
           current_page = $(this).data('page');
            //current_page--;
@@ -227,7 +227,7 @@ new WOW().init();
   });
       
       // обработчик клика на ссылку "Next"
-    $('.next_page').click(function() {
+     $(document).on('click','a.next_page', function() {
     //if (current_page < total_pages) {
        current_page = $(this).data('page');
         //current_page++;
@@ -237,11 +237,11 @@ new WOW().init();
 
   loadProducts();
 
+//})
 
 
-
-
-
+//function for plugin Load More Ajax
+/*
 jQuery(function($) {
 
     function ajax_load_more(order_by, order) {
@@ -310,12 +310,12 @@ jQuery(function($) {
         }
     });
 }
-
+*/
 
 //изменение параметров фильтра в шорткоде от ajax_load_more(
 
 
-$('.sort-by-list a').click(function() {
+/*$('.sort-by-list a').click(function() {
 
     $(this).parent().addClass('active').siblings().removeClass('active');
     var orderby = $(this).data('orderby');
@@ -352,4 +352,4 @@ $('.sort-by-list a').click(function() {
     });
 });
 
-});
+});*/
