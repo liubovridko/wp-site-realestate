@@ -212,109 +212,42 @@ get_header();
                         <p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies . </p>
                     </div>
                 </div>
+                <?php 
+                 $args = array(
+                    'post_type' => 'property',
+                     'post_status' => 'publish',
+                    'posts_per_page' => 7 ,
+                  );
 
+                  $query = new WP_Query($args);
+                   if ($query->have_posts()) {
+
+                ?>
                 <div class="row">
                     <div class="proerty-th">
+                        <?php
+                          while ($query->have_posts()) {
+                            $query->the_post();
+                                    $price= get_post_meta(get_the_ID(), 'price', true);
+                                    $area= get_post_meta(get_the_ID(), 'area', true); 
+                        ?>
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-two proerty-item">
                                 <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-1.jpg"></a>
+                                    <a href="<?php echo esc_url(get_post_permalink()) ?>" ><img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
+                                    <h5><a href="<?php echo esc_url(get_post_permalink()) ?>" >Super nice villa </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b><?php _e('Area', 'realestate'); ?> :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <span class="pull-left"><b><?php _e('Area', 'realestate'); ?> :</b> <?php echo $area; ?>m </span>
+                                    <span class="proerty-price pull-right">$ <?php echo $price; ?></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-2.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-2.jpg"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-3.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-3.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-4.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-3.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-2.jpg"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-2.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-4.jpg"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/property-3.jpg"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
+                       <?php
+                        } 
+                       ?>
 
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-tree more-proerty text-center">
@@ -324,13 +257,20 @@ get_header();
                                 <div class="more-entry overflow">
                                     <h5><a href="property-1.html" ><?php _e('CAN`T DECIDE', 'realestate'); ?> ? </a></h5>
                                     <h5 class="tree-sub-ttl"><?php _e('Show all properties', 'realestate'); ?></h5>
-                                    <button class="btn border-btn more-black" value="All properties"><?php _e('All properties', 'realestate'); ?></button>
+                                    <button class="btn border-btn more-black" onclick="window.open('/properties')" value="All properties"><?php _e('All properties', 'realestate'); ?></button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+
+                <?php
+                     } else {
+                             get_template_part( 'template-parts/content', 'none' );
+                  }
+                  wp_reset_postdata();
+                ?>
             </div>
         </div>
 
