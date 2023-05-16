@@ -20,33 +20,33 @@ get_header();
             <div class="slider-content">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <h2>property Searching Just Got So Easy</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
+                        <h2><?php echo esc_html(pll__('property Searching Just Got So Easy')) ?></h2>
+                        <p><?php echo esc_html(pll_e('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!')) ?></p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
                             <form action="" class=" form-inline">
                                 <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Key word">
+                                    <input type="text" class="form-control" placeholder="<?php echo esc_attr(pll__('Key word')); ?>">
                                 </div>
                                 <div class="form-group">                                   
-                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="<?php _e('Select your city', 'realestate'); ?>">
+                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="<?php pll_e('Select your city', 'realestate'); ?>">
 
-                                        <option><?php _e('New york, CA', 'realestate'); ?></option>
-                                        <option><?php _e('Paris', 'realestate'); ?></option>
-                                        <option><?php _e('Casablanca', 'realestate'); ?></option>
-                                        <option><?php _e('Tokyo', 'realestate'); ?></option>
-                                        <option><?php _e('Marraekch', 'realestate'); ?></option>
-                                        <option><?php _e('kyoto , shibua', 'realestate'); ?></option>
+                                        <option><?php pll_e('New york, CA', 'realestate'); ?></option>
+                                        <option><?php pll_e('Paris', 'realestate'); ?></option>
+                                        <option><?php pll_e('Casablanca', 'realestate'); ?></option>
+                                        <option><?php pll_e('Tokyo', 'realestate'); ?></option>
+                                        <option><?php pll_e('Marraekch', 'realestate'); ?></option>
+                                        <option><?php pll_e('kyoto , shibua', 'realestate'); ?></option>
                                     </select>
                                 </div>
                                 <div class="form-group">                                     
                                     <select id="basic" class="selectpicker show-tick form-control">
-                                        <option> <?php _e('-Status-', 'realestate'); ?> </option>
-                                        <option> <?php _e('Rent', 'realestate'); ?></option>
-                                        <option><?php _e('Boy', 'realestate'); ?></option>
-                                        <option><?php _e('used', 'realestate'); ?></option>  
+                                        <option> <?php pll_e('-Status-', 'realestate'); ?> </option>
+                                        <option> <?php pll_e('Rent', 'realestate'); ?></option>
+                                        <option><?php pll_e('Buy', 'realestate'); ?></option>
+                                        <option><?php pll_e('used', 'realestate'); ?></option>  
 
                                     </select>
                                 </div>
@@ -57,7 +57,7 @@ get_header();
                                     <div class="search-row">   
 
                                         <div class="form-group mar-r-20">
-                                            <label for="price-range"><?php _e('Price range', 'realestate'); ?> ($):</label>
+                                            <label for="price-range"><?php pll_e('Price range', 'realestate'); ?> ($):</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[0,450]" id="price-range" ><br />
@@ -67,7 +67,7 @@ get_header();
                                         <!-- End of  -->  
 
                                         <div class="form-group mar-l-20">
-                                            <label for="property-geo"><?php _e('Property geo (m2) ', 'realestate'); ?> :</label>
+                                            <label for="property-geo"><?php pll_e('Property geo (m2) ', 'realestate'); ?> :</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[50,450]" id="property-geo" ><br />
@@ -80,7 +80,7 @@ get_header();
                                     <div class="search-row">
 
                                         <div class="form-group mar-r-20">
-                                            <label for="price-range"><?php _e('Min baths ', 'realestate'); ?>:</label>
+                                            <label for="price-range"><?php pll_e('Min baths ', 'realestate'); ?>:</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[250,450]" id="min-baths" ><br />
@@ -90,7 +90,7 @@ get_header();
                                         <!-- End of  --> 
 
                                         <div class="form-group mar-l-20">
-                                            <label for="property-geo"><?php _e('Min bed ', 'realestate'); ?>:</label>
+                                            <label for="property-geo"><?php pll_e('Min bed ', 'realestate'); ?>:</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[250,450]" id="min-bed" ><br />
@@ -106,7 +106,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Fire Place', 'realestate'); ?>(3100)
+                                                    <input type="checkbox"> <?php pll_e('Fire Place', 'realestate'); ?>(3100)
                                                 </label>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Dual Sinks', 'realestate'); ?>(500)
+                                                    <input type="checkbox"> <?php pll_e('Dual Sinks', 'realestate'); ?>(500)
                                                 </label>
                                             </div>
                                         </div>
@@ -124,7 +124,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Hurricane Shutters', 'realestate'); ?>(99)
+                                                    <input type="checkbox"> <?php pll_e('Hurricane Shutters', 'realestate'); ?>(99)
                                                 </label>
                                             </div>
                                         </div>
@@ -136,7 +136,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Swimming Pool', 'realestate'); ?>(1190)
+                                                    <input type="checkbox"> <?php pll_e('Swimming Pool', 'realestate'); ?>(1190)
                                                 </label>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> 2 <?php _e('Stories', 'realestate'); ?>(4600)
+                                                    <input type="checkbox"> 2 <?php pll_e('Stories', 'realestate'); ?>(4600)
                                                 </label>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Emergency Exit', 'realestate'); ?>(200)
+                                                    <input type="checkbox"> <?php pll_e('Emergency Exit', 'realestate'); ?>(200)
                                                 </label>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Laundry Room', 'realestate'); ?>(10073)
+                                                    <input type="checkbox"> <?php pll_e('Laundry Room', 'realestate'); ?>(10073)
                                                 </label>
                                             </div>
                                         </div>
@@ -175,7 +175,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> <?php _e('Jog Path', 'realestate'); ?>(1503)
+                                                    <input type="checkbox"> <?php pll_e('Jog Path', 'realestate'); ?>(1503)
                                                 </label>
                                             </div>
                                         </div>
@@ -184,7 +184,7 @@ get_header();
                                         <div class="form-group">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> 26' <?php _e('Ceilings', 'realestate'); ?>(1200)
+                                                    <input type="checkbox"> 26' <?php pll_e('Ceilings', 'realestate'); ?>(1200)
                                                 </label>
                                             </div>
                                         </div>
@@ -208,8 +208,8 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2>Top submitted property</h2>
-                        <p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies . </p>
+                        <h2><?php esc_html(pll__('Top submitted property')); ?></h2>
+                        <p><?php esc_html(pll__('Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies .')); ?> </p>
                     </div>
                 </div>
                 <?php 
@@ -239,7 +239,7 @@ get_header();
                                 <div class="item-entry overflow">
                                     <h5><a href="<?php echo esc_url(get_post_permalink()) ?>" >Super nice villa </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b><?php _e('Area', 'realestate'); ?> :</b> <?php echo $area; ?>m </span>
+                                    <span class="pull-left"><b><?php pll_e('Area', 'realestate'); ?> :</b> <?php echo $area; ?>m </span>
                                     <span class="proerty-price pull-right">$ <?php echo $price; ?></span>
                                 </div>
                             </div>
@@ -255,8 +255,8 @@ get_header();
                                     <i class="fa fa-th"></i>
                                 </div>
                                 <div class="more-entry overflow">
-                                    <h5><a href="property-1.html" ><?php _e('CAN`T DECIDE', 'realestate'); ?> ? </a></h5>
-                                    <h5 class="tree-sub-ttl"><?php _e('Show all properties', 'realestate'); ?></h5>
+                                    <h5><a href="property-1.html" ><?php pll_e('CAN`T DECIDE', 'realestate'); ?> ? </a></h5>
+                                    <h5 class="tree-sub-ttl"><?php pll_e('Show all properties', 'realestate'); ?></h5>
                                     <button class="btn border-btn more-black" onclick="window.open('/properties')" value="All properties"><?php _e('All properties', 'realestate'); ?></button>
                                 </div>
                             </div>
