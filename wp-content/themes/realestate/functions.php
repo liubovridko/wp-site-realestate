@@ -399,6 +399,9 @@ function sort_properties_callback() {
 add_action('wp_ajax_sort_properties', 'sort_properties_callback');
 add_action('wp_ajax_nopriv_sort_properties', 'sort_properties_callback');
 
+
+//change shortcode from plugin Ajax load more
+
 function ajax_load_more__properties_callback() {
 	 $orderby = isset($_POST['orderby']) ? $_POST['orderby'] : 'date';
     $order = isset($_POST['order']) ? $_POST['order'] : 'ASC' ;
@@ -414,6 +417,234 @@ function ajax_load_more__properties_callback() {
 
 //add_action('wp_ajax_sort_properties', 'ajax_load_more__properties_callback');
 //add_action('wp_ajax_nopriv_sort_properties', 'ajax_load_more__properties_callback');
+
+//register string for plugin Polylang-translation
+
+add_action('init', function () {
+
+  if(! function_exists('pll_register_string')) {
+    return;
+  }
+
+  if( ! function_exists( 'pll__' ) ) {
+    function pll__( $string ) {
+      return $string;
+    }
+  }
+ 
+  if( ! function_exists( 'pll_e' ) ) {
+    function pll_e( $string ) {
+      echo $string;
+    }
+  }
+
+  pll_register_string(
+    'title_name_home_page', // название строки
+    'property Searching Just Got So Easy', // сама строка
+    'Slider', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+   pll_register_string(
+    'title_text_home_page', // название строки
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!', // сама строка
+    'Slider', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+   pll_register_string(
+    'search_title_select_fild', // название строки
+    'Select your city', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+    pll_register_string(
+    'search_form_inp_value', // название строки
+    'Key word', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+     pll_register_string(
+    'search_form_option_value', // название строки
+    'New york, CA', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+      pll_register_string(
+    'search_form_option_value', // название строки
+    'Paris', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+        pll_register_string(
+    'search_form_option_value', // название строки
+    'Casablanca', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+     pll_register_string(
+    'search_form_option_value', // название строки
+    'Tokyo', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+      pll_register_string(
+    'search_form_option_value', // название строки
+    'Marraekch', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+      pll_register_string(
+    'search_form_option_value', // название строки
+    'kyoto', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+       pll_register_string(
+    'search_form_option_value', // название строки
+    '-Status-', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+        pll_register_string(
+    'search_form_option_value', // название строки
+    'Rent', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+        pll_register_string(
+    'search_form_option_value', // название строки
+    'Buy', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+        pll_register_string(
+    'search_form_option_value', // название строки
+    'used', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+     pll_register_string(
+    'search_form_inp_name', // название строки
+    'Price range', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+      pll_register_string(
+    'search_form_inp_name', // название строки
+    'Property geo (m2)', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+      pll_register_string(
+    'search_form_inp_name', // название строки
+    'Min baths', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+       pll_register_string(
+    'search_form_inp_name', // название строки
+    'Min bed', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+     pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Fire Place', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+     pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Dual Sinks', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+      pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Hurricane Shutters', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+       pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Swimming Pool', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+   pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Stories', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+   pll_register_string(
+    'search_form_inp_checkbox', // название строки
+    'Emergency Exit', // сама строка
+    'Search Form', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+  pll_register_string(
+      'search_form_inp_checkbox', // название строки
+      'Laundry Room', // сама строка
+      'Search Form', // категория для удобства
+      false // будут ли тут переносы строк в тексте или нет
+    );
+  pll_register_string(
+      'search_form_inp_checkbox', // название строки
+      'Jog Path', // сама строка
+      'Search Form', // категория для удобства
+      false // будут ли тут переносы строк в тексте или нет
+    );
+  pll_register_string(
+      'search_form_inp_checkbox', // название строки
+      'Ceilings', // сама строка
+      'Search Form', // категория для удобства
+      false // будут ли тут переносы строк в тексте или нет
+    );
+   pll_register_string(
+    'title_name_home_page', // название строки
+    'Top submitted property', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+   pll_register_string(
+    'title_text_home_page', // название строки
+    'Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies .', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'name_custom_fields', // название строки
+    'Area', // сама строка
+    'Properties', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'title_text_home_page', // название строки
+    'CAN`T DECIDE', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'title_text_home_page', // название строки
+    'Show all properties', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+});
+
+
+
 
 
 if ( ! defined( '_S_VERSION' ) ) {
