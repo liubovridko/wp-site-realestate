@@ -154,6 +154,24 @@ function realestate_register_post_type_property() {
          'rewrite'     => array( 'slug' => 'properties' ),
 	];
     register_post_type('property', $args);
+   unset($args); /*очищать массив args*/
+    
+    $args =[
+    'label' => esc_html__('Testimonials', 'realestate'), //название типа поста, отображаемое в меню
+         'public' => true, // будет ли отображаться  через интерфейс администратора
+         'show_in_menu' => true , //Где показать тип сообщения в меню администратора
+         'has_archive' => true,
+         'menu_icon' => 'dashicons-format-status', //иконка меню
+         'supports' => [              //Основные функции, которые поддерживает тип публикации
+          'title',
+      'editor',
+      'thumbnail',
+      'excerpt',
+      'custom-fields'
+         ],
+         'rewrite'     => array( 'slug' => 'testimonials' ),
+  ];
+    register_post_type('testimonial', $args);
 }
 //init-функция будут запускаться при загрузке WP
 add_action('init', 'realestate_register_post_type_property');
@@ -501,7 +519,7 @@ add_action('init', function () {
 
       pll_register_string(
     'search_form_option_value', // название строки
-    'kyoto', // сама строка
+    'kyoto , shibua', // сама строка
     'Search Form', // категория для удобства
     false // будут ли тут переносы строк в тексте или нет
   );
@@ -636,6 +654,102 @@ add_action('init', function () {
     pll_register_string(
     'title_text_home_page', // название строки
     'Show all properties', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'header_btn_name', // название строки
+    'Submit', // сама строка
+    'Header', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'btn_value', // название строки
+    'All properties', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+     pll_register_string(
+    'welcome_area_title', // название строки
+    'Any property', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+      pll_register_string(
+    'welcome_area_title', // название строки
+    'More Clients', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+       pll_register_string(
+    'welcome_area_title', // название строки
+    'Easy to use', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
+    'welcome_area_title', // название строки
+    'Any help', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+     pll_register_string(
+    'testimonial_area_title', // название строки
+    'Our Customers Said', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+      pll_register_string(
+    'count_area_title', // название строки
+    'You can trust Us', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+       pll_register_string(
+    'count_area_title', // название строки
+    'HAPPY CUSTOMER', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+        pll_register_string(
+    'count_area_title', // название строки
+    'Properties in stock', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+        pll_register_string(
+    'count_area_title', // название строки
+    'City registered', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+         pll_register_string(
+    'count_area_title', // название строки
+    'DEALER BRANCHES', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+          pll_register_string(
+    'boy-sale_area_title', // название строки
+    'ARE YOU LOOKING FOR A Property?', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+           pll_register_string(
+    'boy-sale_area_text', // название строки
+    'varius od lio eget conseq uat blandit, lorem auglue comm lodo nisl no us nibh mas lsa', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+            pll_register_string(
+    'boy-sale_area_title', // название строки
+    'DO YOU WANT TO SELL A Property?', // сама строка
+    'Home page', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+              pll_register_string(
+    'boy-sale_area_caal_title', // название строки
+    'QUESTIONS? CALL US', // сама строка
     'Home page', // категория для удобства
     false // будут ли тут переносы строк в тексте или нет
   );
