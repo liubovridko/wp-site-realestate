@@ -664,6 +664,12 @@ add_action('init', function () {
     false // будут ли тут переносы строк в тексте или нет
   );
     pll_register_string(
+    'header_btn_name', // название строки
+    'Login', // сама строка
+    'Header', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+    pll_register_string(
     'btn_value', // название строки
     'All properties', // сама строка
     'Home page', // категория для удобства

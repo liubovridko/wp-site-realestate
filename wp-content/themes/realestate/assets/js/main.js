@@ -170,9 +170,16 @@ $(document).ready(function () {
       url: my_script_vars.ajaxurl, // Переменная ajaxurl определена в WordPress
       type: 'POST',
       data: data,
+      beforeSend: function() {
+        // Перед отправкой запроса плавно скрываем результаты
+        $('#list-type').fadeTo(300, 0.5);
+       
+      },
       success: function(response) {
         if(response) {
           $('#list-type').html(response);
+          // После обновления данных плавно их отображаем
+        $('#list-type').fadeTo(300, 1);;
           loading = false;
           $('#loader').hide();
         } else {
@@ -198,10 +205,10 @@ $(document).ready(function () {
 
   // Обработчик события change для изменения количества товаров на странице
   $('#items_per_page').on('change', function() {
-    page = 1;
+    //page = 1;
     per_page = $(this).val();
     $('#list-type').html('');
-    loadProducts(order, orderby);
+    loadProducts();
   });
 
   // Обработчик клика на кнопке "Property Date" and "Property Price
