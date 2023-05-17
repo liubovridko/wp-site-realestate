@@ -1,0 +1,72 @@
+[2023-05-17 13:40:05 : INFO] - Re_Smush_It_Task with attachment ID : 253, autocreated on : May 17, 2023 01:40:05 
+[2023-05-17 13:45:14 : INFO] - 
+ 
+[2023-05-17 13:45:14 : INFO] - Header for logs at time:  Wed, 17 May 2023 13:45:14 +0000 on http://real-estate.test 
+[2023-05-17 13:45:14 : INFO] - WP: 6.1.1 
+[2023-05-17 13:45:14 : INFO] - PHP: 8.2.0 (apache2handler, Windows NT DESKTOP-M9GF80J 10.0 build 19045 (Windows 10) AMD64) 
+[2023-05-17 13:45:14 : INFO] - MySQL: 10.4.27 
+[2023-05-17 13:45:14 : INFO] - WPLANG: en_US 
+[2023-05-17 13:45:14 : INFO] - Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0 
+[2023-05-17 13:45:14 : INFO] - Outbound connections: N 
+[2023-05-17 13:45:14 : INFO] - safe_mode: 0 
+[2023-05-17 13:45:14 : INFO] - max_execution_time: 120 
+[2023-05-17 13:45:14 : INFO] - memory_limit: 512M (used: 40.2M | 44M) 
+[2023-05-17 13:45:14 : INFO] - multisite: N 
+[2023-05-17 13:45:14 : INFO] - openssl: OpenSSL 3.0.7 1 Nov 2022 
+[2023-05-17 13:45:14 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2023-05-17 13:45:14 : DEBUG] - Lock option (updraft_lock_smush, re_options) was created in the database 
+[2023-05-17 13:45:14 : INFO] - Lock (updraft_lock_smush, re_options) acquired after initialising the database 
+[2023-05-17 13:45:14 : INFO] - Processing task with ID : 85, and type 'smush' 
+[2023-05-17 13:45:14 : INFO] - Re_Smush_It_Task with attachment ID : 253, autocreated on : May 17, 2023 01:40:05 
+[2023-05-17 13:45:14 : INFO] - There were no WebP conversion tools found on your server. 
+[2023-05-17 13:45:14 : INFO] - 75 
+[2023-05-17 13:45:14 : INFO] - Re_Smush_It_Task with attachment ID : 256, autocreated on : May 17, 2023 01:45:14 
+[2023-05-17 13:45:14 : INFO] - Backing up the original image - 2023/05/client-face1-updraft-pre-smush-original.png 
+[2023-05-17 13:45:14 : INFO] - Successfully optimized the image - C:\xampp\htdocs\real-estate/wp-content/uploads/2023/05/client-face1.png.The file was compressed from 15.05 KB to 7.47 KB saving 50.37 percent using WP-Optimize 
+[2023-05-17 13:45:14 : INFO] - Completed processing task with ID : 85, and type 'smush' 
+[2023-05-17 13:45:14 : INFO] - Lock option (updraft_lock_smush, re_options) released 
+[2023-05-17 13:45:14 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2023-05-17 13:45:14 : INFO] - Lock option (updraft_lock_smush, re_options) was deleted from the database 
+[2023-05-17 13:55:27 : INFO] - 
+ 
+[2023-05-17 13:55:27 : INFO] - Header for logs at time:  Wed, 17 May 2023 13:55:27 +0000 on http://real-estate.test 
+[2023-05-17 13:55:27 : INFO] - WP: 6.1.1 
+[2023-05-17 13:55:27 : INFO] - PHP: 8.2.0 (apache2handler, Windows NT DESKTOP-M9GF80J 10.0 build 19045 (Windows 10) AMD64) 
+[2023-05-17 13:55:27 : INFO] - MySQL: 10.4.27 
+[2023-05-17 13:55:27 : INFO] - WPLANG: en_US 
+[2023-05-17 13:55:27 : INFO] - Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0 
+[2023-05-17 13:55:27 : INFO] - Outbound connections: N 
+[2023-05-17 13:55:27 : INFO] - safe_mode: 0 
+[2023-05-17 13:55:27 : INFO] - max_execution_time: 120 
+[2023-05-17 13:55:27 : INFO] - memory_limit: 512M (used: 40.2M | 46M) 
+[2023-05-17 13:55:27 : INFO] - multisite: N 
+[2023-05-17 13:55:27 : INFO] - openssl: OpenSSL 3.0.7 1 Nov 2022 
+[2023-05-17 13:55:27 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2023-05-17 13:55:27 : DEBUG] - Lock option (updraft_lock_smush, re_options) was created in the database 
+[2023-05-17 13:55:27 : INFO] - Lock (updraft_lock_smush, re_options) acquired after initialising the database 
+[2023-05-17 13:55:27 : INFO] - Processing task with ID : 86, and type 'smush' 
+[2023-05-17 13:55:27 : INFO] - Re_Smush_It_Task with attachment ID : 256, autocreated on : May 17, 2023 01:45:14 
+[2023-05-17 13:55:27 : INFO] - There were no WebP conversion tools found on your server. 
+[2023-05-17 13:55:27 : INFO] - 75 
+[2023-05-17 13:55:28 : INFO] - Backing up the original image - 2023/05/client-face2-updraft-pre-smush-original.png 
+[2023-05-17 13:55:28 : INFO] - Successfully optimized the image - C:\xampp\htdocs\real-estate/wp-content/uploads/2023/05/client-face2.png.The file was compressed from 14.77 KB to 6.78 KB saving 54.1 percent using WP-Optimize 
+[2023-05-17 13:55:28 : INFO] - Completed processing task with ID : 86, and type 'smush' 
+[2023-05-17 13:55:28 : INFO] - Lock option (updraft_lock_smush, re_options) released 
+[2023-05-17 13:55:28 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2023-05-17 13:55:28 : INFO] - Lock option (updraft_lock_smush, re_options) was deleted from the database 
+[2023-05-17 13:55:28 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2023-05-17 14:05:52 : INFO] - 
+ 
+[2023-05-17 14:05:52 : INFO] - Header for logs at time:  Wed, 17 May 2023 14:05:52 +0000 on http://real-estate.test 
+[2023-05-17 14:05:52 : INFO] - WP: 6.1.1 
+[2023-05-17 14:05:52 : INFO] - PHP: 8.2.0 (apache2handler, Windows NT DESKTOP-M9GF80J 10.0 build 19045 (Windows 10) AMD64) 
+[2023-05-17 14:05:52 : INFO] - MySQL: 10.4.27 
+[2023-05-17 14:05:52 : INFO] - WPLANG: en_US 
+[2023-05-17 14:05:52 : INFO] - Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0 
+[2023-05-17 14:05:52 : INFO] - Outbound connections: N 
+[2023-05-17 14:05:52 : INFO] - safe_mode: 0 
+[2023-05-17 14:05:52 : INFO] - max_execution_time: 120 
+[2023-05-17 14:05:52 : INFO] - memory_limit: 512M (used: 40.2M | 46M) 
+[2023-05-17 14:05:52 : INFO] - multisite: N 
+[2023-05-17 14:05:52 : INFO] - openssl: OpenSSL 3.0.7 1 Nov 2022 
+[2023-05-17 14:05:52 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 

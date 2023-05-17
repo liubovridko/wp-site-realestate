@@ -208,8 +208,8 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2><?php esc_html(pll__('Top submitted property')); ?></h2>
-                        <p><?php esc_html(pll__('Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies .')); ?> </p>
+                        <h2><?php echo esc_html(pll__('Top submitted property')); ?></h2>
+                        <p><?php echo esc_html(pll__('Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies .')); ?> </p>
                     </div>
                 </div>
                 <?php 
@@ -237,7 +237,7 @@ get_header();
                                     <a href="<?php echo esc_url(get_post_permalink()) ?>" ><img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="<?php echo esc_url(get_post_permalink()) ?>" >Super nice villa </a></h5>
+                                    <h5><a href="<?php echo esc_url(get_post_permalink()) ?>" ><?php the_title(); ?> </a></h5>
                                     <div class="dot-hr"></div>
                                     <span class="pull-left"><b><?php pll_e('Area', 'realestate'); ?> :</b> <?php echo $area; ?>m </span>
                                     <span class="proerty-price pull-right">$ <?php echo $price; ?></span>
@@ -257,7 +257,7 @@ get_header();
                                 <div class="more-entry overflow">
                                     <h5><a href="property-1.html" ><?php pll_e('CAN`T DECIDE', 'realestate'); ?> ? </a></h5>
                                     <h5 class="tree-sub-ttl"><?php pll_e('Show all properties', 'realestate'); ?></h5>
-                                    <button class="btn border-btn more-black" onclick="window.open('/properties')" value="All properties"><?php _e('All properties', 'realestate'); ?></button>
+                                    <button class="btn border-btn more-black" onclick="window.open('/properties')" value="<?php  esc_attr(pll__('All properties')) ?>"><?php esc_html(pll_e('All properties', 'realestate')); ?></button>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +297,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-home pe-4x"></i>
                                             </div>
-                                            <h3><?php _e('Any property', 'realestate'); ?></h3>
+                                            <h3><?php esc_html(pll_e('Any property', 'realestate')); ?></h3>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 m-padding">
@@ -305,7 +305,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-users pe-4x"></i>
                                             </div>
-                                            <h3><?php _e('More Clients', 'realestate'); ?></h3>
+                                            <h3><?php esc_html(pll_e('More Clients', 'realestate')); ?></h3>
                                         </div>
                                     </div>
 
@@ -319,7 +319,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-notebook pe-4x"></i>
                                             </div>
-                                            <h3><?php _e('Easy to use', 'realestate'); ?></h3>
+                                            <h3><?php esc_html(pll_e('Easy to use', 'realestate')); ?></h3>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 m-padding">
@@ -327,7 +327,7 @@ get_header();
                                             <div class="welcome-icon">
                                                 <i class="pe-7s-help2 pe-4x"></i>
                                             </div>
-                                            <h3><?php _e('Any help', 'realestate'); ?> </h3>
+                                            <h3><?php esc_html(pll_e('Any help', 'realestate')); ?> </h3>
                                         </div>
                                     </div>
 
@@ -345,51 +345,45 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2><?php _e('Our Customers Said', 'realestate'); ?>  </h2> 
+                        <h2><?php esc_html(pll_e('Our Customers Said', 'realestate')); ?>  </h2> 
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="row testimonial">
                         <div class="col-md-12">
+                            <?php 
+                                 $args = array(
+                                    'post_type' => 'testimonial',
+                                     'post_status' => 'publish',
+                                   
+                                  );
+
+                                  $query = new WP_Query($args);
+                                   if ($query->have_posts()) {
+                           ?>
                             <div id="testimonial-slider">
+                                <?php
+                          while ($query->have_posts()) {
+                                    $query->the_post();
+                                    ?>
+
                                 <div class="item">
                                     <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
+                                        <?php the_content(); ?>
+                                        <h4><strong><?= the_title(); ?>, </strong><i><?= get_field('position'); ?></i></h4>
                                     </div>
                                     <div class="client-face wow fadeInRight" data-wow-delay=".9s"> 
-                                        <img src="<?php echo  get_template_directory_uri()?>/assets/img/client-face1.png" alt="">
+                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url()) ?>" alt="">
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="<?php echo  get_template_directory_uri()?>/assets/img/client-face2.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="<?php echo  get_template_directory_uri()?>/assets/img/client-face1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="<?php echo  get_template_directory_uri()?>/assets/img/client-face2.png" alt="">
-                                    </div>
-                                </div>
+                               <?php
+                                    } /*end while loop*/
+                                ?>
                             </div>
+                            <?php
+                        } /*end if loop*/
+                            ?>
                         </div>
                     </div>
 
@@ -403,7 +397,7 @@ get_header();
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2><?php _e('You can trust Us', 'realestate'); ?> </h2> 
+                        <h2><?php esc_html(pll_e('You can trust Us', 'realestate')); ?> </h2> 
                     </div>
                 </div>
                 <div class="row">
@@ -416,7 +410,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="5000">
                                         <h2 class="percent" id="counter">0</h2>
-                                        <h5><?php _e('HAPPY CUSTOMER', 'realestate'); ?> </h5>
+                                        <h5><?php esc_html(pll_e('HAPPY CUSTOMER', 'realestate')); ?> </h5>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +421,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="12000">
                                         <h2 class="percent" id="counter1">0</h2>
-                                        <h5><?php _e('Properties in stock', 'realestate'); ?></h5>
+                                        <h5><?php esc_html(pll_e('Properties in stock', 'realestate')); ?></h5>
                                     </div>
                                 </div> 
                             </div> 
@@ -438,7 +432,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="120">
                                         <h2 class="percent" id="counter2">0</h2>
-                                        <h5><?php _e('City registered', 'realestate'); ?> </h5>
+                                        <h5><?php esc_html(pll_e('City registered', 'realestate')); ?> </h5>
                                     </div>
                                 </div> 
                             </div> 
@@ -449,7 +443,7 @@ get_header();
                                     </div>
                                     <div class="chart" data-percent="5000">
                                         <h2 class="percent"  id="counter3">5000</h2>
-                                        <h5><?php _e('DEALER BRANCHES', 'realestate'); ?></h5>
+                                        <h5><?php esc_html(pll_e('DEALER BRANCHES', 'realestate')); ?></h5>
                                     </div>
                                 </div> 
 
@@ -471,8 +465,8 @@ get_header();
                                 <span class="fa fa-search"></span>
                             </div>
                             <div class="asks-first-info">
-                                <h2>ARE YOU LOOKING FOR A Property?</h2>
-                                <p> varius od lio eget conseq uat blandit, lorem auglue comm lodo nisl no us nibh mas lsa</p>                                        
+                                <h2><?php esc_html(pll_e('ARE YOU LOOKING FOR A Property?')) ?></h2>
+                                <p> <?php esc_html(pll_e('varius od lio eget conseq uat blandit, lorem auglue comm lodo nisl no us nibh mas lsa')) ?></p>                                        
                             </div>
                             <div class="asks-first-arrow">
                                 <a href="properties.html"><span class="fa fa-angle-right"></span></a>
@@ -485,8 +479,8 @@ get_header();
                                 <span class="fa fa-usd"></span>
                             </div>
                             <div class="asks-first-info">
-                                <h2>DO YOU WANT TO SELL A Property?</h2>
-                                <p> varius od lio eget conseq uat blandit, lorem auglue comm lodo nisl no us nibh mas lsa</p>
+                                <h2><?php esc_html(pll_e('DO YOU WANT TO SELL A Property?')) ?></h2>
+                                <p> <?php esc_html(pll_e('varius od lio eget conseq uat blandit, lorem auglue comm lodo nisl no us nibh mas lsa')) ?></p>
                             </div>
                             <div class="asks-first-arrow">
                                 <a href="properties.html"><span class="fa fa-angle-right"></span></a>
@@ -494,7 +488,7 @@ get_header();
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <p  class="asks-call"><?php _e('QUESTIONS? CALL US', 'realestate'); ?>  : <span class="strong"> + 3-123- 424-5700</span></p>
+                        <p  class="asks-call"><?php esc_html(pll_e('QUESTIONS? CALL US', 'realestate')); ?>  : <span class="strong"> + 3-123- 424-5700</span></p>
                     </div>
                 </div>
             </div>
