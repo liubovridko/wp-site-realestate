@@ -78,7 +78,7 @@
                         <?php } else {
                             ?>
 
-                            <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('/login')" data-wow-delay="0.45s"><?php  _e('Login'); ?></button>
+                            <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('/login')" data-wow-delay="0.45s"><?php  pll_e('Login'); ?></button>
                        <?php } ?>
                         
                         <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s"><?php pll_e('Submit', 'realestate'); ?></button>
