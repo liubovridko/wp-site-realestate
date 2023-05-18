@@ -14,19 +14,6 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 
-# Backup Migration START
-<IfModule mod_rewrite.c>
-	
-	RewriteEngine On
-	RewriteRule .* - [E=noconntimeout:1,E=noabort:1]
-	
-</IfModule>
-<IfModule mod_env>
-	
-	SetEnv noabort 1
-	
-</IfModule>
-# Backup Migration END
 
 # BEGIN WP-Optimize Gzip compression
 <IfModule mod_filter.c>

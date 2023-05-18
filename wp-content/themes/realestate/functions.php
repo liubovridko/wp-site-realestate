@@ -898,6 +898,17 @@ function realestate_widgets_init() {
 			'after_title'   => '</h4>',
 		)
 	);
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Sidebar-2', 'realestate' ),
+      'id'            => 'sidebar-right-2',
+      'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
+      'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3 class="panel-title">',
+      'after_title'   => '</h3>',
+    )
+  );
 }
 add_action( 'widgets_init', 'realestate_widgets_init' );
 

@@ -93,9 +93,11 @@ get_header();
                         </form>
                     </div>
                 </div>
-                <!-- /.col-md-9 -->   
+                <!-- /.col-md-9 -->  
 
-                <div class="col-md-3 ">                    
+                <?php get_sidebar(); ?> 
+
+                <!-- <div class="col-md-3 ">                    
                     <div class="blog-asside-right">  
                         <div class="panel panel-default sidebar-menu wow fadeInRight animated">
                             <div class="panel-heading">
@@ -188,7 +190,7 @@ get_header();
                             </div>
                         </div>
                     </div>                     
-                </div>            
+                </div>   -->          
             </div>
         </div>
          <div id="map" style="height: 400px;"></div>
