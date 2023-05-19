@@ -53,7 +53,7 @@ get_header();
                        
                         <hr>
                         <h2>Contact form</h2>
-                        <form>
+                        <form id="myForm" method="post" action="#">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
