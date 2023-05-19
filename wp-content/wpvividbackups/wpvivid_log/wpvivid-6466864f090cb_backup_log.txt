@@ -1,0 +1,107 @@
+Log created: 2023-05-18 20:10:55
+Type: backup
+[2023-05-18 20:10:56][notice]Start backing up.
+[2023-05-18 20:10:56][notice]server info fcgi:Off max execution time: 300 wp version:6.1.1 php version:8.2.0 db version:10.4.27 php ini:safe_mode: memory_limit:256M memory_get_usage:53.95 MB memory_get_peak_usage:54.61 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2023-05-18 20:10:56][notice]Prepare to backup backup_db files.
+[2023-05-18 20:10:56][notice]Start exporting database.
+[2023-05-18 20:10:56][notice]Preparing to dump table re_alm
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automation_triggers
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automations
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_forms
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_log
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_statistics_bounces
+[2023-05-18 20:10:56][notice]Preparing to dump table re_sml
+[2023-05-18 20:10:56][notice]Preparing to dump table re_actionscheduler_claims
+[2023-05-18 20:10:56][notice]Preparing to dump table re_actionscheduler_groups
+[2023-05-18 20:10:56][notice]Preparing to dump table re_links
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automation_run_logs
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automation_runs
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automation_versions
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_custom_fields
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_dynamic_segment_filters
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_feature_flags
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_migrations
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_newsletter_option
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_newsletter_option_fields
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_newsletter_posts
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_newsletter_segment
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_scheduled_task_subscribers
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_settings
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_statistics_forms
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_subscriber_custom_field
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_subscriber_ips
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_tags
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_user_agents
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_user_flags
+[2023-05-18 20:10:56][notice]Preparing to dump table re_term_relationships
+[2023-05-18 20:10:56][notice]Preparing to dump table re_commentmeta
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_automation_run_subjects
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_scheduled_tasks
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_segments
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_sending_queues
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_statistics_newsletters
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_stats_notifications
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_subscriber_segment
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_subscriber_tag
+[2023-05-18 20:10:56][notice]Preparing to dump table re_term_taxonomy
+[2023-05-18 20:10:56][notice]Preparing to dump table re_termmeta
+[2023-05-18 20:10:56][notice]Preparing to dump table re_terms
+[2023-05-18 20:10:56][notice]Preparing to dump table re_tm_taskmeta
+[2023-05-18 20:10:56][notice]Preparing to dump table re_tm_tasks
+[2023-05-18 20:10:56][notice]Preparing to dump table re_usermeta
+[2023-05-18 20:10:56][notice]Preparing to dump table re_mailpoet_newsletter_links
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_newsletters
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_statistics_clicks
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_statistics_unsubscribes
+[2023-05-18 20:10:57][notice]Preparing to dump table re_users
+[2023-05-18 20:10:57][notice]Preparing to dump table re_actionscheduler_logs
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_statistics_woocommerce_purchases
+[2023-05-18 20:10:57][notice]Preparing to dump table re_comments
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_statistics_opens
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_subscribers
+[2023-05-18 20:10:57][notice]Preparing to dump table re_actionscheduler_actions
+[2023-05-18 20:10:57][notice]Preparing to dump table re_postmeta
+[2023-05-18 20:10:57][notice]Preparing to dump table re_posts
+[2023-05-18 20:10:57][notice]Preparing to dump table re_options
+[2023-05-18 20:10:57][notice]Preparing to dump table re_mailpoet_newsletter_templates
+[2023-05-18 20:10:57][notice]Exporting database finished.
+[2023-05-18 20:10:57][notice]Start compressing database
+[2023-05-18 20:10:57][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_db.sql
+[2023-05-18 20:10:57][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_db.part001.zip, filesize: 2.74 MB
+[2023-05-18 20:10:57][notice]Compressing database completed
+[2023-05-18 20:10:57][notice]Backing up backup_db completed.
+[2023-05-18 20:10:57][notice]Prepare to backup backup_themes files.
+[2023-05-18 20:10:57][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_themes.part001.zip index:634
+[2023-05-18 20:11:06][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_themes.part001.zip success. index:634 file size:24.37 MB
+[2023-05-18 20:11:06][notice]Backing up backup_themes completed.
+[2023-05-18 20:11:06][notice]Prepare to backup backup_plugin files.
+[2023-05-18 20:11:12][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_plugin.part001.zip index:6740
+[2023-05-18 20:13:00][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_plugin.part001.zip success. index:6740 file size:62.10 MB
+[2023-05-18 20:13:00][notice]Backing up backup_plugin completed.
+[2023-05-18 20:13:00][notice]Prepare to backup backup_uploads files.
+[2023-05-18 20:13:00][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_uploads.part001.zip index:50
+[2023-05-18 20:13:00][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_uploads.part001.zip success. index:50 file size:2.70 MB
+[2023-05-18 20:13:00][notice]Backing up backup_uploads completed.
+[2023-05-18 20:13:00][notice]Prepare to backup backup_content files.
+[2023-05-18 20:13:00][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_content.part001.zip index:138
+[2023-05-18 20:13:02][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_content.part001.zip success. index:138 file size:7.54 MB
+[2023-05-18 20:13:02][notice]Backing up backup_content completed.
+[2023-05-18 20:13:02][notice]Prepare to backup backup_core files.
+[2023-05-18 20:13:03][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_core.part001.zip index:2525
+[2023-05-18 20:13:45][notice]Compressing zip file:real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_core.part001.zip success. index:2525 file size:49.83 MB
+[2023-05-18 20:13:45][notice]Backing up backup_core completed.
+[2023-05-18 20:13:45][notice]Prepare to backup backup_merge files.
+[2023-05-18 20:13:45][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_db.zip
+[2023-05-18 20:13:45][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 2.75 MB
+[2023-05-18 20:13:45][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_themes.zip
+[2023-05-18 20:13:46][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 22.41 MB
+[2023-05-18 20:13:46][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_plugin.zip
+[2023-05-18 20:13:49][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 38.74 MB
+[2023-05-18 20:13:49][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_uploads.zip
+[2023-05-18 20:13:49][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 41.43 MB
+[2023-05-18 20:13:49][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_content.zip
+[2023-05-18 20:13:49][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 48.97 MB
+[2023-05-18 20:13:49][notice]Prepare to zip file. file: real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_core.zip
+[2023-05-18 20:13:52][notice]Adding zip files completed.real-estate.test_wpvivid-6466864f090cb_2023-05-18-20-10_backup_all.part001.zip, filesize: 60.15 MB
+[2023-05-18 20:13:53][notice]Backing up backup_merge completed.
+[2023-05-18 20:13:53][notice]Backup completed.
