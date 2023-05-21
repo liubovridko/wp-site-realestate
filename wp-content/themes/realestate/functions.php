@@ -435,6 +435,73 @@ function ajax_load_more__properties_callback() {
 //add_action('wp_ajax_sort_properties', 'ajax_load_more__properties_callback');
 //add_action('wp_ajax_nopriv_sort_properties', 'ajax_load_more__properties_callback');
 
+
+
+
+function submit_form_callback() {
+  // Получение данных из AJAX запроса
+  
+ 
+  $first_name = $_POST['firstName'];
+  // Действия при успешном получении значения name
+  echo 'console.log(' . $first_name .')';
+
+  $last_name = $_POST['lastName'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
+  // Обработка данных формы
+  // Ваш код обработки данных формы здесь
+
+  // Отправка данных на Mailchimp
+  $api_key = '';
+  $list_id = 'e1668210d7';
+
+  $data = array(
+    'email_address' => $email,
+    'status' => 'subscribed',
+    'merge_fields' => array(
+       'FNAME'=>  $first_name,
+       'LNAME'=> $last_name,
+       'MMERGE6'=> $subject,
+      ' MMERGE5'=> $message
+    )
+  );
+
+  $url = 'https://api.mailchimp.com/3.0/lists/' . $list_id . '/members';
+
+  $request_args = array(
+    'method' => 'POST',
+    'headers' => array(
+      'Content-Type' => 'application/json',
+      'Authorization' => 'Basic ' . base64_encode('user:' . $api_key)
+    ),
+    'body' => json_encode($data)
+  );
+
+  $response = wp_remote_post($url, $request_args);
+
+  if (!is_wp_error($response)) {
+    $response_code = wp_remote_retrieve_response_code($response);
+    if ($response_code === 200) {
+      // Действия при успешной отправке данных на Mailchimp
+      echo 'Данные успешно отправлены на Mailchimp';
+    } else {
+      // Действия при ошибке отправки данных на Mailchimp
+      echo 'Ошибка при отправке данных на Mailchimp';
+    }
+  } else {
+    // Действия при ошибке выполнения запроса к Mailchimp
+    echo 'Ошибка выполнения запроса к Mailchimp';
+  }
+
+  wp_die(); 
+}
+
+add_action('wp_ajax_submit_form', 'submit_form_callback');
+add_action('wp_ajax_nopriv_submit_form', 'submit_form_callback');
+
 //register string for plugin Polylang-translation
 
 add_action('init', function () {
