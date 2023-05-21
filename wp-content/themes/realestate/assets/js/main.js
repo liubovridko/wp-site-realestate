@@ -363,3 +363,41 @@ jQuery(function($) {
 });
 
 });*/
+
+//FORM COMTACT TO Mailchimp
+
+$(document).ready(function() {
+  $('#myForm').submit(function(event) {
+    event.preventDefault();
+
+    var firstName = $('input[name="firstname"]').val();
+    var lastName = $('#lastname').val();
+    var email = $('#email').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+
+ console.log(firstName);
+
+    // Отправка данных на сервер WordPress
+    $.ajax({
+      url: my_script_vars.ajaxurl,
+      type: 'POST',
+      data: {
+        action: 'submit_form',
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        subject: subject,
+        message: message
+      },
+      success: function(response) {
+        // Действия при успешной отправке данных на сервер WordPress
+        console.log('Данные успешно отправлены на сервер WordPress');
+      },
+      error: function(xhr, status, error) {
+        // Действия при ошибке отправки данных на сервер WordPress
+        console.log('Ошибка при отправке данных на сервер WordPress');
+      }
+    });
+  });
+});
