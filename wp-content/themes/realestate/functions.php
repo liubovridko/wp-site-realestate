@@ -477,7 +477,7 @@ $list_id = 'YOUR_MAILCHIMP_LIST_ID';
     )
   );
 
-  $url = 'https://us9.api.mailchimp.com/3.0/lists/' . $list_id . '/members';
+  $url = 'https://<dc>.api.mailchimp.com/3.0/lists/' . $list_id . '/members';
 
   $request_args = array(
     'method' => 'POST',
