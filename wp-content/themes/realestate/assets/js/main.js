@@ -393,6 +393,7 @@ $(document).ready(function() {
       success: function(response) {
         // Действия при успешной отправке данных на сервер WordPress
         console.log('Данные успешно отправлены на сервер WordPress');
+        $('#answer').html(response);
       },
       error: function(xhr, status, error) {
         // Действия при ошибке отправки данных на сервер WordPress

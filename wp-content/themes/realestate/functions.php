@@ -457,20 +457,15 @@ function submit_form_callback() {
   $subject = $_POST['subject'];
   $message = $_POST['message'];
 
-  echo 'alert(' . $first_name . ')' ;
   
 
   // Обработка данных формы
   // Ваш код обработки данных формы здесь
-  // Отладочные сообщения
-  error_log('Имя: ' .  $first_name);
-  error_log('Имя: ' .   $last_name);
-  error_log('Email: ' . $email);
-  error_log('Сообщение: ' . $message);
+  
 
   // Отправка данных на Mailchimp
-  $api_key = '';
-  $list_id = 'e1668210d7';
+ $api_key = 'YOUR_MAILCHIMP_API_KEY';
+$list_id = 'YOUR_MAILCHIMP_LIST_ID';
 
   $data = array(
     'email_address' => $email,
@@ -479,11 +474,11 @@ function submit_form_callback() {
        'FNAME'=>  $first_name,
        'LNAME'=> $last_name,
        'MMERGE6'=> $subject,
-      ' MMERGE5'=> $message
+      'MMERGE5'=> $message
     )
   );
 
-  $url = 'https://api.mailchimp.com/3.0/lists/' . $list_id . '/members';
+  $url = 'https://us9.api.mailchimp.com/3.0/lists/' . $list_id . '/members';
 
   $request_args = array(
     'method' => 'POST',
@@ -495,14 +490,22 @@ function submit_form_callback() {
   );
 
   $response = wp_remote_post($url, $request_args);
+  
 
   if (is_wp_error($response)) {
   $error_message = $response->get_error_message();
-   error_log('Ошибка при выполнении запроса к Mailchimp: ' . $error_message);
+
+   echo 'Ошибка при выполнении запроса к Mailchimp: ' . $error_message;
+   // Отладочные сообщения
+  /*error_log('Имя: ' .  $first_name);
+  error_log('Имя: ' .   $last_name);
+  error_log('Email: ' . $email);
+  error_log('Сообщение: ' . $message);*/
 }
 
   if (!is_wp_error($response)) {
     $response_code = wp_remote_retrieve_response_code($response);
+
     if ($response_code === 200) {
       // Действия при успешной отправке данных на Mailchimp
       echo 'Данные успешно отправлены на Mailchimp';
