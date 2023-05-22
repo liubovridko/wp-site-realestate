@@ -44,8 +44,7 @@ function realestate_enqueue_script() {
      wp_enqueue_script( 'icheck', get_template_directory_uri(). '/assets/js/icheck.min.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow'), '1.0.0', 'all'  );
      wp_enqueue_script( 'price-range', get_template_directory_uri(). '/assets/js/price-range.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck'), '1.0.0', 'all'  );
      wp_enqueue_script( 'maps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart', 'owl-carousel', 'wow', 'icheck', 'price-range'), '1.0.0', 'all'  );
-     //wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
-     //wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range',  'maps-api'), '1.0.0', 'all'  );
+    
      wp_enqueue_script( 'main', get_template_directory_uri(). '/assets/js/main.js',  array('modernizr-2.6.2','jquery-1.10.2' , 'bootstrap' , 'bootstrap-select', 'bootstrap-hover-dropdown', 'easypiechart', 'jquery-easypiechart','owl-carousel', 'wow', 'icheck', 'price-range', 'maps-api'), '1.0.0', 'all'  );
      wp_localize_script('main', 'my_script_vars', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
@@ -60,6 +59,15 @@ function realestate_enqueue_links() {
         echo '<link rel="icon" href="favicon.ico" type="image/x-icon">';
 }  
 add_action( 'wp_head', 'realestate_enqueue_links' );
+
+//подключаем скрипты карты только на страницы контакты
+function enqueue_gmaps_script() {
+    if ( is_page( 'contact' ) ) { // Замените 'contacts' на slug (часть URL) вашей страницы контактов
+         wp_enqueue_script( 'gmaps', get_template_directory_uri().'/assets/js/gmaps.js',  array(), '1.0.0', true  );
+     wp_enqueue_script( 'gmaps-init', get_template_directory_uri().'/assets/js/gmaps.init.js',  array(), '1.0.0', true  );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_gmaps_script' );
 
 /*function realestate_add_classes($classes) {
 	$classes[] = "my_class";
@@ -443,16 +451,21 @@ function submit_form_callback() {
   
  
   $first_name = $_POST['firstName'];
-  // Действия при успешном получении значения name
-  echo 'console.log(' . $first_name .')';
-
   $last_name = $_POST['lastName'];
   $email = $_POST['email'];
   $subject = $_POST['subject'];
   $message = $_POST['message'];
 
+  echo 'alert(' . $first_name . ')' ;
+  
+
   // Обработка данных формы
   // Ваш код обработки данных формы здесь
+  // Отладочные сообщения
+  error_log('Имя: ' .  $first_name);
+  error_log('Имя: ' .   $last_name);
+  error_log('Email: ' . $email);
+  error_log('Сообщение: ' . $message);
 
   // Отправка данных на Mailchimp
   $api_key = '';
@@ -481,6 +494,11 @@ function submit_form_callback() {
   );
 
   $response = wp_remote_post($url, $request_args);
+
+  if (is_wp_error($response)) {
+  $error_message = $response->get_error_message();
+   error_log('Ошибка при выполнении запроса к Mailchimp: ' . $error_message);
+}
 
   if (!is_wp_error($response)) {
     $response_code = wp_remote_retrieve_response_code($response);

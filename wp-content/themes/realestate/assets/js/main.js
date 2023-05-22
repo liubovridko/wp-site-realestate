@@ -375,7 +375,7 @@ $(document).ready(function() {
     var subject = $('#subject').val();
     var message = $('#message').val();
 
- console.log(firstName);
+
 
     // Отправка данных на сервер WordPress
     $.ajax({
