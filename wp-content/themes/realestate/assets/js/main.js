@@ -366,7 +366,7 @@ jQuery(function($) {
 
 //FORM COMTACT TO Mailchimp
 
-$(document).ready(function() {
+/*$(document).ready(function() {
   $('#myForm').submit(function(event) {
     event.preventDefault();
 
@@ -401,4 +401,4 @@ $(document).ready(function() {
       }
     });
   });
-});
+});*/
