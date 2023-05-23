@@ -13,12 +13,24 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'realestate' ); ?></h1>
-			</header><!-- .page-header -->
+
+			 <div class="content-area error-page" style="background-color: #FCFCFC; padding-bottom: 55px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                        <h2 class="error-title">404</h2>
+                        <p><?php esc_html_e( 'Sorry, the page you requested may have been moved or deleted', 'realestate' ) ?></p>
+                        <a href="<?php echo get_home_page(); ?>" class="btn btn-default">Home</a>                        
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
 
 			<div class="page-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'realestate' ); ?></p>
+
+
 
 					<?php
 					get_search_form();

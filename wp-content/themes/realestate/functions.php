@@ -444,7 +444,7 @@ function ajax_load_more__properties_callback() {
 //add_action('wp_ajax_nopriv_sort_properties', 'ajax_load_more__properties_callback');
 
 
-
+/*Form contact*/
 
 function submit_form_callback() {
   // Получение данных из AJAX запроса
@@ -520,8 +520,8 @@ $list_id = 'YOUR_MAILCHIMP_LIST_ID';
   wp_die(); 
 }
 
-add_action('wp_ajax_submit_form', 'submit_form_callback');
-add_action('wp_ajax_nopriv_submit_form', 'submit_form_callback');
+//add_action('wp_ajax_submit_form', 'submit_form_callback');
+//add_action('wp_ajax_nopriv_submit_form', 'submit_form_callback');
 
 //register string for plugin Polylang-translation
 
