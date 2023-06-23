@@ -29,17 +29,17 @@
                                     </div> 
 
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                        <li data-thumb="assets/img/property-1/property1.jpg"> 
-                                            <img src="assets/img/property-1/property1.jpg" />
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg" />
                                         </li>
                                         <li data-thumb="img/property-1/property2.jpg"> 
-                                            <img src="assets/img/property-1/property3.jpg" />
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
                                         </li>
-                                        <li data-thumb="assets/img/property-1/property3.jpg"> 
-                                            <img src="assets/img/property-1/property3.jpg" />
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
                                         </li>
-                                        <li data-thumb="assets/img/property-1/property4.jpg"> 
-                                            <img src="assets/img/property-1/property4.jpg" />
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg" />
                                         </li>                                         
                                     </ul>
                                 </div>
@@ -183,7 +183,7 @@
                                 <h4 class="s-property-title">Property Video</h4> 
                                 <div class="video-thumb">
                                     <a class="video-popup" href="yout" title="Virtual Tour">
-                                        <img src="assets/img/property-video.jpg" class="img-responsive wp-post-image" alt="Exterior">            
+                                        <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-video.jpg" class="img-responsive wp-post-image" alt="Exterior">            
                                     </a>
                                 </div>
                             </div>
@@ -200,7 +200,7 @@
                                         <div class="clear">
                                             <div class="col-xs-4 col-sm-4 dealer-face">
                                                 <a href="">
-                                                    <img src="assets/img/client-face1.png" class="img-circle">
+                                                    <img src="<?php echo  get_template_directory_uri()?>/assets/img/client-face1.png" class="img-circle">
                                                 </a>
                                             </div>
                                             <div class="col-xs-8 col-sm-8 ">
@@ -251,7 +251,7 @@
                                     <ul>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/small-property-2.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -264,7 +264,7 @@
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-1.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/small-property-1.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -277,7 +277,7 @@
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-3.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/small-property-3.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -291,7 +291,7 @@
 
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?php echo  get_template_directory_uri()?>/assets/img/demo/small-property-2.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -314,7 +314,7 @@
                                     <h3 class="panel-title">Ads her  </h3>
                                 </div>
                                 <div class="panel-body recent-property-widget">
-                                    <img src="assets/img/ads.jpg">
+                                    <img src="<?php echo  get_template_directory_uri()?>/assets/img/ads.jpg">
                                 </div>
                             </div>
 
