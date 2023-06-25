@@ -89,7 +89,8 @@
                                     $area= get_post_meta(get_the_ID(), 'area', true);
                                     $rooms= get_post_meta(get_the_ID(), 'rooms', true);
                                     $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
-                                    $cars= get_post_meta(get_the_ID(), 'cars', true);*/
+                                    $cars= get_post_meta(get_the_ID(), 'cars', true);
+                                   */
 								?>
 
                            <!--  <div class="col-sm-6 col-md-4 p0">

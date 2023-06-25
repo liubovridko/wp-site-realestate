@@ -372,7 +372,7 @@ function sort_properties_callback() {
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> <?php echo $area; ?>m </span>
                                             <span class="proerty-price pull-right"> $ <?php echo $price; ?></span>
-                                            <p style="display: none;"><?php the_content(); ?></p>
+                                            <p style="display: none;"><?php the_excerpt(); ?></p>
                                             <div class="property-icon">
                                                 <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/bed.png">(<?php echo $rooms; ?>)
                                                  <img src="<?php echo get_template_directory_uri()?>/assets/img/icon/shawer.png">(<?php echo $bathrooms; ?>)

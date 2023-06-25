@@ -16,7 +16,17 @@
 
                 <div class="clearfix padding-top-40">
                     <div class="col-md-8 single-property-content ">
+                         <?php
+                          while ( have_posts() ) :
+                             the_post();
+                             $price= get_post_meta(get_the_ID(), 'price', true);
+                             $area= get_post_meta(get_the_ID(), 'area', true);
+                             $rooms= get_post_meta(get_the_ID(), 'rooms', true);
+                             $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
+                             $cars= get_post_meta(get_the_ID(), 'cars', true);
+                         ?>
                         <div class="row">
+                                
                             <div class="light-slide-item">            
                                 <div class="clearfix">
                                     <div class="favorite-and-print">
@@ -48,8 +58,8 @@
 
                         <div class="single-property-wrapper">
                             <div class="single-property-header">                                          
-                                <h1 class="property-title pull-left">Villa in Coral Gables</h1>
-                                <span class="property-price pull-right">$825,000</span>
+                                <h1 class="property-title pull-left"><?php the_title(); ?></h1>
+                                <span class="property-price pull-right">$<?php echo $price; ?></span>
                             </div>
 
                             <div class="property-meta entry-meta clearfix ">   
@@ -74,7 +84,7 @@
                                     </span>
                                     <span class="property-info-entry">
                                         <span class="property-info-label">Area</span>
-                                        <span class="property-info-value">3500<b class="property-info-unit">Sq Ft</b></span>
+                                        <span class="property-info-value"><?php echo $area; ?><b class="property-info-unit">Sq Ft</b></span>
                                     </span>
                                 </div>
 
@@ -86,7 +96,7 @@
                                     </span>
                                     <span class="property-info-entry">
                                         <span class="property-info-label">Bedrooms</span>
-                                        <span class="property-info-value">3</span>
+                                        <span class="property-info-value"><?php echo $rooms; ?></span>
                                     </span>
                                 </div>
 
@@ -98,7 +108,7 @@
                                     </span>
                                     <span class="property-info-entry">
                                         <span class="property-info-label">Bathrooms</span>
-                                        <span class="property-info-value">3.5</span>
+                                        <span class="property-info-value"><?php echo $bathrooms; ?></span>
                                     </span>
                                 </div>
 
@@ -110,7 +120,7 @@
                                     </span>
                                     <span class="property-info-entry">
                                         <span class="property-info-label">Garages</span>
-                                        <span class="property-info-value">2</span>
+                                        <span class="property-info-value"><?php echo $cars; ?></span>
                                     </span>
                                 </div>
 
@@ -121,7 +131,7 @@
                             <div class="section">
                                 <h4 class="s-property-title">Description</h4>
                                 <div class="s-property-content">
-                                    <p>Nulla quis dapibus nisl. Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies                                </p>
+                                    <p<?php the_content(); ?></p>
                                 </div>
                             </div>
                             <!-- End description area  -->
@@ -166,15 +176,19 @@
 
                             <div class="section property-features">      
 
-                                <h4 class="s-property-title">Features</h4>                            
-                                <ul>
-                                    <li><a href="properties.html">Swimming Pool</a></li>   
-                                    <li><a href="properties.html">3 Stories</a></li>
-                                    <li><a href="properties.html">Central Cooling</a></li>
-                                    <li><a href="properties.html">Jog Path 2</a></li>
-                                    <li><a href="properties.html">2 Lawn</a></li>
-                                    <li><a href="properties.html">Bike Path</a></li>
-                                </ul>
+                                <h4 class="s-property-title">Features</h4>
+                                    <?php
+                                $post_tags = get_the_terms($post->ID, 'Features');
+                                if ( $post_tags ) { //проверка на наличие меток, чтобы не выводилось только название с пустотой                            
+                                echo '<ul>';
+                                foreach ( $post_tags as $post_tag ) { //запускаем цикл
+                                    echo '<li><a href="' . get_term_link( $post_tag->term_id ) . '">' . $post_tag->name . '</a></li>';
+                                } //заканчиваем цикл   
+                                    
+                                echo '</ul>';
+                                } //заканчиваем условие if
+
+                            ?>
 
                             </div>
                             <!-- End features area  -->
@@ -188,6 +202,10 @@
                                 </div>
                             </div>
                             <!-- End video area  -->
+
+                          <?php  endwhile; // End of the loop.
+                       ?>
+
                         </div>
                     </div>
 
