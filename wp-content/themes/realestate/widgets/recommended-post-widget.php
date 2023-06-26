@@ -83,8 +83,14 @@ class Realestate_Recommended_Posts extends WP_Widget {
 			return;
 		}
 		?>
-
-		<?php echo $args['before_widget']; ?>
+		<?php
+		if (is_singular('property')) { // Проверяем, является ли текущая страница типом 'property'
+        $args['before_widget'] = str_replace('widget_recommend_entries panel panel-default sidebar-menu wow fadeInRight animated', 'widget_recommend_entries panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated', $args['before_widget']);
+        echo $args['before_widget'];
+        } else {
+        echo $args['before_widget'];	
+        }
+		 ?>
 
 		<?php
 		echo '<div class="panel-heading">';

@@ -260,8 +260,12 @@
                                 </div>
                             </div>
 
+                        <?php  if ( ! is_active_sidebar( 'sidebar-property' ) ) {
+                                return;
+                            }
+                            dynamic_sidebar( 'sidebar-property' ); ?>
 
-                            <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
+                           <!--  <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Similar Properties</h3>
                                 </div>
@@ -501,7 +505,7 @@
                                         </fieldset>                                     
                                     </form>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </aside>
