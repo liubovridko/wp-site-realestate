@@ -10,15 +10,19 @@
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
+if ( ! is_active_sidebar( 'sidebar-right-2' ) ) {
+	return;
+}
+
 ?>
 
 <div class="blog-asside-right col-md-3">
 
 
  <?php  if(get_the_ID() == 108) {  
-dynamic_sidebar( 'sidebar-right' ); 
+ dynamic_sidebar( 'sidebar-right' ); 
    } else if (get_the_ID() == 112) {
-dynamic_sidebar( 'sidebar-right-2' ); 
+  dynamic_sidebar( 'sidebar-right-2' ); 
    }
 
  ?>

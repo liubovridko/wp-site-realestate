@@ -250,6 +250,7 @@ function custom_widgets_init() {
     require get_template_directory() . '/widgets/last-news-widget.php';
     require get_template_directory() . '/widgets/stay-in-touch-widget.php';
     require get_template_directory() . '/widgets/advanced-search-widget.php';
+    require get_template_directory() . '/widgets/image-ads.php';
     //unregister_widget( 'WP_Widget_Text' );
     register_widget( 'RealEstate_Text_Widget' );
     register_widget( 'RealEstate_Search_Widget' );
@@ -260,6 +261,7 @@ function custom_widgets_init() {
     register_widget( 'Widget_Last_Posts' );
     register_widget( 'Realestate_Stay_In_Touch' );
     register_widget( 'Custom_Real_Estate_Search_Widget' );
+    register_widget( 'ImageWidget' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
 
@@ -990,6 +992,17 @@ function realestate_widgets_init() {
     array(
       'name'          => esc_html__( 'Sidebar-2', 'realestate' ),
       'id'            => 'sidebar-right-2',
+      'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
+      'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3 class="panel-title">',
+      'after_title'   => '</h3>',
+    )
+  );
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Sidebar-propetry', 'realestate' ),
+      'id'            => 'sidebar-property',
       'description'   => esc_html__( 'Add widgets here.', 'realestate' ),
       'before_widget' => ' <div id="%1$s" class="%2$s panel panel-default sidebar-menu wow fadeInRight animated" >',
       'after_widget'  => '</div>',
