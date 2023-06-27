@@ -24,6 +24,7 @@
                              $rooms= get_post_meta(get_the_ID(), 'rooms', true);
                              $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
                              $cars= get_post_meta(get_the_ID(), 'cars', true);
+                             $status='For Sale';
                          ?>
                         <div class="row">
                                 
@@ -72,7 +73,7 @@
                                     </span>
                                     <span class="property-info-entry">
                                         <span class="property-info-label">Status</span>
-                                        <span class="property-info-value">For Sale</span>
+                                        <span class="property-info-value"><?php echo $status; ?></span>
                                     </span>
                                 </div>
 
@@ -260,12 +261,13 @@
                                 </div>
                             </div>
 
-                        <?php  if ( ! is_active_sidebar( 'sidebar-property' ) ) {
+                       <?php  
+                       if ( ! is_active_sidebar( 'sidebar-property' ) ) {
                                 return;
                             }
-                            dynamic_sidebar( 'sidebar-property' ); ?>
+                            dynamic_sidebar( 'sidebar-property' ); ?> 
 
-                           <!--  <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
+                            <!-- <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Similar Properties</h3>
                                 </div>
@@ -505,8 +507,8 @@
                                         </fieldset>                                     
                                     </form>
                                 </div>
-                            </div> -->
-
+                            </div>
+ -->
 
                         </aside>
                     </div>

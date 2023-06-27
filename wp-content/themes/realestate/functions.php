@@ -58,7 +58,7 @@ add_action( 'wp_enqueue_scripts', 'realestate_enqueue_script' );
 function realestate_enqueue_links() {
 	    echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
         echo '<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">';
-        echo '<link rel="icon" href="favicon.ico" type="image/x-icon">';
+        //echo '<link rel="icon" href="favicon.ico" type="image/x-icon">';
 }  
 add_action( 'wp_head', 'realestate_enqueue_links' );
 
