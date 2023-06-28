@@ -25,6 +25,7 @@
                              $bathrooms= get_post_meta(get_the_ID(), 'bathrooms', true);
                              $cars= get_post_meta(get_the_ID(), 'cars', true);
                              $status='For Sale';
+                             $built='2003';
                          ?>
                         <div class="row">
                                 
@@ -51,7 +52,19 @@
                                         </li>
                                         <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg"> 
                                             <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg" />
-                                        </li>                                         
+                                        </li>
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg" />
+                                        </li>
+                                        <li data-thumb="img/property-1/property2.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
+                                        </li>
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
+                                        </li>
+                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg"> 
+                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg" />
+                                        </li>                                                      
                                     </ul>
                                 </div>
                             </div>
@@ -149,7 +162,7 @@
 
                                     <li>
                                         <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Built In</span>
-                                        <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">2003</span>
+                                        <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?php echo $built; ?></span>
                                     </li>
                                     <li>
                                         <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Parking</span>
