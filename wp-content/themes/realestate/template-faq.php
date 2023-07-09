@@ -30,30 +30,42 @@ get_header();
 
                 <div class="row row-feat"> 
                     <div class="col-md-12">
+
+                            <?php 
+                     $args = array(
+                        'post_type' => 'faq',
+                         'post_status' => 'publish',
+                        'posts_per_page' => 3 ,
+                      );
+
+                      $query = new WP_Query($args);
+                       if ($query->have_posts()) {
+
+                    ?>
  
                         <div class="col-sm-6 feat-list">
+                            <?php
+                          while ($query->have_posts()) :
+                            $query->the_post();                                  
+                            ?>
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                          <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa11" >
-                                            Nostrud exercitation ullamco laboris 1 1
+                                            <?php the_title(); ?>
                                          </h4> 
                                     </div>
                                     <div id="fqa11" class="panel-collapse collapse fqa-body">
                                         <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
+                                            <?php the_content(); ?>
                                         </div> 
                                     </div>
                                 </div>
                             </div>
+                            <?php endwhile; ?>
+
                             
-                            <div class="panel-group">
+                            <!-- <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                          <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa22" >
@@ -93,31 +105,50 @@ get_header();
                                         </div> 
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
+                         <?php
+                         } else {
+                                 get_template_part( 'template-parts/content', 'none' );
+                      }
+                      wp_reset_postdata();
+                    ?>
+
+
+                    <?php 
+                     $args = array(
+                        'post_type' => 'faq',
+                         'post_status' => 'publish',
+                        'posts_per_page' => 3 ,
+                        'offset' => 3,
+                      );
+
+                      $query = new WP_Query($args);
+                       if ($query->have_posts()) {
+
+                    ?>
                         <div class="col-sm-6 feat-list">
+                            <?php
+                          while ($query->have_posts()) :
+                            $query->the_post();                                  
+                            ?>
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                          <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa1" >
-                                            Nostrud exercitation ullamco laboris 1 
+                                           <?php the_title(); ?> 
                                          </h4> 
                                     </div>
                                     <div id="fqa1" class="panel-collapse collapse fqa-body">
                                         <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
+                                            <?php the_content(); ?>
                                         </div> 
                                     </div>
                                 </div>
                             </div>
+                            <?php endwhile; ?>
                             
-                            <div class="panel-group">
+                            <!-- <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                          <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa2" >
@@ -157,8 +188,15 @@ get_header();
                                         </div> 
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
+
+                     <?php
+                         } else {
+                                 get_template_part( 'template-parts/content', 'none' );
+                      }
+                      wp_reset_postdata();
+                    ?>    
 
                     </div>
                 </div>

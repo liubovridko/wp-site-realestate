@@ -53,18 +53,6 @@
                                         <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg"> 
                                             <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg" />
                                         </li>
-                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg"> 
-                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property1.jpg" />
-                                        </li>
-                                        <li data-thumb="img/property-1/property2.jpg"> 
-                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
-                                        </li>
-                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg"> 
-                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property3.jpg" />
-                                        </li>
-                                        <li data-thumb="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg"> 
-                                            <img src="<?php echo  get_template_directory_uri()?>/assets/img/property-1/property4.jpg" />
-                                        </li>                                                      
                                     </ul>
                                 </div>
                             </div>
