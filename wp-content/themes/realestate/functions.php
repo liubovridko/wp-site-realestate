@@ -181,6 +181,24 @@ function realestate_register_post_type_property() {
          'rewrite'     => array( 'slug' => 'testimonials' ),
   ];
     register_post_type('testimonial', $args);
+     unset($args); /*очищать массив args*/
+
+     $args =[
+    'label' => esc_html__('FAQ', 'realestate'), //название типа поста, отображаемое в меню
+         'public' => true, // будет ли отображаться  через интерфейс администратора
+         'show_in_menu' => true , //Где показать тип сообщения в меню администратора
+         'has_archive' => true,
+         'menu_icon' => 'dashicons-editor-help', //иконка меню
+         'supports' => [              //Основные функции, которые поддерживает тип публикации
+          'title',
+      'editor',
+      'thumbnail',
+      'excerpt',
+      'custom-fields'
+         ],
+         'rewrite'     => array( 'slug' => 'faq' ),
+  ];
+    register_post_type('faq', $args);
 }
 //init-функция будут запускаться при загрузке WP
 add_action('init', 'realestate_register_post_type_property');
