@@ -46,16 +46,17 @@ get_header();
                         <div class="col-sm-6 feat-list">
                             <?php
                           while ($query->have_posts()) :
-                            $query->the_post();                                  
+                            $query->the_post();
+                             $number= get_post_meta(get_the_ID(), 'num', true);                                  
                             ?>
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa11" >
+                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa<?php echo  $number; ?>" >
                                             <?php the_title(); ?>
                                          </h4> 
                                     </div>
-                                    <div id="fqa11" class="panel-collapse collapse fqa-body">
+                                    <div id="fqa<?php echo  $number; ?>" class="panel-collapse collapse fqa-body">
                                         <div class="panel-body">
                                             <?php the_content(); ?>
                                         </div> 
@@ -130,16 +131,17 @@ get_header();
                         <div class="col-sm-6 feat-list">
                             <?php
                           while ($query->have_posts()) :
-                            $query->the_post();                                  
+                            $query->the_post(); 
+                             $number2= get_post_meta(get_the_ID(), 'num', true);                                 
                             ?>
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa1" >
+                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa<?php echo  $number2; ?>" >
                                            <?php the_title(); ?> 
                                          </h4> 
                                     </div>
-                                    <div id="fqa1" class="panel-collapse collapse fqa-body">
+                                    <div id="fqa<?php echo  $number2; ?>" class="panel-collapse collapse fqa-body">
                                         <div class="panel-body">
                                             <?php the_content(); ?>
                                         </div> 
