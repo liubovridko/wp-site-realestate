@@ -65,48 +65,6 @@ get_header();
                             </div>
                             <?php endwhile; ?>
 
-                            
-                            <!-- <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa22" >
-                                            Nostrud exercitation ullamco laboris 2 2
-                                         </h4> 
-                                    </div>
-                                    <div id="fqa22" class="panel-collapse collapse fqa-body">
-                                        <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa33" >
-                                            Nostrud exercitation ullamco laboris 3 3
-                                         </h4> 
-                                    </div>
-                                    <div id="fqa33" class="panel-collapse collapse fqa-body">
-                                        <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                          <?php
                          } else {
@@ -149,48 +107,6 @@ get_header();
                                 </div>
                             </div>
                             <?php endwhile; ?>
-                            
-                            <!-- <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa2" >
-                                            Nostrud exercitation ullamco laboris 2 
-                                         </h4> 
-                                    </div>
-                                    <div id="fqa2" class="panel-collapse collapse fqa-body">
-                                        <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                         <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa3" >
-                                            Nostrud exercitation ullamco laboris 3
-                                         </h4> 
-                                    </div>
-                                    <div id="fqa3" class="panel-collapse collapse fqa-body">
-                                        <div class="panel-body">
-                                            <ol>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                                <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>                                           
-                                            </ol> 
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
 
                      <?php
