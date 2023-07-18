@@ -54,6 +54,16 @@ if (isset($_POST['update'])) {
         exit;
     }
 
+    //более прямым способом проверки пароля пользователя
+
+    //$is_password_correct = wp_check_password($current_password, $current_user->user_pass, $current_user->ID);
+
+    //if (!$is_password_correct) {
+    //    echo "Current password is incorrect.";
+    //    get_footer();
+    //    exit;
+   // }
+
     // Хеширование нового пароля
     $new_password_hashed = wp_hash_password($new_password);
 
