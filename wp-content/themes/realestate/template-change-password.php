@@ -17,6 +17,7 @@ $csrf_token = wp_create_nonce('change_password');
 
 // Обработка отправки формы
 if (isset($_POST['update'])) {
+    //защита от межсайтовой подделки запроса (CSRF)
     // Проверка CSRF-токена
     if (!wp_verify_nonce($_POST['csrf_token'], 'change_password')) {
         echo "Invalid CSRF token.";
