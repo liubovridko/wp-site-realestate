@@ -26,9 +26,10 @@ if (isset($_POST['update'])) {
     }
 
     // Получение данных из формы
-    $current_password = $_POST['current_password'];
-    $new_password = $_POST['new_password'];
-    $confirm_password = $_POST['confirm_password'];
+    //функции, такие как sanitize_text_field() или wp_kses_post(), для очистки и экранирования пользовательского ввода
+    $current_password = wp_kses_post($_POST['current_password']);
+    $new_password = wp_kses_post($_POST['new_password']);
+    $confirm_password = wp_kses_post($_POST['confirm_password']);
 
     // Валидация данных
     if (empty($current_password) || empty($new_password) || empty($confirm_password)) {
