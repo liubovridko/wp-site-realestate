@@ -15,70 +15,66 @@ if (!is_user_logged_in() || !current_user_can('read')) {
 // Генерация CSRF-токена
 $csrf_token = wp_create_nonce('change_password');
 
+// Переменная для хранения сообщения об ошибке
+$error_message = '';
+
 // Обработка отправки формы
 if (isset($_POST['update'])) {
     //защита от межсайтовой подделки запроса (CSRF)
     // Проверка CSRF-токена
     if (!wp_verify_nonce($_POST['csrf_token'], 'change_password')) {
-        echo "Invalid CSRF token.";
-        get_footer();
-        exit;
-    }
+        $error_message = "Invalid CSRF token.";
+    } else {
 
-    // Получение данных из формы
-    //функции, такие как sanitize_text_field() или wp_kses_post(), для очистки и экранирования пользовательского ввода
-    $current_password = wp_kses_post($_POST['current_password']);
-    $new_password = wp_kses_post($_POST['new_password']);
-    $confirm_password = wp_kses_post($_POST['confirm_password']);
+        // Получение данных из формы
+        //функции, такие как sanitize_text_field() или wp_kses_post(), для очистки и экранирования пользовательского ввода
+        $current_password = wp_kses_post($_POST['current_password']);
+        $new_password = wp_kses_post($_POST['new_password']);
+        $confirm_password = wp_kses_post($_POST['confirm_password']);
 
-    // Валидация данных
-    if (empty($current_password) || empty($new_password) || empty($confirm_password)) {
-        echo "Please fill in all fields.";
-        get_footer();
-        exit;
-    } elseif ($new_password !== $confirm_password) {
-        echo "New password and confirm password do not match.";
-        get_footer();
-        exit;
-    }
+        // Валидация данных
+        if (empty($current_password) || empty($new_password) || empty($confirm_password)) {
+            $error_message = "Please fill in all fields.";
+        } elseif ($new_password !== $confirm_password) {
+           $error_message = "New password and confirm password do not match.";
+        } else {
 
-    // Проверка текущего пароля
-    $current_user = wp_get_current_user();
-    $credentials = array(
-        'user_login' => $current_user->user_login,
-        'user_password' => $current_password
-    );
-    $user = wp_authenticate($credentials['user_login'], $credentials['user_password']);
+            // Проверка текущего пароля
+            $current_user = wp_get_current_user();
+            $credentials = array(
+                'user_login' => $current_user->user_login,
+                'user_password' => $current_password
+            );
+            $user = wp_authenticate($credentials['user_login'], $credentials['user_password']);
 
-    if (is_wp_error($user)) {
-        echo "Current password is incorrect.";
-        get_footer();
-        exit;
-    }
+            if (is_wp_error($user)) {
+                $error_message = "Current password is incorrect.";
+            } else {
 
-    //более прямым способом проверки пароля пользователя
+            //более прямым способом проверки пароля пользователя
 
-    //$is_password_correct = wp_check_password($current_password, $current_user->user_pass, $current_user->ID);
+            //$is_password_correct = wp_check_password($current_password, $current_user->user_pass, $current_user->ID);
 
-    //if (!$is_password_correct) {
-    //    echo "Current password is incorrect.";
-    //    get_footer();
-    //    exit;
-   // }
+            //if (!$is_password_correct) {
+            //    echo "Current password is incorrect.";
+            //    get_footer();
+            //    exit;
+           // }
 
-    // Хеширование нового пароля
-    $new_password_hashed = wp_hash_password($new_password);
+            // Хеширование нового пароля
+            $new_password_hashed = wp_hash_password($new_password);
 
-    // Изменение пароля
-    wp_set_password($new_password, $user->ID);
+            // Изменение пароля
+            wp_set_password($new_password, $user->ID);
 
-    // Уведомление пользователя
-    //wp_mail($current_user->user_email, 'Password Change Notification', 'Your password has been successfully changed.');
+            // Уведомление пользователя
+            //wp_mail($current_user->user_email, 'Password Change Notification', 'Your password has been successfully changed.');
 
-    echo "Password changed successfully.";
-    get_footer();
-    exit;
-}
+            $success_message = "Password changed successfully.";
+            }
+        }
+     }
+  }
 ?>
 
  <div class="page-head"> 
@@ -111,6 +107,13 @@ if (isset($_POST['update'])) {
                             <div class="clear">
 
                                 <div class="col-sm-10 col-sm-offset-1">
+                                    <?php if ($error_message) : ?>
+                                      <div class="alert alert-danger"><?php echo $error_message; ?></div>
+                                    <?php endif; ?>
+
+                                    <?php if ($success_message) : ?>
+                                       <div class="alert alert-success"><?php echo $success_message; ?></div>
+                                    <?php endif; ?>
                                     <div class="form-group">
                                         <label>Current Password <small>(required)</small></label>
                                         <input name="current_password" type="password" class="form-control">
