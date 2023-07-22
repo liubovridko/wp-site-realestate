@@ -6,7 +6,7 @@
  * Author: Liubov Ridkokasha
  
  */
-
+// Добавили выполнение функции через шорткод
 	function realestate_registration_form_shortcode() {
 	    ob_start();
 	    realestate_registration_form(); // Функция вывода формы регистрации
@@ -16,8 +16,9 @@
 	add_shortcode( 'realestate_registration_form', 'realestate_registration_form_shortcode' );
 
 	function realestate_registration_form() {
+        // Генерация CSRF-токена
+     $csrf_token = wp_create_nonce( 'registration_form' );
     // Код для формы регистрации
-
     ?>
     <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
         <div class="form-group">
@@ -32,6 +33,8 @@
             <label for="password"><?php _e( 'Password:', 'realestate' ); ?></label>
             <input type="password" class="form-control" name="password" value="" required />
         </div>
+        <!-- // Вставка CSRF-токена в скрытое поле формы -->
+        <input type="hidden" name="registration_form_nonce" value="<?php echo esc_attr( $csrf_token ); ?>">
         <?php do_action( 'register_form' ); ?>
         <div class="text-center">
             <input type="submit" class="btn btn-default" name="submit" value="<?php _e( 'Register', 'mydomain' ); ?>" />
@@ -45,8 +48,17 @@
 
 function realestate_user_registration($user_id) {
 
+    
+
     // Код для обработки данных формы
 if ( isset( $_POST['submit'] ) ) {
+
+         // Проверка CSRF-токена
+        if ( ! isset( $_POST['registration_form_nonce'] ) || ! wp_verify_nonce( $_POST['registration_form_nonce'], 'registration_form' ) ) {
+            $error_message = "Invalid CSRF token.";
+        // Вывод модального окна с сообщением об ошибке через JavaScript
+        echo "<script>alert('$error_message');</script>";
+        }
         $username = sanitize_user( $_POST['username'] );
         $email = sanitize_email( $_POST['email'] );
         $password = esc_attr( $_POST['password'] );
